@@ -1,0 +1,46 @@
+<!--copyright_Shahriar Shafin
+19-Oct-2020
+last modified 24oct2020-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css">
+		<script src="script.js"></script>
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script> <!--icons-->
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>   <!--jquery-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>RC Car Controller | Shafin D_bot</title>
+	</head>
+	
+	<body>
+		<!--comment out to stream ip webcam-->
+		<!--<center> <img name="main" id="main" border="0" width="768" height="432" src="http://192.168.0.105:8080/video"> </center> -->
+		
+		<table cellpadding="10" border="1">
+			<tbody>
+				<tr>
+				    <td> <div class="button"> <img id="stop" src="icons/stop_off.png">     </div></td> 
+					<td> <div class="button"><img id="forward" src="icons/up_off.png" class="button"></div></td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td> <div class="button"> <img id="left" src="icons/left_off.png">     </div></td>
+					<td> <div class="button"> <img id="backward" src="icons/down_off.png"> </div></td>
+					<td> <div class="button"> <img id="right" src="icons/right_off.png">   </div></td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<!--notifier-->
+		<div class="alert hide">
+			<span class="fas fa-exclamation-circle"></span>
+			<span class="msg">You pressed break!</span>
+			<div class="close-btn">
+				<span class="fas fa-times"></span>
+			</div>
+		</div>	
+		
+	</body>
+</html>
+
