@@ -1,5 +1,31 @@
-//copyright_Shahriar Shafin
-//19-Oct-2020
+/* copyright_Shahriar Shafin
+19-Oct-2020 */
+
+
+body{
+  overflow: hidden;
+  background-color: #252121;
+  background-image: url("http://192.168.0.104:8080/video"), url('icons/error.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*use this 2 line for no-crop stream.But it will compressed the size.*/
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  /*.....*/
+}
+h1{
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 3px 5px #000000;
+
+}
+/* test code here */
+
+
+
+
+
+/* test code here */
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 *{
   margin: 0;
@@ -7,14 +33,6 @@
   user-select: none;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-}
-html,body{
-  height: 100%;
-}
-body{
-  display: grid;
-  place-items: center;
-  overflow: hidden;
 }
 
 .alert{
