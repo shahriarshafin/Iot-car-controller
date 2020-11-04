@@ -1,32 +1,41 @@
 /* copyright_Shahriar Shafin
 19-Oct-2020 */
 
-
 body{
   overflow: hidden;
-  background-color: #252121;
-  background-image: url("http://192.168.0.104:8080/video"), url('icons/error.png');
+  background-color: #2e1b28;
+  background-image: url(), url('icons/bg.png');
   background-repeat: no-repeat;
   background-size: cover;
-  /*use this 2 line for no-crop stream.But it will compressed the size.*/
+  /*use this 2 line for full size stream.But ratio will be compressed.*/
   background-size: 100% 100%;
   background-attachment: fixed;
   /*.....*/
+  
 }
 h1{
-  color: #ffffff;
+  color: #000000;
   text-align: center;
-  text-shadow: 3px 5px #000000;
+
 
 }
+.table {
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  width: 100%;
+}
+img{
+  opacity: 1;
+}
+
 /* test code here */
 
 
-
-
-
 /* test code here */
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+/* notifier */
+/* @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -117,4 +126,4 @@ h1{
   color: #ce8500;
   font-size: 22px;
   line-height: 40px;
-}
+} */
