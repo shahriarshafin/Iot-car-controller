@@ -1,6 +1,5 @@
 <!--copyright_Shahriar Shafin
 19-Oct-2020
-last modified 24oct2020 | 03nov2020 -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,48 +9,70 @@ last modified 24oct2020 | 03nov2020 -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
 	<script src="script.js"></script>
-	<!--icons-->
-	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<!--notifier icons -->
+	<!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
 	<!--jquery-->
-	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<!-- <script src="https://code.jquery.com/jquery-3.4.1.js"></script> -->
 	<title>RC Car Controller | Shafin D_bot</title>
 </head>
 
 <body>
-	<h1>Shafin_Dbot</h1>
-	<table cellpadding="10" boder="1">
-		<tbody>
-			<tr>
-				<td>
-					<div class="button"> <img id="stop" src="icons/stop_off.png"> </div>
-				</td>
-				<td>
-					<div class="button"><img id="forward" src="icons/up_off.png" class="button"></div>
-				</td>
-				<td>&nbsp;</td>
-			</tr>
-			<tr>
-				<td>
-					<div class="button"> <img id="left" src="icons/left_off.png"> </div>
-				</td>
-				<td>
-					<div class="button"> <img id="backward" src="icons/down_off.png"> </div>
-				</td>
-				<td>
-					<div class="button"> <img id="right" src="icons/right_off.png"> </div>
-				</td>
-			</tr>
-		</tbody>
-	</table>
+	<!-- test -->
 
+
+
+	<!-- test -->
+
+	<center>
+		<h1 style=color:white>Shafin_Dbot</h1>
+	</center>
+	<!-- IP Address -->
+
+	<center> Cam IP: <input type="url" id="ip" placeholder="http://camera_ip/video">
+		<button onclick="getIp()">Play</button></center>
+
+	<!-- IP Address -->
+
+	<table border="1" class="table">
+
+		<tr>
+			<td colspan="3">
+				<center><img id="forward" src="icons/up_off.png"></center>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<img id="left" src="icons/left_off.png">
+			</td>
+			<td>
+				<center><img id="stop" src="icons/stop_off.png"></center>
+			</td>
+			<td style="text-align:right">
+				<img id="right" src="icons/right_off.png">
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3">
+				<center><img id="backward" src="icons/down_off.png"> </center>
+			</td>
+		</tr>
+
+	</table>
+	<!-------------------------------------------- test code here  --------------------------------------------------->
+
+
+
+
+
+	<!-------------------------------------------- test code here  --------------------------------------------------->
 	<!--notifier-->
-	<div class="alert hide">
+	<!-- <div class="alert hide">
 		<span class="fas fa-exclamation-circle"></span>
 		<span class="msg">You pressed break!</span>
 		<div class="close-btn">
 			<span class="fas fa-times"></span>
 		</div>
-	</div>
+	</div> -->
 
 </body>
 
