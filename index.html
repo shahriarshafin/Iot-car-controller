@@ -9,71 +9,56 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
 	<script src="script.js"></script>
-	<!--notifier icons -->
-	<!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
-	<!--jquery-->
-	<!-- <script src="https://code.jquery.com/jquery-3.4.1.js"></script> -->
 	<title>RC Car Controller | Shafin D_bot</title>
 </head>
 
-<body>
+<body onload="tutorial()">
 	<!-- test -->
 
 
 
 	<!-- test -->
 
-	<center>
-		<h1 style=color:white>Shafin_Dbot</h1>
-	</center>
 	<!-- IP Address -->
 
-	<center> Cam IP: <input type="url" id="ip" placeholder="http://camera_ip/video">
-		<button onclick="getIp()">Play</button></center>
+	Cam IP: <input type="url" id="ip" placeholder="http://camera_ip/video">
+	<button onclick="getIp()">Play</button>
 
 	<!-- IP Address -->
 
-	<table border="1" class="table">
-
+	<table border="0" class="table">
 		<tr>
-			<td colspan="3">
-				<center><img id="forward" src="icons/up_off.png"></center>
+			<td colspan="2">
+				<center><img id="box" src="icons/stay.png" width="140" height="140"></center>
 			</td>
 		</tr>
 		<tr>
 			<td>
-				<img id="left" src="icons/left_off.png">
+				<img id="left" src="icons/leftOff.png" width="140" height="140">
 			</td>
-			<td>
-				<center><img id="stop" src="icons/stop_off.png"></center>
-			</td>
+
 			<td style="text-align:right">
-				<img id="right" src="icons/right_off.png">
+				<img id="right" src="icons/rightOff.png" width="140" height="140">
 			</td>
 		</tr>
-		<tr>
-			<td colspan="3">
-				<center><img id="backward" src="icons/down_off.png"> </center>
-			</td>
-		</tr>
-
 	</table>
 	<!-------------------------------------------- test code here  --------------------------------------------------->
 
 
 
 
+	<div class="dashboard">
+		<div class="meter meter--rpm meter--big-label"></div>
+		<div class="meter meter--gear">
+			<div>1</div>
+		</div>
+		<div class="meter meter--speed"></div>
+	</div>
+
+
+	<button class="btn-volume active">♩</button>
 
 	<!-------------------------------------------- test code here  --------------------------------------------------->
-	<!--notifier-->
-	<!-- <div class="alert hide">
-		<span class="fas fa-exclamation-circle"></span>
-		<span class="msg">You pressed break!</span>
-		<div class="close-btn">
-			<span class="fas fa-times"></span>
-		</div>
-	</div> -->
-
 </body>
 
 </html>
