@@ -1,5 +1,5 @@
-/* copyright_Shahriar Shafin
-19-Oct-2020 */
+/*copyright https://github.com/ShahriarShafin
+19-Oct-2020*/
 
 body{
   overflow: hidden;
@@ -8,20 +8,41 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   /*use this 2 line for full size stream.But ratio will be compressed.*/
-  background-size: 100% 100%;
+  background-size: 100% 100%;              
   background-attachment: fixed;
-  /*.....*/
-  
+  color: #ffffff;
+  /*---------------------------------------*/
   /* text-align: center; */
 }
-h1{
 
-/* ----------------- */
-margin: 0;
-font-weight: normal;
-text-transform: uppercase;
-
+/* input box */
+input[type="url"], textarea {
+  background-color : #07ffea1f; 
+  color: #ffffff;
+  width: 15%;
+  padding:7px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 4px;
 }
+
+/* webkit autofill */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px rgb(65, 142, 165) inset !important;
+}
+/* one man */
+#box{
+  position: fixed;
+  top: 4.5rem;
+  left: 44%;
+  width: 140px; 
+  height: 140px;
+}
+/* Left Right Button  */
 .table {
   margin-left: auto;
   margin-right: auto;
@@ -29,7 +50,7 @@ text-transform: uppercase;
   width: 100%;
 }
 
-/* test code here */
+/* ---------------------------------SpeedMeter----------------------------- */
 
 
 @import url(https://fonts.googleapis.com/css?family=Coda:400|Roboto+Mono:400,400italic);
@@ -41,20 +62,20 @@ text-transform: uppercase;
   display: inline-block;
 
   position: fixed;
-  top: 28rem;
-  left: 59rem;
+  top: 71%; /*29.6rem;*/
+  left: 72%; /* 59rem; */
   font-family: 'Coda', cursive;
 }
 
 .meter {
   display: inline-block;
   position: relative;
-  width: 10rem; /*I will back*/ 
+  width: 10rem;
   height: 10rem;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 1);  /* opacity-------------------------------------------------------------------*/ 
   border-radius: 50%;
-  margin: 0 .3rem 1.6rem;
-  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.16), inset 0 3px 6px rgba(0, 0, 0, 0.23);
+  margin: 0 .7rem 0.8rem;  /* down gap......1.6.............................................................*/
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, .16), inset 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 .meter:before {
   content: "";
@@ -65,7 +86,7 @@ text-transform: uppercase;
   top: -3.5%;
   bottom: -3.5%;
   border-radius: 50%;
-  background: #333;
+  background: rgba(51, 51, 51, 1);  /* opacity---------------------------------------------------------------- */
   z-index: -1;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
@@ -220,8 +241,8 @@ text-transform: uppercase;
 }
 
 .meter--gear {
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;  /* 4....................................................................................*/
   margin: 0rem;
   margin-left: -2rem;
   margin-right: -2rem;
@@ -235,9 +256,9 @@ text-transform: uppercase;
   bottom: -10%;
 }
 .meter--gear div {
-  font-size: 2.5rem;
+  font-size:2.5rem;
   text-align: center;
-  line-height: 4rem;
+  line-height: 3rem;
   font-family: 'Roboto Mono', monospace;
   font-style: italic;
   font-weight: bold;
@@ -265,9 +286,3 @@ text-transform: uppercase;
   color: tomato;
   border-color: tomato;
 }
-
-
-
-
-
-/* test code here */
