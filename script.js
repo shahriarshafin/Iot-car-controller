@@ -1,12 +1,29 @@
-//copyright_Shahriar Shafin
+//copyright https://github.com/ShahriarShafin
 //19-Oct-2020
 
+//----------------------NOTIFIER---------------
 
 function tutorial() {
-  alert("Controlling Guide");
+  alert("Controlling Guide : 1.Insert IP of Cam and IP of Engine.  2.Press CONNECT and controll with W,A,S,D  3.H,L for gear ");
 }
-//keydown event
+
+//---------------------IP ADDRESS--------------
+
+function getIp() {
+  var x = "url('";
+  var y = document.getElementById("ip_input").value;
+  var z = "')";
+  var xyz = x + y + z; //"url('get from y') //ninja technique:D
+  document.body.style.backgroundImage = xyz;
+}
+
+//---------------------KEY DOWN----------------
+//Sound ON
 window.addEventListener('keydown', function (event) {
+if (event.keyCode === 72) {    //H
+  document.getElementById('sound').play();
+}
+
   //forward
   if (event.keyCode === 38) {
     document.getElementById("box").src = "icons/up_on.png";
@@ -65,19 +82,27 @@ window.addEventListener('keydown', function (event) {
   if (event.keyCode === 32) //space
   {
     document.getElementById("box").src = "icons/stop_on.png";
+    document.getElementById('brake').play();
     // action link  
     // location.href = "https://shahriarshafin.me";
   }
 
 });
 
+//---------------------KEY UP-------------------
 
-//keyup event
 window.addEventListener('keyup', function (event) {
+  //soundOFF
+  if (event.keyCode === 72) {           //H
+    document.getElementById('sound').pause();
+    sound.currentTime = 0;
+  }
+
   //forward 
   if (event.keyCode === 38) {
     document.getElementById("box").src = "icons/stay.png";
     // action link
+
     // location.href = "https://shahriarshafin.me";
   }
   else if (event.keyCode === 87) //W
@@ -103,6 +128,7 @@ window.addEventListener('keyup', function (event) {
   //left
   if (event.keyCode === 37) {
     document.getElementById("left").src = "icons/leftOff.png";
+    event.preventDefault();
     // action link
     // location.href = "https://shahriarshafin.me";
   }
@@ -130,6 +156,8 @@ window.addEventListener('keyup', function (event) {
   if (event.keyCode === 32) //space
   {
     document.getElementById("box").src = "icons/stay.png";
+    document.getElementById('brake').pause();
+    brake.currentTime = 0;
     // action link
     // location.href = "https://shahriarshafin.me";
 
@@ -137,20 +165,7 @@ window.addEventListener('keyup', function (event) {
 
 });
 
-// IP Address 
-function getIp() {
-  var x = "url('";
-  var y = document.getElementById("ip").value;
-  var z = "')";
-  var xyz = x + y + z;
-  document.body.style.backgroundImage = xyz;
-
-}
-// test code here 
-
-//demo  http://192.168.0.106:8080/video
-
-
+//--------------------------SPEED METER------------------------------
 
 let motorSamplePath = 'https://freesound.org/data/previews/127/127980_2335231-lq.ogg';
 
@@ -332,12 +347,12 @@ document.addEventListener("DOMContentLoaded", function () {
     if (e.keyCode == '38') {// up arrow
       isAccelerating = true;
     } else
-      if (e.keyCode == '40') {// down arrow
+      if (e.keyCode == '32') {// spacebar
         isBraking = true;
       } else
-        if (e.keyCode == '37') {// left arrow
+        if (e.keyCode == '76') {// L key
         } else
-          if (e.keyCode == '39') {// right arrow
+          if (e.keyCode == '16') {// Shift key
           }
 
   }
@@ -349,13 +364,13 @@ document.addEventListener("DOMContentLoaded", function () {
     if (e.keyCode == '38') {// up arrow
       isAccelerating = false;
     } else
-      if (e.keyCode == '40') {// down arrow
+      if (e.keyCode == '32') {// spacebar
         isBraking = false;
       } else
-        if (e.keyCode == '37') {// left arrow
+        if (e.keyCode == '76') {// L key
           gearDown();
         } else
-          if (e.keyCode == '39') {// right arrow
+          if (e.keyCode == '16') {// Shift key
             gearUp();
           }
 
@@ -585,6 +600,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // wire up buttons
 
   btnVolume.onclick = function () {
+
     this.classList.toggle('active');
 
     if (this.classList.contains('active')) {
