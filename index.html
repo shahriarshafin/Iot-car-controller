@@ -1,4 +1,4 @@
-<!--copyright_Shahriar Shafin
+<!--copyright https://github.com/ShahriarShafin
 19-Oct-2020-->
 
 <!DOCTYPE html>
@@ -13,25 +13,34 @@
 </head>
 
 <body onload="tutorial()">
-	<!-- test -->
+	<audio id="sound" src="carhorn.mp3"></audio>
+	<audio id="brake" src="brake.mp3"></audio>
 
+	<!-------------------------------IP ADDRESS------------------------------------->
 
+	<form>
+		<label>Cam IP:</label>
+		<input type="url" id="ip_input" placeholder="http://camera_ip/video" list="ipList">
+		<datalist id="ipList">
+			<option value="http://192.168.0.106:8080/video">
+			<option value="http://192.168.0.111:8080/video">
+		</datalist>
+		<br>
+		<label>Engine:</label>
+		<input type="url" id="janina" placeholder="192.168.772" list="ipCar">
+		<datalist id="ipCar">
+			<option value="http://192.168.0.106:8080/video">
+			<option value="http://192.168.0.111:8080/video">
+		</datalist>
+		<br><br>
+		<input type="button" onclick="getIp()" value="CONNECT">
+	</form>
 
-	<!-- test -->
+	<!----------------------------------BUTTONS------------------------------------->
 
-	<!-- IP Address -->
-
-	Cam IP: <input type="url" id="ip" placeholder="http://camera_ip/video">
-	<button onclick="getIp()">Play</button>
-
-	<!-- IP Address -->
-
+	<img id="box" src="icons/stay.png">
+	<br>
 	<table border="0" class="table">
-		<tr>
-			<td colspan="2">
-				<center><img id="box" src="icons/stay.png" width="140" height="140"></center>
-			</td>
-		</tr>
 		<tr>
 			<td>
 				<img id="left" src="icons/leftOff.png" width="140" height="140">
@@ -42,10 +51,8 @@
 			</td>
 		</tr>
 	</table>
-	<!-------------------------------------------- test code here  --------------------------------------------------->
 
-
-
+	<!-------------------------------SPEED METER------------------------------------->
 
 	<div class="dashboard">
 		<div class="meter meter--rpm meter--big-label"></div>
@@ -54,11 +61,7 @@
 		</div>
 		<div class="meter meter--speed"></div>
 	</div>
-
-
 	<button class="btn-volume active">♩</button>
-
-	<!-------------------------------------------- test code here  --------------------------------------------------->
 </body>
 
 </html>
