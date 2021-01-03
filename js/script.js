@@ -42,7 +42,7 @@ window.addEventListener("keydown", function (event) {
 
   //____________________ S T O P ____________________
   if (event.keyCode === keySpace) {
-    document.getElementById("box").src = "../assets/STOP_on.png";
+    document.getElementById("box").src = "assets/STOP_on.png";
     document.getElementById("brake").play();
     // action link
     // location.href = "https://bot-car-ip/STOP";
@@ -50,45 +50,45 @@ window.addEventListener("keydown", function (event) {
 
   //_________________ F O R W A R D _________________
   if (event.keyCode === arrowUp) {
-    document.getElementById("box").src = "../assets/up_on.png";
+    document.getElementById("box").src = "assets/up_on.png";
     // action link
     // location.href = "https://bot-car-ip/FORWARD";
   } else if (event.keyCode === keyW) {
     //W
-    document.getElementById("box").src = "../assets/up_on.png";
+    document.getElementById("box").src = "assets/up_on.png";
     // action link
     // location.href = "https://bot-car-ip/FORWARD";
   }
 
   //________________ B A C K W A R D ________________
   if (event.keyCode === arrowDown) {
-    document.getElementById("box").src = "../assets/down_on.png";
+    document.getElementById("box").src = "assets/down_on.png";
     // action link
     // location.href = "https://bot-car-ip/BACKWARD";
   } else if (event.keyCode === keyS) {
-    document.getElementById("box").src = "../assets/down_on.png";
+    document.getElementById("box").src = "assets/down_on.png";
     // action link
     // location.href = "https://bot-car-ip/BACKWARD";
   }
 
   // ____________________ L E F T ___________________
   if (event.keyCode === arrowLeft) {
-    document.getElementById("left").src = "../assets/leftOn.png";
+    document.getElementById("left").src = "assets/leftOn.png";
     // action link
     // location.href = "https://bot-car-ip/LEFT;
   } else if (event.keyCode === keyA) {
-    document.getElementById("left").src = "../assets/leftOn.png";
+    document.getElementById("left").src = "assets/leftOn.png";
     // action link
     // location.href = "https://bot-car-ip/LEFT";
   }
 
   //____________________ R I G H T __________________
   if (event.keyCode === arrowRight) {
-    document.getElementById("right").src = "../assets/rightOn.png";
+    document.getElementById("right").src = "assets/rightOn.png";
     // action link
     // location.href = "https://bot-car-ip/RIGHT";
   } else if (event.keyCode === keyD) {
-    document.getElementById("right").src = "../assets/rightOn.png";
+    document.getElementById("right").src = "assets/rightOn.png";
     // action link
     // location.href = "https://bot-car-ip/RIGHT";
   }
@@ -111,52 +111,52 @@ window.addEventListener("keyup", function (event) {
 
   //BRAKE
   if (event.keyCode === keySpace) {
-    document.getElementById("box").src = "../assets/stay.png";
+    document.getElementById("box").src = "assets/stay.png";
     document.getElementById("brake").pause();
     brake.currentTime = 0;
   }
 
   //_________________ F O R W A R D _________________
   if (event.keyCode === arrowUp) {
-    document.getElementById("box").src = "../assets/stay.png";
+    document.getElementById("box").src = "assets/stay.png";
     // action link
     // location.href = "https://bot-car-ip/STOP";
   } else if (event.keyCode === keyW) {
-    document.getElementById("box").src = "../assets/stay.png";
+    document.getElementById("box").src = "assets/stay.png";
     // action link
     // location.href = "https://bot-car-ip/STOP";
   }
 
   //________________ B A C K W A R D ________________
   if (event.keyCode === arrowDown) {
-    document.getElementById("box").src = "../assets/stay.png";
+    document.getElementById("box").src = "assets/stay.png";
     // action link
     // location.href = "https://bot-car-ip/STOP";
   } else if (event.keyCode === keyS) {
-    document.getElementById("box").src = "../assets/stay.png";
+    document.getElementById("box").src = "assets/stay.png";
     // action link
     // location.href = "https://bot-car-ip/STOP";
   }
 
   // ____________________ L E F T ___________________
   if (event.keyCode === arrowLeft) {
-    document.getElementById("left").src = "../assets/leftOff.png";
+    document.getElementById("left").src = "assets/leftOff.png";
     event.preventDefault();
     // action link
     // location.href = "https://bot-car-ip/STOP";
   } else if (event.keyCode === keyA) {
-    document.getElementById("left").src = "../assets/leftOff.png";
+    document.getElementById("left").src = "assets/leftOff.png";
     // action link
     // location.href = "https://bot-car-ip/STOP";
   }
 
   //___________________ R I G H T ___________________
   if (event.keyCode === arrowRight) {
-    document.getElementById("right").src = "../assets/rightOff.png";
+    document.getElementById("right").src = "assets/rightOff.png";
     // action link
     // location.href = "https://bot-car-ip/STOP";
   } else if (event.keyCode === keyD) {
-    document.getElementById("right").src = "../assets/rightOff.png";
+    document.getElementById("right").src = "assets/rightOff.png";
     // action link
     // location.href = "https://bot-car-ip/STOP";
   }
