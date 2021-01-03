@@ -1,59 +1,57 @@
-<!--copyright https://github.com/ShahriarShafin
-19-Oct-2020-->
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
-	<script src="script.js"></script>
+	<link rel="stylesheet" href="css/style.css">
 	<title>RC Car Controller | Shafin D_bot</title>
 </head>
 
+<!-- TUTORIAL  -->
+
 <body onload="tutorial()">
-	<audio id="sound" src="carhorn.mp3"></audio>
-	<audio id="brake" src="brake.mp3"></audio>
-
-	<!-------------------------------IP ADDRESS------------------------------------->
-
-	<form>
-		<label>Cam IP:</label>
-		<input type="url" id="ip_input" placeholder="http://camera_ip/video" list="ipList">
+	<!-------------------------------START IP ADDRESS------------------------------------->
+	<form class="ipform">
+		<label>CAM IP :</label>
+		<input type="url" id="ip_cam" placeholder="http://camera_ip/video" list="ipList">
 		<datalist id="ipList">
 			<option value="http://192.168.0.106:8080/video">
 			<option value="http://192.168.0.111:8080/video">
 		</datalist>
 		<br>
-		<label>Engine:</label>
-		<input type="url" id="janina" placeholder="192.168.772" list="ipCar">
+		<label>ENGINE:</label>
+		<input type="url" id="ip_engine" placeholder="192.168.772" list="ipCar">
 		<datalist id="ipCar">
 			<option value="http://192.168.0.106:8080/video">
 			<option value="http://192.168.0.111:8080/video">
 		</datalist>
 		<br><br>
-		<input type="button" onclick="getIp()" value="CONNECT">
+		<input type="button" id="connectBtn" onclick="getIp()" value="CONNECT">
 	</form>
+	<!------------------------------- END IP ADDRESS------------------------------------->
+	
+	<!--VOLUME BUTTON -->
+	<button class="btn-volume active">♩</button>
 
-	<!----------------------------------BUTTONS------------------------------------->
-
-	<img id="box" src="icons/stay.png">
+	<!---------------------------------START BUTTONS------------------------------------->
+	<img id="box" src="assets/stay.png">
 	<br>
 	<table border="0" class="table">
 		<tr>
 			<td>
-				<img id="left" src="icons/leftOff.png" width="140" height="140">
+				<img id="left" class="sidebutton" src="assets/leftOff.png">
 			</td>
 
 			<td style="text-align:right">
-				<img id="right" src="icons/rightOff.png" width="140" height="140">
+				<img id="right" class="sidebutton" src="assets/rightOff.png">
 			</td>
 		</tr>
 	</table>
+	<!----------------------------------END BUTTONS------------------------------------->
 
-	<!-------------------------------SPEED METER------------------------------------->
 
+	<!-------------------------------STRAT SPEED METER---------------------------------->
 	<div class="dashboard">
 		<div class="meter meter--rpm meter--big-label"></div>
 		<div class="meter meter--gear">
@@ -61,7 +59,15 @@
 		</div>
 		<div class="meter meter--speed"></div>
 	</div>
-	<button class="btn-volume active">♩</button>
+	<!-------------------------------END SPEED METER------------------------------------>
+
+	<!-- START SOUNDS -->
+	<audio id="sound" src="audios/carhorn.mp3"></audio>
+	<audio id="brake" src="audios/brake.mp3"></audio>
+	<!--- END SOUNDS --->
+
+	<!---------------------------------- SCRIPTS  -------------------------------------->
+	<script src="js/script.js"></script>
 </body>
 
 </html>
