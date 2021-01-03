@@ -42,7 +42,7 @@ window.addEventListener("keydown", function (event) {
 
   //____________________ S T O P ____________________
   if (event.keyCode === keySpace) {
-    document.getElementById("box").src = "assets/STOP_on.png";
+    document.getElementById("box").src = "assets/stop_on.png";
     document.getElementById("brake").play();
     // action link
     // location.href = "https://bot-car-ip/STOP";
