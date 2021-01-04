@@ -3,14 +3,6 @@ https://shahriarshafin.me/wificarcontroller/
 ## This is a web application that can control Nodemcu bot-Car and stream live footage with ip address
 
 ## License
-  
-| Permissions         | Limitations   |
-| -----------         | -----------   |
-| ✅ Commercial use   | ❌ Liability |
-| ✅ Modification     | ❌ Warranty  |
-| ✅ Distribution                    |
-| ✅Private use                      |
-
 ```
 MIT License
 
