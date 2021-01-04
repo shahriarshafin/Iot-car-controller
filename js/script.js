@@ -4,7 +4,7 @@
 //---------------------- NOTIFIER -------------------
 function tutorial() {
   alert(
-    "Controlling Guide :\n  1. Insert IP of Cam, IP of Engine & Press CONNECT.\n  2. Control - W,A,S,D or Arrow keys\n  3. Change Gear - Shift, L\n  4. Horn - H\n  5. Brake - Space"
+    "Controlling Guide :\n  1. Insert IP of Cam, IP of Engine & Press CONNECT.\n  2. Control - W,A,S,D or Arrow keys\n  3. Change Gear - Shift, L\n  4. Horn - H\n  5. Brake - Space\n ' Please reload this page If you encounter any Problems '"
   );
 }
 //---------------------------------------------------
