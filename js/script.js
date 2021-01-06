@@ -13,7 +13,7 @@ function tutorial() {
 function getIp() {
   var x = "url('";
   var y = document.getElementById("ip_cam").value;
-  var z = "')";
+  var z = "'), url(assets/Camerror.gif)"; //for invalid input the second one will load
   var xyz = x + y + z; //url('get from y') //ninja technique:D
   document.body.style.backgroundImage = xyz;
 }
