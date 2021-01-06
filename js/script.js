@@ -14,7 +14,7 @@ function getIp() {
   var x = "url('";
   var y = document.getElementById("ip_cam").value;
   var z = "')";
-  var xyz = x + y + z; //"url('get from y') //ninja technique:D
+  var xyz = x + y + z; //url('get from y') //ninja technique:D
   document.body.style.backgroundImage = xyz;
 }
 //---------------------------------------------------
