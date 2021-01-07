@@ -46,7 +46,7 @@ select:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s;
 }
 
-/* HIDDEN IMAGE */
+/* HIDDEN BOX */
 #box {
   position: absolute;
   top: 10%;
@@ -74,6 +74,10 @@ select:-webkit-autofill:focus {
   opacity: 0.2;
 }
 
+/* left-right(180deg) --> right */
+#right{
+  transform: rotate(180deg);
+}
 /* ---------------------------------SpeedMeter----------------------------- */
 
 @import url(https://fonts.googleapis.com/css?family=Coda:400|Roboto+Mono:400,400italic);
