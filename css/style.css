@@ -5,7 +5,7 @@ body {
   overflow: hidden;
   box-sizing: border-box;
   background-color: #1f1f29;
-  background-image: url("../assets/Camerror.gif"); 
+  background-image: url("../assets/Camerror.gif");
   background-repeat: no-repeat;
   background-size: cover;
   /*use these 2 line for full size stream. But ratio will be compressed.*/
@@ -54,6 +54,9 @@ select:-webkit-autofill:focus {
   margin-left: -70px;
   width: 140px;
   height: 140px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* left-right Button Table  */
