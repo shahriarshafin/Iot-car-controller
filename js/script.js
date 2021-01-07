@@ -164,6 +164,7 @@ window.addEventListener("keyup", function (event) {
 //-------------------------------------------------------------------------
 
 //--------------------------START SPEED METER------------------------------
+//--------------- https://codepen.io/Chmood/pen/MaBZdM --------------------
 
 let motorSamplePath = "../audios/gear.ogg"; // https://freesound.org/data/previews/127/127980_2335231-lq.ogg
 
