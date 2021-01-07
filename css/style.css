@@ -68,6 +68,7 @@ select:-webkit-autofill:focus {
 .sidebutton {
   width: 140px;
   height: 140px;
+  opacity: 0.2;
 }
 
 /* ---------------------------------SpeedMeter----------------------------- */
