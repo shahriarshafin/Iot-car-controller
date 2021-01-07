@@ -56,7 +56,7 @@ select:-webkit-autofill:focus {
   height: 140px;
 }
 
-/* Left Right Button  */
+/* left-right Button Table  */
 .table {
   position: absolute;
   top: 25%;
@@ -64,7 +64,7 @@ select:-webkit-autofill:focus {
   width: 100%;
 }
 
-/* left right button image  */
+/* left-right Button image  */
 .sidebutton {
   width: 140px;
   height: 140px;
