@@ -64,12 +64,14 @@ window.addEventListener("keydown", function (event) {
 
   //________________ B A C K W A R D ________________
   if (event.keyCode === arrowDown) {
-    document.getElementById("box").style.backgroundImage = "url('assets/down_on.png')";
+    document.getElementById("box").style.backgroundImage = "url('assets/up_on.png')";
+    document.getElementById("box").style.transform = "rotate(180deg)";
 
     // action link
     // location.href = "https://bot-car-ip/BACKWARD";
   } else if (event.keyCode === keyS) {
-    document.getElementById("box").style.backgroundImage = "url('assets/down_on.png')";
+    document.getElementById("box").style.backgroundImage = "url('assets/up_on.png')";
+    document.getElementById("box").style.transform = "rotate(180deg)";
 
     // action link
     // location.href = "https://bot-car-ip/BACKWARD";
@@ -140,11 +142,13 @@ window.addEventListener("keyup", function (event) {
   //________________ B A C K W A R D ________________
   if (event.keyCode === arrowDown) {
     document.getElementById("box").style.backgroundImage = "url('')";
+    document.getElementById("box").style.transform = "rotate(0deg)";
 
     // action link
     // location.href = "https://bot-car-ip/STOP";
   } else if (event.keyCode === keyS) {
     document.getElementById("box").style.backgroundImage = "url('')";
+    document.getElementById("box").style.transform = "rotate(0deg)";
 
     // action link
     // location.href = "https://bot-car-ip/STOP";
