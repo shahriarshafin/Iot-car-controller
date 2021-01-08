@@ -43,6 +43,8 @@ window.addEventListener("keydown", function (event) {
   //____________________ S T O P ____________________
   if (event.keyCode === keySpace) {
     document.getElementById("brake").play();
+    document.getElementById("left").style.opacity = "1.0";
+    document.getElementById("right").style.opacity = "1.0";
     // action link
     // location.href = "https://bot-car-ip/STOP";
   }
@@ -122,6 +124,8 @@ window.addEventListener("keyup", function (event) {
   if (event.keyCode === keySpace) {
     document.getElementById("brake").pause();
     brake.currentTime = 0;
+    document.getElementById("left").style.opacity = "0.2";
+    document.getElementById("right").style.opacity = "0.2";
   }
 
   //_________________ F O R W A R D _________________
