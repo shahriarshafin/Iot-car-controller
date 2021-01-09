@@ -1,5 +1,5 @@
 # wificarcontroller
-http://wificarcontroller.shahriarshafin.me
+https://wificarcontroller.netlify.app/
 ## This is a web application that can control Nodemcu bot-Car and stream live footage with ip address
 
 ## License
