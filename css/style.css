@@ -69,9 +69,9 @@ select:-webkit-autofill:focus {
 
 /* left-right Button image  */
 .sidebutton {
-  width: 140px;
-  height: 140px;
   opacity: 0.2;
+  width: 20%;
+  height: auto;
 }
 
 /* left-right(180deg) --> right */
