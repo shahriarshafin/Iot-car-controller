@@ -2,6 +2,8 @@
 19-Oct-2020*/
 
 body {
+  margin: 0 0;
+  padding: 0 0;
   overflow: hidden;
   box-sizing: border-box;
   background-color: #1f1f29;
@@ -17,21 +19,35 @@ body {
 /* input form  */
 form {
   color: #fff;
-  display: inline-block;
+  font-family: "Roboto Mono", monospace;
+  margin-left: 5px;
 }
 
 /* input box */
 input[type="url"],
 textarea {
   background-color: #07ffea1f;
-  color: #fff;
-  padding: 7px 20px;
-  margin-top: 10px;
-  border: 2px solid rgb(255, 255, 255);
+  color: #ffffff;
+  padding: 7px 3px;
+  margin-top: 9px;
+  border: 2px solid rgb(0, 204, 255);
   border-radius: 4px;
+  width: 20%;
+  max-width:165px ;
+  font-size: 13px;
 }
 
-/* autocomplete styles */
+/* focus  */
+input:focus {
+  background-color: rgba(8, 231, 27, 0.534);
+}
+
+/* placeholder color */
+input::placeholder {
+  color: rgba(255, 255, 255, 0.575);
+}
+
+/* input autocomplete styles */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -46,14 +62,30 @@ select:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s;
 }
 
+/* connect button */
+#connectBtn{
+  background-color:#004263da;
+  border: 2px solid rgb(0, 204, 255);
+  color: rgb(253, 253, 253);
+  margin-left:70px;
+  width: 20%;
+  max-width:165px ;
+  padding: 7px 3px;
+  text-align: center;
+  font-size: 13px;
+  border-radius: 5px;
+  
+}
+
+
 /* HIDDEN BOX */
 #box {
   position: absolute;
   top: 10%;
   left: 50%;
   margin-left: -70px;
-  width: 140px;
-  height: 140px;
+  width: 110px;
+  height: 110px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -75,7 +107,7 @@ select:-webkit-autofill:focus {
 }
 
 /* left-right(180deg) --> right */
-#right{
+#right {
   transform: rotate(180deg);
 }
 /* ---------------------------------SpeedMeter----------------------------- */
@@ -98,7 +130,12 @@ select:-webkit-autofill:focus {
   position: relative;
   width: 10rem;
   height: 10rem;
-  background-color: rgba(255, 255, 255, 0); /* opacity-------------------------------------------------------------------*/
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0
+  ); /* opacity-------------------------------------------------------------------*/
   border-radius: 50%;
   margin: 0 0.7rem 1rem; /* down gap......1.6.............................................................*/
   box-shadow: inset 0 3px 6px rgb(255, 255, 255),
@@ -113,7 +150,12 @@ select:-webkit-autofill:focus {
   top: -3.5%;
   bottom: -3.5%;
   border-radius: 50%;
-  background: rgba(0, 38, 255, 0.144); /* opacity---------------------------------------------------------------- */
+  background: rgba(
+    0,
+    38,
+    255,
+    0.144
+  ); /* opacity---------------------------------------------------------------- */
   z-index: -1;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.644), 0 6px 6px rgba(0, 0, 0, 0.23);
 }

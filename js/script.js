@@ -45,6 +45,7 @@ window.addEventListener("keydown", function (event) {
     document.getElementById("brake").play();
     document.getElementById("left").style.opacity = "1.0";
     document.getElementById("right").style.opacity = "1.0";
+    
     // action link
     // location.href = "https://bot-car-ip/STOP";
   }
@@ -52,6 +53,7 @@ window.addEventListener("keydown", function (event) {
   //_________________ F O R W A R D _________________
   if (event.keyCode === arrowUp) {
     document.getElementById("box").style.backgroundImage = "url('assets/up_on.png')";
+    // document.getElementById("box").style.backgroundSize = "60px 60% ";
 
     // action link
     // location.href = "https://bot-car-ip/FORWARD";
