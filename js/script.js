@@ -9,7 +9,7 @@ function tutorial() {
 }
 //---------------------------------------------------
 
-//--------------------- IP OF CAM -------------------
+//------------------- Getting Cam IP -----------------
 function getIp() {
   var x = "url('";
   var y = document.getElementById("ip_cam").value;
@@ -45,9 +45,9 @@ window.addEventListener("keydown", function (event) {
     document.getElementById("brake").play();
     document.getElementById("left").style.opacity = "1.0";
     document.getElementById("right").style.opacity = "1.0";
-    
+
     // action link
-    // location.href = "https://bot-car-ip/STOP";
+    // location.href = document.getElementById("ip_engine").value+"/stop";  
   }
 
   //_________________ F O R W A R D _________________
@@ -56,13 +56,13 @@ window.addEventListener("keydown", function (event) {
     // document.getElementById("box").style.backgroundSize = "60px 60% ";
 
     // action link
-    // location.href = "https://bot-car-ip/FORWARD";
+    // location.href = document.getElementById("ip_engine").value+"/forward";
   } else if (event.keyCode === keyW) {
     //W
     document.getElementById("box").style.backgroundImage = "url('assets/up_on.png')";
 
     // action link
-    // location.href = "https://bot-car-ip/FORWARD";
+     // location.href = document.getElementById("ip_engine").value+"/forward";
   }
 
   //________________ B A C K W A R D ________________
@@ -71,13 +71,13 @@ window.addEventListener("keydown", function (event) {
     document.getElementById("box").style.transform = "rotate(180deg)";
 
     // action link
-    // location.href = "https://bot-car-ip/BACKWARD";
+    // location.href = document.getElementById("ip_engine").value+"/backward";
   } else if (event.keyCode === keyS) {
     document.getElementById("box").style.backgroundImage = "url('assets/up_on.png')";
     document.getElementById("box").style.transform = "rotate(180deg)";
 
     // action link
-    // location.href = "https://bot-car-ip/BACKWARD";
+    // location.href = document.getElementById("ip_engine").value+"/backward";
   }
 
   // ____________________ L E F T ___________________
@@ -85,12 +85,12 @@ window.addEventListener("keydown", function (event) {
     document.getElementById("left").style.opacity = "1.0";
 
     // action link
-    // location.href = "https://bot-car-ip/LEFT;
+    // location.href = document.getElementById("ip_engine").value+"left";
   } else if (event.keyCode === keyA) {
     document.getElementById("left").style.opacity = "1.0";
 
     // action link
-    // location.href = "https://bot-car-ip/LEFT";
+    // location.href = document.getElementById("ip_engine").value+"/left";
   }
 
   //____________________ R I G H T __________________
@@ -98,12 +98,12 @@ window.addEventListener("keydown", function (event) {
     document.getElementById("right").style.opacity = "1.0";
 
     // action link
-    // location.href = "https://bot-car-ip/RIGHT";
+    // location.href = document.getElementById("ip_engine").value+"/right";
   } else if (event.keyCode === keyD) {
     document.getElementById("right").style.opacity = "1.0";
 
     // action link
-    // location.href = "https://bot-car-ip/RIGHT";
+    // location.href = document.getElementById("ip_engine").value+"/right";
   }
 });
 //----------------------------------------------------
@@ -121,7 +121,7 @@ window.addEventListener("keyup", function (event) {
     document.getElementById("sound").pause();
     sound.currentTime = 0;
   }
-  
+
   //BRAKE
   if (event.keyCode === keySpace) {
     document.getElementById("brake").pause();
@@ -135,12 +135,12 @@ window.addEventListener("keyup", function (event) {
     document.getElementById("box").style.backgroundImage = "url('')";
 
     // action link
-    // location.href = "https://bot-car-ip/STOP";
+    // location.href = document.getElementById("ip_engine").value+"/stop";
   } else if (event.keyCode === keyW) {
     document.getElementById("box").style.backgroundImage = "url('')";
 
     // action link
-    // location.href = "https://bot-car-ip/STOP";
+    // location.href = document.getElementById("ip_engine").value+"/stop";
   }
 
   //________________ B A C K W A R D ________________
@@ -149,13 +149,13 @@ window.addEventListener("keyup", function (event) {
     document.getElementById("box").style.transform = "rotate(0deg)";
 
     // action link
-    // location.href = "https://bot-car-ip/STOP";
+    // location.href = document.getElementById("ip_engine").value+"/stop";
   } else if (event.keyCode === keyS) {
     document.getElementById("box").style.backgroundImage = "url('')";
     document.getElementById("box").style.transform = "rotate(0deg)";
 
     // action link
-    // location.href = "https://bot-car-ip/STOP";
+    // location.href = document.getElementById("ip_engine").value+"/stop";
   }
 
   // ____________________ L E F T ___________________
@@ -163,12 +163,12 @@ window.addEventListener("keyup", function (event) {
     document.getElementById("left").style.opacity = "0.2";
 
     // action link
-    // location.href = "https://bot-car-ip/STOP";
+    // location.href = document.getElementById("ip_engine").value+"/stop";
   } else if (event.keyCode === keyA) {
     document.getElementById("left").style.opacity = "0.2";
 
     // action link
-    // location.href = "https://bot-car-ip/STOP";
+   //  location.href = document.getElementById("ip_engine").value+"/stop";
   }
 
   //___________________ R I G H T ___________________
@@ -176,12 +176,12 @@ window.addEventListener("keyup", function (event) {
     document.getElementById("right").style.opacity = "0.2";
 
     // action link
-    // location.href = "https://bot-car-ip/STOP";
+    // location.href = document.getElementById("ip_engine").value+"/stop";
   } else if (event.keyCode === keyD) {
     document.getElementById("right").style.opacity = "0.2";
 
     // action link
-    // location.href = "https://bot-car-ip/STOP";
+    // location.href = document.getElementById("ip_engine").value+"/stop";
   }
 });
 //-------------------------------------------------------------------------
