@@ -50,7 +50,8 @@ window.addEventListener("keydown", function (event) {
     document.getElementById("right").style.opacity = "1.0";
 
     // action link
-    // location.href = document.getElementById("ip_engine").value+"/stop";  
+    document.getElementById("cmdip").href = document.getElementById("ip_engine").value+"stop";
+    document.getElementById("cmdip").click();
   }
 
   //_________________ F O R W A R D _________________
@@ -59,13 +60,15 @@ window.addEventListener("keydown", function (event) {
     // document.getElementById("box").style.backgroundSize = "60px 60% ";
 
     // action link
-    // location.href = document.getElementById("ip_engine").value+"/forward";
+    document.getElementById("cmdip").href = document.getElementById("ip_engine").value+"forward";
+    document.getElementById("cmdip").click();
   } else if (event.keyCode === keyW) {
     //W
     document.getElementById("box").style.backgroundImage = "url('assets/up_on.png')";
 
     // action link
-     // location.href = document.getElementById("ip_engine").value+"/forward";
+    document.getElementById("cmdip").href = document.getElementById("ip_engine").value+"forward";
+    document.getElementById("cmdip").click();
   }
 
   //________________ B A C K W A R D ________________
@@ -74,13 +77,15 @@ window.addEventListener("keydown", function (event) {
     document.getElementById("box").style.transform = "rotate(180deg)";
 
     // action link
-    // location.href = document.getElementById("ip_engine").value+"/backward";
+    document.getElementById("cmdip").href = document.getElementById("ip_engine").value+"backward";
+    document.getElementById("cmdip").click();
   } else if (event.keyCode === keyS) {
     document.getElementById("box").style.backgroundImage = "url('assets/up_on.png')";
     document.getElementById("box").style.transform = "rotate(180deg)";
 
     // action link
-    // location.href = document.getElementById("ip_engine").value+"/backward";
+    document.getElementById("cmdip").href = document.getElementById("ip_engine").value+"backward";
+    document.getElementById("cmdip").click();
   }
 
   // ____________________ L E F T ___________________
@@ -88,12 +93,14 @@ window.addEventListener("keydown", function (event) {
     document.getElementById("left").style.opacity = "1.0";
 
     // action link
-    // location.href = document.getElementById("ip_engine").value+"left";
+    document.getElementById("cmdip").href = document.getElementById("ip_engine").value+"left";
+    document.getElementById("cmdip").click();
   } else if (event.keyCode === keyA) {
     document.getElementById("left").style.opacity = "1.0";
 
     // action link
-    // location.href = document.getElementById("ip_engine").value+"/left";
+    document.getElementById("cmdip").href = document.getElementById("ip_engine").value+"left";
+    document.getElementById("cmdip").click();
   }
 
   //____________________ R I G H T __________________
@@ -101,12 +108,14 @@ window.addEventListener("keydown", function (event) {
     document.getElementById("right").style.opacity = "1.0";
 
     // action link
-    // location.href = document.getElementById("ip_engine").value+"/right";
+    document.getElementById("cmdip").href = document.getElementById("ip_engine").value+"right";
+    document.getElementById("cmdip").click();
   } else if (event.keyCode === keyD) {
     document.getElementById("right").style.opacity = "1.0";
 
     // action link
-    // location.href = document.getElementById("ip_engine").value+"/right";
+    document.getElementById("cmdip").href = document.getElementById("ip_engine").value+"right";
+    document.getElementById("cmdip").click();
   }
 });
 //----------------------------------------------------
@@ -138,12 +147,14 @@ window.addEventListener("keyup", function (event) {
     document.getElementById("box").style.backgroundImage = "url('')";
 
     // action link
-    // location.href = document.getElementById("ip_engine").value+"/stop";
+    document.getElementById("cmdip").href = document.getElementById("ip_engine").value+"stop";
+    document.getElementById("cmdip").click();
   } else if (event.keyCode === keyW) {
     document.getElementById("box").style.backgroundImage = "url('')";
 
     // action link
-    // location.href = document.getElementById("ip_engine").value+"/stop";
+    document.getElementById("cmdip").href = document.getElementById("ip_engine").value+"stop";
+    document.getElementById("cmdip").click();
   }
 
   //________________ B A C K W A R D ________________
@@ -152,13 +163,15 @@ window.addEventListener("keyup", function (event) {
     document.getElementById("box").style.transform = "rotate(0deg)";
 
     // action link
-    // location.href = document.getElementById("ip_engine").value+"/stop";
+    document.getElementById("cmdip").href = document.getElementById("ip_engine").value+"stop";
+    document.getElementById("cmdip").click();
   } else if (event.keyCode === keyS) {
     document.getElementById("box").style.backgroundImage = "url('')";
     document.getElementById("box").style.transform = "rotate(0deg)";
 
     // action link
-    // location.href = document.getElementById("ip_engine").value+"/stop";
+    document.getElementById("cmdip").href = document.getElementById("ip_engine").value+"stop";
+    document.getElementById("cmdip").click();
   }
 
   // ____________________ L E F T ___________________
@@ -166,12 +179,14 @@ window.addEventListener("keyup", function (event) {
     document.getElementById("left").style.opacity = "0.2";
 
     // action link
-    // location.href = document.getElementById("ip_engine").value+"/stop";
+    document.getElementById("cmdip").href = document.getElementById("ip_engine").value+"stop";
+    document.getElementById("cmdip").click();
   } else if (event.keyCode === keyA) {
     document.getElementById("left").style.opacity = "0.2";
 
     // action link
-   //  location.href = document.getElementById("ip_engine").value+"/stop";
+    document.getElementById("cmdip").href = document.getElementById("ip_engine").value+"stop";
+    document.getElementById("cmdip").click();
   }
 
   //___________________ R I G H T ___________________
@@ -179,12 +194,14 @@ window.addEventListener("keyup", function (event) {
     document.getElementById("right").style.opacity = "0.2";
 
     // action link
-    // location.href = document.getElementById("ip_engine").value+"/stop";
+    document.getElementById("cmdip").href = document.getElementById("ip_engine").value+"stop";
+    document.getElementById("cmdip").click();
   } else if (event.keyCode === keyD) {
     document.getElementById("right").style.opacity = "0.2";
 
     // action link
-    // location.href = document.getElementById("ip_engine").value+"/stop";
+    document.getElementById("cmdip").href = document.getElementById("ip_engine").value+"stop";
+    document.getElementById("cmdip").click();
   }
 });
 //-------------------------------------------------------------------------
