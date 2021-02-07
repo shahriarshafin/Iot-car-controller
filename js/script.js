@@ -39,12 +39,12 @@ var keyEnter = 13;
 //--------------------- KEY DOWN --------------------
 window.addEventListener("keydown", function (event) {
   //SOUND_HORN
-  if (event.keyCode === keyH) {
+  if (event.keyCode == keyH) {
     document.getElementById("sound").play();
   }
 
   //____________________ S T O P ____________________
-  if (event.keyCode === keySpace) {
+  if (event.keyCode == keySpace) {
     document.getElementById("brake").play();
     document.getElementById("left").style.opacity = "1.0";
     document.getElementById("right").style.opacity = "1.0";
@@ -55,14 +55,14 @@ window.addEventListener("keydown", function (event) {
   }
 
   //_________________ F O R W A R D _________________
-  if (event.keyCode === arrowUp) {
+  if (event.keyCode == arrowUp) {
     document.getElementById("box").style.backgroundImage = "url('assets/up_on.png')";
     // document.getElementById("box").style.backgroundSize = "60px 60% ";
 
     // action link
     document.getElementById("cmdip").href = document.getElementById("ip_engine").value+"/forward";
     document.getElementById("cmdip").click();
-  } else if (event.keyCode === keyW) {
+  } else if (event.keyCode == keyW) {
     //W
     document.getElementById("box").style.backgroundImage = "url('assets/up_on.png')";
 
@@ -72,14 +72,14 @@ window.addEventListener("keydown", function (event) {
   }
 
   //________________ B A C K W A R D ________________
-  if (event.keyCode === arrowDown) {
+  if (event.keyCode == arrowDown) {
     document.getElementById("box").style.backgroundImage = "url('assets/up_on.png')";
     document.getElementById("box").style.transform = "rotate(180deg)";
 
     // action link
     document.getElementById("cmdip").href = document.getElementById("ip_engine").value+"/backward";
     document.getElementById("cmdip").click();
-  } else if (event.keyCode === keyS) {
+  } else if (event.keyCode == keyS) {
     document.getElementById("box").style.backgroundImage = "url('assets/up_on.png')";
     document.getElementById("box").style.transform = "rotate(180deg)";
 
@@ -89,13 +89,13 @@ window.addEventListener("keydown", function (event) {
   }
 
   // ____________________ L E F T ___________________
-  if (event.keyCode === arrowLeft) {
+  if (event.keyCode == arrowLeft) {
     document.getElementById("left").style.opacity = "1.0";
 
     // action link
     document.getElementById("cmdip").href = document.getElementById("ip_engine").value+"/left";
     document.getElementById("cmdip").click();
-  } else if (event.keyCode === keyA) {
+  } else if (event.keyCode == keyA) {
     document.getElementById("left").style.opacity = "1.0";
 
     // action link
@@ -104,13 +104,13 @@ window.addEventListener("keydown", function (event) {
   }
 
   //____________________ R I G H T __________________
-  if (event.keyCode === arrowRight) {
+  if (event.keyCode == arrowRight) {
     document.getElementById("right").style.opacity = "1.0";
 
     // action link
     document.getElementById("cmdip").href = document.getElementById("ip_engine").value+"/right";
     document.getElementById("cmdip").click();
-  } else if (event.keyCode === keyD) {
+  } else if (event.keyCode == keyD) {
     document.getElementById("right").style.opacity = "1.0";
 
     // action link
@@ -123,19 +123,19 @@ window.addEventListener("keydown", function (event) {
 //------------------------ KEY UP --------------------
 window.addEventListener("keyup", function (event) {
   //CONNECT_BUTTON_PRESSED
-  if (event.keyCode === keyEnter) {
+  if (event.keyCode == keyEnter) {
     event.preventDefault();
     document.getElementById("connectBtn").click();
   }
 
   //HORN_OFF
-  if (event.keyCode === keyH) {
+  if (event.keyCode == keyH) {
     document.getElementById("sound").pause();
     sound.currentTime = 0;
   }
 
   //BRAKE
-  if (event.keyCode === keySpace) {
+  if (event.keyCode == keySpace) {
     document.getElementById("brake").pause();
     brake.currentTime = 0;
     document.getElementById("left").style.opacity = "0.2";
@@ -143,13 +143,13 @@ window.addEventListener("keyup", function (event) {
   }
 
   //_________________ F O R W A R D _________________
-  if (event.keyCode === arrowUp) {
+  if (event.keyCode == arrowUp) {
     document.getElementById("box").style.backgroundImage = "url('')";
 
     // action link
     document.getElementById("cmdip").href = document.getElementById("ip_engine").value+"/stop";
     document.getElementById("cmdip").click();
-  } else if (event.keyCode === keyW) {
+  } else if (event.keyCode == keyW) {
     document.getElementById("box").style.backgroundImage = "url('')";
 
     // action link
@@ -158,14 +158,14 @@ window.addEventListener("keyup", function (event) {
   }
 
   //________________ B A C K W A R D ________________
-  if (event.keyCode === arrowDown) {
+  if (event.keyCode == arrowDown) {
     document.getElementById("box").style.backgroundImage = "url('')";
     document.getElementById("box").style.transform = "rotate(0deg)";
 
     // action link
     document.getElementById("cmdip").href = document.getElementById("ip_engine").value+"/stop";
     document.getElementById("cmdip").click();
-  } else if (event.keyCode === keyS) {
+  } else if (event.keyCode == keyS) {
     document.getElementById("box").style.backgroundImage = "url('')";
     document.getElementById("box").style.transform = "rotate(0deg)";
 
@@ -175,13 +175,13 @@ window.addEventListener("keyup", function (event) {
   }
 
   // ____________________ L E F T ___________________
-  if (event.keyCode === arrowLeft) {
+  if (event.keyCode == arrowLeft) {
     document.getElementById("left").style.opacity = "0.2";
 
     // action link
     document.getElementById("cmdip").href = document.getElementById("ip_engine").value+"/stop";
     document.getElementById("cmdip").click();
-  } else if (event.keyCode === keyA) {
+  } else if (event.keyCode == keyA) {
     document.getElementById("left").style.opacity = "0.2";
 
     // action link
@@ -190,13 +190,13 @@ window.addEventListener("keyup", function (event) {
   }
 
   //___________________ R I G H T ___________________
-  if (event.keyCode === arrowRight) {
+  if (event.keyCode == arrowRight) {
     document.getElementById("right").style.opacity = "0.2";
 
     // action link
     document.getElementById("cmdip").href = document.getElementById("ip_engine").value+"/stop";
     document.getElementById("cmdip").click();
-  } else if (event.keyCode === keyD) {
+  } else if (event.keyCode == keyD) {
     document.getElementById("right").style.opacity = "0.2";
 
     // action link
