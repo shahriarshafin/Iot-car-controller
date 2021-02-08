@@ -1,0 +1,112 @@
+/*copyright https://github.com/ShahriarShafin
+19-Oct-2020*/
+
+body {
+    margin: 0 0;
+    padding: 0 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: #1f1f29;
+    background-image: url("../assets/Camerror.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*use these 2 line for full size stream. But ratio will be compressed.*/
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    /*---------------------------------------*/
+  }
+  
+  /* input form  */
+  form {
+    color: #fff;
+    font-family: "Roboto Mono", monospace;
+    margin-left: 5px;
+  }
+  
+  /* input box */
+  input[type="url"],
+  textarea {
+    background-color: #07ffea1f;
+    color: #ffffff;
+    padding: 7px 3px;
+    margin-top: 9px;
+    border: 2px solid rgb(0, 204, 255);
+    border-radius: 4px;
+    width: 20%;
+    max-width:165px ;
+    font-size: 13px;
+  }
+  
+  /* focus  */
+  input:focus {
+    background-color: rgba(8, 231, 27, 0.534);
+  }
+  
+  /* placeholder color */
+  input::placeholder {
+    color: rgba(255, 255, 255, 0.575);
+  }
+  
+  /* input autocomplete styles */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    -webkit-box-shadow: 0 0 0px 1000px #07ffea1f inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+  
+  /* connect button */
+  #connectBtn{
+    background-color:#004263da;
+    border: 2px solid rgb(0, 204, 255);
+    color: rgb(253, 253, 253);
+    margin-left:70px;
+    width: 20%;
+    max-width:165px ;
+    padding: 7px 3px;
+    text-align: center;
+    font-size: 13px;
+    border-radius: 5px;
+    
+  }
+  
+  
+  /* HIDDEN BOX */
+  #box {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    margin-left: -70px;
+    width: 110px;
+    height: 110px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* left-right Button Table  */
+  .table {
+    position: absolute;
+    top: 25%;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  /* left-right Button image  */
+  .sidebutton {
+    opacity: 0.2;
+    width: 20%;
+    height: auto;
+  }
+  
+  /* left-right(180deg) --> right */
+  #right {
+    transform: rotate(180deg);
+  }
