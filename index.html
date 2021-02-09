@@ -5,6 +5,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" href="assets/favicon.png" type="image/gif" sizes="16x16">
+	<!-- FONT AWESOME  -->
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css'>
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/style.css">
 	<title>Wifi Car Controller | Shafin D_bot</title>
@@ -13,6 +15,67 @@
 <!-- TUTORIAL  -->
 
 <body onload="tutorial()">
+	<!--------------------------------- START POP UP --------------------------------------->
+	<div id="myModal" class="modal">
+		<div class="modal-content">
+			<div class="modal-header">
+				<span class="close">&times;</span>
+				<h2>Wifi Car Controller</h2>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="column">
+						<img class="logo" src="assets/icon.png">
+						<h2 class="dev">Shahriar Shafin</h2>
+						<div class="social-buttons">
+							<a href="#" class="social-buttons__button social-button social-button--facebook"
+								aria-label="Facebook">
+								<span class="social-button__inner">
+									<i class="fab fa-facebook-f"></i>
+								</span>
+							</a>
+							<a href="#" class="social-buttons__button social-button social-button--linkedin"
+								aria-label="LinkedIn">
+								<span class="social-button__inner">
+									<i class="fab fa-linkedin-in"></i>
+								</span>
+							</a>
+							<a href="#" class="social-buttons__button social-button social-button--snapchat"
+								aria-label="SnapChat">
+								<span class="social-button__inner">
+									<i class="fab fa-snapchat-ghost"></i>
+								</span>
+							</a>
+							<a href="#" class="social-buttons__button social-button social-button--github"
+								aria-label="GitHub">
+								<span class="social-button__inner">
+									<i class="fab fa-github"></i>
+								</span>
+							</a>
+						</div>
+					</div>
+					<div class="separator"></div>
+					<div class="column">
+						<h2>Controlling Guide:</h2>
+						<ul>
+							<li>Connect with Cam & Engine IP</li>
+							<li>Control - W,A,S,D or Arrow keys</li>
+							<li>Change Gear - Shift, L</li>
+							<li>Horn - H</li>
+							<li>Brake - Space</li>
+						</ul>
+					</div>
+				</div>
+				<h3>Please <a href="https://wificarcontroller.netlify.app/">reload</a>, if you encounter any problems.
+				</h3>
+			</div>
+			<div class="modal-footer">
+				<!-- i am footer  -->
+			</div>
+		</div>
+	</div>
+	<!--------------------------------- END POP UP --------------------------------------->
+
 	<!-------------------------------START IP ADDRESS------------------------------------->
 	<form class="ipform">
 		<label>CAM IP:</label>

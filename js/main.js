@@ -3,15 +3,35 @@
 
 //---------------------- NOTIFIER -------------------
 function tutorial() {
-    if(window.innerHeight > window.innerWidth){
-      alert("Please rotate screen to landscape mode and reload !");
-    }
-   else{
-     alert("Controlling Guide :\n  1. Insert IP of Cam, IP of Engine & Press CONNECT.\n  2. Control - W,A,S,D or Arrow keys\n  3. Change Gear - Shift, L\n  4. Horn - H\n  5. Brake - Space\n ' Please reload this page If you encounter any Problems '");
-       }
+  if(window.innerHeight > window.innerWidth){
+    alert("Please rotate screen to landscape mode and reload !");
   }
+ else{
+    modal.style.display = "block";
+     }
+}
   //---------------------------------------------------
-  
+
+   //----------------------- POP UP --------------------
+		// Get the modal
+    var modal = document.getElementById("myModal");
+    
+		// Get the <span> element
+		var span = document.getElementsByClassName("close")[0];
+
+		// close the modal
+		span.onclick = function () {
+			modal.style.display = "none";
+		}
+
+		// clicks outside of the modal
+		window.onclick = function (event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+  //---------------------------------------------------
+
   //------------------- Getting Cam IP -----------------
   function getIp() {
     var x = "url('";
