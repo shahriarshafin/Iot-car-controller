@@ -72,7 +72,7 @@
   float: left;
   width: 50%;
   padding: 10px;
-  height: 300px;
+  height: 250px;
   background-color:#5cb85c44;
 }
 .separator {
@@ -94,6 +94,16 @@
     border-right: none;
     }
 }
+@media only screen and (min-width: 600px) {
+  .modal-content {
+    width: 64%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .modal-content {
+    width: 50%;
+  }
+} 
 
 .logo{
   width: 100px;
@@ -112,10 +122,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 0px;
 }
 .social-buttons__button {
-  margin: 10px 5px 0;
+  margin: 0px 4px 0;
 }
 .social-button {
   position: relative;
@@ -145,7 +155,7 @@
   transition: 0.3s;
 }
 .social-button i {
-  font-size: 28px;
+  font-size: 20px;
 }
 .social-button svg {
   height: 40%;
