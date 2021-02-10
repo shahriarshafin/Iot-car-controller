@@ -85,7 +85,8 @@
   clear: both;
 }
 
-@media screen and (max-width: 600px) {
+/* media  */
+@media screen and (max-width: 880px) {
   .column {
     width: 100%;
   }
@@ -94,16 +95,12 @@
     border-right: none;
     }
 }
-@media only screen and (min-width: 600px) {
-  .modal-content {
-    width: 64%;
-  }
-}
 @media only screen and (min-width: 768px) {
   .modal-content {
     width: 50%;
   }
 } 
+/* media  */
 
 .logo{
   width: 100px;
@@ -112,9 +109,18 @@
   margin-left: auto; 
   margin-right: auto;
 }
-.dev{
+.version{
   color: #FF6347;
   text-align: center;
+  margin: 10px;
+  padding: 0px;
+}
+.developer{
+  text-align: center;
+}
+.developer span{
+  color: #e25555;
+  font-size: 20px;
 }
 
 /*--------------- Social icons ---------------*/
@@ -216,11 +222,11 @@
 .social-button--steam::after {
   background: #7da10e;
 }
-.social-button--snapchat {
-  color: #eec900;
+.social-button--twitter {
+  color: #00acee;
 }
-.social-button--snapchat::after {
-  background: #eec900;
+.social-button--twitter::after {
+  background: #00acee;
 }
 .social-button--twitter {
   color: #55acee;
@@ -241,10 +247,13 @@
   background: #c12127;
 }
 /*--------------- Social icons ---------------*/
-
+/* guide  */
+h2{
+  text-align: center;
+}
+/* points  */
 ul {
-  margin: 19px;
-  padding: 0;
+  margin-left: 13%;
 }
 
 /* ......................main-body.......................  */
