@@ -1,3 +1,5 @@
+
+
 //copyright https://github.com/ShahriarShafin
 //19-Oct-2020
 
@@ -13,6 +15,27 @@ function tutorial() {
   //---------------------------------------------------
 
    //----------------------- POP UP --------------------
+   // loading bar
+   var i = 0;
+function move() {
+  if (i == 0) {
+    i = 1;
+    var elem = document.getElementById("myBar");
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        i = 0;
+        modal.style.display = "none";
+      } else {
+        width++;
+        elem.style.width = width + "%";
+      }
+    }
+  }
+}
+
 		// Get the modal
     var modal = document.getElementById("myModal");
     
@@ -21,13 +44,13 @@ function tutorial() {
 
 		// close the modal
 		span.onclick = function () {
-			modal.style.display = "none";
+      move();
 		}
 
 		// clicks outside of the modal
 		window.onclick = function (event) {
 			if (event.target == modal) {
-				modal.style.display = "none";
+        move();
 			}
 		}
   //---------------------------------------------------

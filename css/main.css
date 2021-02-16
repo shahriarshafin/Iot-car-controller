@@ -60,6 +60,7 @@
 }
 .modal-body h3{
   text-align:center;
+  margin: 5px;
 }
 .modal-footer {
   padding: 2px;
@@ -255,7 +256,19 @@ h2{
 ul {
   margin-left: 13%;
 }
+/* loading bar  */
+#myProgress {
+  width: 40%;
+  background-color: rgba(0, 0, 0, 0.068);
+  margin: auto;
+  margin-top: 5px;
+}
 
+#myBar {
+  width: 0%;
+  height: 10px;
+  background-color:  green;
+}
 /* ......................main-body.......................  */
 body {
     margin: 0 0;
@@ -330,7 +343,6 @@ body {
     text-align: center;
     font-size: 13px;
     border-radius: 5px;
-    
   }
   
   /* HIDDEN BOX */
