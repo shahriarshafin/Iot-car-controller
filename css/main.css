@@ -3,17 +3,17 @@
 
 /*--------------- POP UP ---------------  */
 .modal {
-  display: none; 
-  position: fixed; 
-  z-index: 1; 
-  padding-top: 100px; 
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
   left: 0;
   top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0, 0, 0, 0.658); 
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.658);
   font: normal 14px/1.618em "Roboto", sans-serif;
 }
 .modal-content {
@@ -23,19 +23,31 @@
   padding: 0;
   border: 1px solid rgb(114, 212, 1);
   width: 50%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
   animation-name: animatetop;
   animation-duration: 0.4s;
 }
 @-webkit-keyframes animatetop {
-  from {top:-300px; opacity:0} 
-  to {top:0; opacity:1}
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }
 @keyframes animatetop {
-  from {top:-300px; opacity:0}
-  to {top:0; opacity:1}
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }
 .close {
   color: white;
@@ -45,7 +57,7 @@
 }
 .close:hover,
 .close:focus {
-  color: #FF6347;
+  color: #ff6347;
   text-decoration: none;
   cursor: pointer;
 }
@@ -58,8 +70,8 @@
 .modal-body {
   padding: 2px 5px;
 }
-.modal-body h3{
-  text-align:center;
+.modal-body h3 {
+  text-align: center;
   margin: 5px;
 }
 .modal-footer {
@@ -74,7 +86,7 @@
   width: 50%;
   padding: 10px;
   height: 250px;
-  background-color:#5cb85c44;
+  background-color: #5cb85c44;
 }
 .separator {
   border-right: 2px dashed green;
@@ -92,34 +104,34 @@
     width: 100%;
   }
   .separator {
-    border-bottom: 2px dashed green; 
+    border-bottom: 2px dashed green;
     border-right: none;
-    }
+  }
 }
 @media only screen and (min-width: 768px) {
   .modal-content {
     width: 50%;
   }
-} 
+}
 /* media  */
 
-.logo{
+.logo {
   width: 100px;
   height: 100px;
   display: block;
-  margin-left: auto; 
+  margin-left: auto;
   margin-right: auto;
 }
-.version{
-  color: #FF6347;
+.version {
+  color: #ff6347;
   text-align: center;
   margin: 10px;
   padding: 0px;
 }
-.developer{
+.developer {
   text-align: center;
 }
-.developer span{
+.developer span {
   color: #e25555;
   font-size: 20px;
 }
@@ -179,10 +191,12 @@
   border-radius: 100%;
   transition: 0.3s;
 }
-.social-button:focus, .social-button:hover {
+.social-button:focus,
+.social-button:hover {
   color: #fff;
 }
-.social-button:focus::after, .social-button:hover::after {
+.social-button:focus::after,
+.social-button:hover::after {
   width: 100%;
   height: 100%;
   margin-left: -50%;
@@ -249,7 +263,7 @@
 }
 /*--------------- Social icons ---------------*/
 /* guide  */
-h2{
+h2 {
   text-align: center;
 }
 /* points  */
@@ -267,113 +281,113 @@ ul {
 #myBar {
   width: 0%;
   height: 10px;
-  background-color:  green;
+  background-color: green;
 }
 /* ......................main-body.......................  */
 body {
-    margin: 0 0;
-    padding: 0 0;
-    overflow: hidden;
-    box-sizing: border-box;
-    background-color: #1f1f29;
-    background-image: url("../assets/Camerror.gif");
-    background-repeat: no-repeat;
-    background-size: cover;
-    /*use these 2 line for full size stream. But ratio will be compressed.*/
-    background-size: 100% 100%;
-    background-attachment: fixed;
-    /*---------------------------------------*/
-  }
-  
-  /* input form  */
-  form {
-    color: #fff;
-    font-family: "Roboto Mono", monospace;
-    margin-left: 5px;
-  }
-  
-  /* input box */
-  input[type="url"],
-  textarea {
-    background-color: #07ffea1f;
-    color: #ffffff;
-    padding: 7px 3px;
-    margin-top: 9px;
-    border: 2px solid rgb(0, 204, 255);
-    border-radius: 4px;
-    width: 20%;
-    max-width:165px ;
-    font-size: 13px;
-  }
-  
-  /* focus  */
-  input:focus {
-    background-color: rgba(8, 231, 27, 0.534);
-  }
-  
-  /* placeholder color */
-  input::placeholder {
-    color: rgba(255, 255, 255, 0.575);
-  }
-  
-  /* input autocomplete styles */
-  input:-webkit-autofill,
-  input:-webkit-autofill:hover,
-  input:-webkit-autofill:focus,
-  textarea:-webkit-autofill,
-  textarea:-webkit-autofill:hover,
-  textarea:-webkit-autofill:focus,
-  select:-webkit-autofill,
-  select:-webkit-autofill:hover,
-  select:-webkit-autofill:focus {
-    -webkit-text-fill-color: rgb(255, 255, 255);
-    -webkit-box-shadow: 0 0 0px 1000px #07ffea1f inset;
-    transition: background-color 5000s ease-in-out 0s;
-  }
-  
-  /* connect button */
-  #connectBtn{
-    background-color:#004263da;
-    border: 2px solid rgb(0, 204, 255);
-    color: rgb(253, 253, 253);
-    margin-left:70px;
-    width: 20%;
-    max-width:165px ;
-    padding: 7px 3px;
-    text-align: center;
-    font-size: 13px;
-    border-radius: 5px;
-  }
-  
-  /* HIDDEN BOX */
-  #box {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    margin-left: -70px;
-    width: 110px;
-    height: 110px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  
-  /* left-right Button Table  */
-  .table {
-    position: absolute;
-    top: 25%;
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  /* left-right Button image  */
-  .sidebutton {
-    opacity: 0.2;
-    width: 20%;
-    height: auto;
-  }
-  
-  /* left-right(180deg) --> right */
-  #right {
-    transform: rotate(180deg);
-  }
+  margin: 0 0;
+  padding: 0 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: #1f1f29;
+  background-image: url("../assets/Camerror.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*use these 2 line for full size stream. But ratio will be compressed.*/
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  /*---------------------------------------*/
+}
+
+/* input form  */
+form {
+  color: #fff;
+  font-family: "Roboto Mono", monospace;
+  margin-left: 5px;
+}
+
+/* input box */
+input[type="url"],
+textarea {
+  background-color: #07ffea1f;
+  color: #ffffff;
+  padding: 7px 3px;
+  margin-top: 9px;
+  border: 2px solid rgb(0, 204, 255);
+  border-radius: 4px;
+  width: 20%;
+  max-width: 165px;
+  font-size: 13px;
+}
+
+/* focus  */
+input:focus {
+  background-color: rgba(8, 231, 27, 0.534);
+}
+
+/* placeholder color */
+input::placeholder {
+  color: rgba(255, 255, 255, 0.575);
+}
+
+/* input autocomplete styles */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: rgb(255, 255, 255);
+  -webkit-box-shadow: 0 0 0px 1000px #07ffea1f inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* connect button */
+#connectBtn {
+  background-color: #004263da;
+  border: 2px solid rgb(0, 204, 255);
+  color: rgb(253, 253, 253);
+  margin-left: 70px;
+  width: 20%;
+  max-width: 165px;
+  padding: 7px 3px;
+  text-align: center;
+  font-size: 13px;
+  border-radius: 5px;
+}
+
+/* HIDDEN BOX */
+#box {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  margin-left: -70px;
+  width: 110px;
+  height: 110px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* left-right Button Table  */
+.table {
+  position: absolute;
+  top: 25%;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* left-right Button image  */
+.sidebutton {
+  opacity: 0.2;
+  width: 20%;
+  height: auto;
+}
+
+/* left-right(180deg) --> right */
+#right {
+  transform: rotate(180deg);
+}
