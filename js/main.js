@@ -67,6 +67,10 @@ window.addEventListener("keydown", function (event) {
   //SOUND_HORN
   if (event.code == "KeyH") {
     document.getElementById("sound").play();
+
+      // action link
+      document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/hornon";
+      document.getElementById("cmdip").click();
   }
 
   //____________________ S T O P ____________________
@@ -158,6 +162,9 @@ window.addEventListener("keyup", function (event) {
   if (event.code == "KeyH") {
     document.getElementById("sound").pause();
     sound.currentTime = 0;
+
+    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/hornoff";
+    document.getElementById("cmdip").click();
   }
 
   //BRAKE
