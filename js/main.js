@@ -119,13 +119,13 @@ window.addEventListener("keydown", function (event) {
     document.getElementById("left").style.opacity = "1.0";
 
     // action link
-    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/left";
+    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/turnleft";
     document.getElementById("cmdip").click();
   } else if (event.code == "KeyA") {
     document.getElementById("left").style.opacity = "1.0";
 
     // action link
-    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/left";
+    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/backleft";
     document.getElementById("cmdip").click();
   }
 
@@ -134,13 +134,13 @@ window.addEventListener("keydown", function (event) {
     document.getElementById("right").style.opacity = "1.0";
 
     // action link
-    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/right";
+    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/turnright";
     document.getElementById("cmdip").click();
   } else if (event.code == "KeyD") {
     document.getElementById("right").style.opacity = "1.0";
 
     // action link
-    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/right";
+    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/backright";
     document.getElementById("cmdip").click();
   }
 });
