@@ -1,34 +1,31 @@
 //-------------------- Hide Cursor --------------------
 //------ https://stackoverflow.com/a/31798987/10695029 ------
 
-$(function () {
+$(function() {
   var timer;
   var fadeInBuffer = false;
-  $(document).mousemove(function () {
-  if (!fadeInBuffer) {
-    if (timer) {
-    clearTimeout(timer);
-    timer = 0;
-    }
-    $("html").css({
-    cursor: "",
-    });
-  } else {
-    $("*").css({
-    cursor: "default",
-    });
-    fadeInBuffer = false;
-  }
-
-  timer = setTimeout(function () {
-    $("*").css({
-    cursor: "none",
-    });
-    fadeInBuffer = true;
-  }, 2000);  // time 2 second
+  $(document).mousemove(function() {
+      if (!fadeInBuffer && timer) {
+          clearTimeout(timer);
+          timer = 0;
+          $('html').css({
+              cursor: ''
+          });
+      } else {
+          $('*').css({
+              cursor: 'default'
+          });
+          fadeInBuffer = false;
+      }
+      timer = setTimeout(function() {
+          $('*').css({
+              cursor: 'none'
+          });
+          fadeInBuffer = true;
+      }, 2000) // time 2 seconds
   });
-  $("*").css({
-  cursor: "default",
+  $('*').css({
+      cursor: 'default'
   });
 });
 
