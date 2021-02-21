@@ -1,3 +1,37 @@
+//-------------------- Hide Cursor --------------------
+//------ https://stackoverflow.com/a/31798987/10695029 ------
+
+$(function () {
+  var timer;
+  var fadeInBuffer = false;
+  $(document).mousemove(function () {
+  if (!fadeInBuffer) {
+    if (timer) {
+    clearTimeout(timer);
+    timer = 0;
+    }
+    $("html").css({
+    cursor: "",
+    });
+  } else {
+    $("*").css({
+    cursor: "default",
+    });
+    fadeInBuffer = false;
+  }
+
+  timer = setTimeout(function () {
+    $("*").css({
+    cursor: "none",
+    });
+    fadeInBuffer = true;
+  }, 2000);  // time 2 second
+  });
+  $("*").css({
+  cursor: "default",
+  });
+});
+
 //--------------------------START SPEED METER------------------------------
 //--------------- https://codepen.io/Chmood/pen/MaBZdM --------------------
 
