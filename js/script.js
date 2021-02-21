@@ -204,14 +204,11 @@ document.addEventListener("DOMContentLoaded", function () {
   function keyDown(e) {
     e = e || window.event;
 
-    if (e.keyCode == "38") {
-      // up arrow
+    if (e.keyCode == "37" || e.keyCode == "38" || e.keyCode == "39" || e.keyCode == "87") {
+      // leftArrow, upArrow, rightArrow, w
       isAccelerating = true;
     }
-    if (e.keyCode == 87) {
-      // W key
-      isAccelerating = true;
-    } else if (e.keyCode == "32") {
+     else if (e.keyCode == "32") {
       // spacebar
       isBraking = true;
     } else if (e.keyCode == "76") {
@@ -224,14 +221,11 @@ document.addEventListener("DOMContentLoaded", function () {
   function keyUp(e) {
     e = e || window.event;
 
-    if (e.keyCode == "38") {
-      // up arrow
+    if (e.keyCode == "37" || e.keyCode == "38" || e.keyCode == "39" || e.keyCode == "87") {
+      // leftArrow, upArrow, rightArrow, w
       isAccelerating = false;
     }
-    if (e.keyCode == "87") {
-      // W key
-      isAccelerating = false;
-    } else if (e.keyCode == "32") {
+      else if (e.keyCode == "32") {
       // spacebar
       isBraking = false;
     } else if (e.keyCode == "76") {
