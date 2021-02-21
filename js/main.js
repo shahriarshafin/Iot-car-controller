@@ -85,31 +85,17 @@ window.addEventListener("keydown", function (event) {
   }
 
   //_________________ F O R W A R D _________________
-  if (event.code == "ArrowUp") {
+  if (event.code == "ArrowUp" || event.code == "KeyW") {
     document.getElementById("box").style.backgroundImage = "url('assets/up_on.png')";
     // document.getElementById("box").style.backgroundSize = "60px 60% ";
 
     // action link
     document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/forward";
     document.getElementById("cmdip").click();
-  } else if (event.code == "KeyW") {
-    //W
-    document.getElementById("box").style.backgroundImage = "url('assets/up_on.png')";
-
-    // action link
-    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/forward";
-    document.getElementById("cmdip").click();
-  }
+  } 
 
   //________________ B A C K W A R D ________________
-  if (event.code == "ArrowDown") {
-    document.getElementById("box").style.backgroundImage = "url('assets/up_on.png')";
-    document.getElementById("box").style.transform = "rotate(180deg)";
-
-    // action link
-    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/backward";
-    document.getElementById("cmdip").click();
-  } else if (event.code == "KeyS") {
+  if (event.code == "ArrowDown" || event.code == "KeyS") {
     document.getElementById("box").style.backgroundImage = "url('assets/up_on.png')";
     document.getElementById("box").style.transform = "rotate(180deg)";
 
@@ -180,29 +166,16 @@ window.addEventListener("keyup", function (event) {
   }
 
   //_________________ F O R W A R D _________________
-  if (event.code == "ArrowUp") {
+  if (event.code == "ArrowUp" || event.code == "KeyW") {
     document.getElementById("box").style.backgroundImage = "url('')";
 
     // action link
     document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/stop";
     document.getElementById("cmdip").click();
-  } else if (event.code == "KeyW") {
-    document.getElementById("box").style.backgroundImage = "url('')";
-
-    // action link
-    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/stop";
-    document.getElementById("cmdip").click();
-  }
+  } 
 
   //________________ B A C K W A R D ________________
-  if (event.code == "ArrowDown") {
-    document.getElementById("box").style.backgroundImage = "url('')";
-    document.getElementById("box").style.transform = "rotate(0deg)";
-
-    // action link
-    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/stop";
-    document.getElementById("cmdip").click();
-  } else if (event.code == "KeyS") {
+  if (event.code == "ArrowDown" || event.code == "KeyS") {
     document.getElementById("box").style.backgroundImage = "url('')";
     document.getElementById("box").style.transform = "rotate(0deg)";
 
@@ -210,7 +183,7 @@ window.addEventListener("keyup", function (event) {
     document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/stop";
     document.getElementById("cmdip").click();
   }
-
+  
   // ____________________ L E F T ___________________
   if (event.code == "ArrowLeft") {
     document.getElementById("left").style.opacity = "0.2";
