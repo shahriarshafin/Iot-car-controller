@@ -152,6 +152,8 @@ window.addEventListener("keyup", function (event) {
   //CONNECT_BUTTON_PRESSED
   if (event.code == "Enter") {
     event.preventDefault();
+    document.getElementById("ip_cam").blur();
+    document.getElementById("ip_engine").blur();
     document.getElementById("connectBtn").click();
   }
 
