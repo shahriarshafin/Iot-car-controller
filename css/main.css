@@ -350,13 +350,14 @@ select:-webkit-autofill:focus {
   background-color: #004263da;
   border: 2px solid rgb(0, 204, 255);
   color: rgb(253, 253, 253);
-  margin-left: 70px;
+  margin-left: 77px;
   width: 20%;
   max-width: 165px;
   padding: 7px 3px;
   text-align: center;
   font-size: 13px;
   border-radius: 5px;
+  display: none;
 }
 
 /* HIDDEN BOX */

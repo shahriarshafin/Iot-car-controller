@@ -52,6 +52,12 @@ window.onclick = function (event) {
 }
 //---------------------------------------------------
 
+//-------------------- SHOW BUTTON ------------------
+function showBtn(){
+  document.getElementById("connectBtn").style.display = "block"; 
+}
+//---------------------------------------------------
+
 //------------------- Getting Cam IP -----------------
 function getIp() {
   var x = "url('";
@@ -59,6 +65,7 @@ function getIp() {
   var z = "'), url(assets/Camerror.gif)"; //for invalid input the second one will load
   var xyz = x + y + z; //url('get from y') //ninja technique:D
   document.body.style.backgroundImage = xyz;
+  document.getElementById("connectBtn").style.display = "none"; // hide button
 }
 //---------------------------------------------------
 
