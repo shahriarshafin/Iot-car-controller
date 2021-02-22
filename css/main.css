@@ -304,6 +304,7 @@ form {
   color: #fff;
   font-family: "Roboto Mono", monospace;
   margin-left: 5px;
+  font-style: italic;
 }
 
 /* input box */
@@ -318,11 +319,7 @@ textarea {
   width: 20%;
   max-width: 165px;
   font-size: 13px;
-}
-
-/* focus  */
-input:focus {
-  background-color: rgba(8, 231, 27, 0.534);
+  transform: skew(349deg);
 }
 
 /* placeholder color */
@@ -358,6 +355,7 @@ select:-webkit-autofill:focus {
   font-size: 13px;
   border-radius: 5px;
   display: none;
+  transform: skew(349deg);
 }
 
 /* HIDDEN BOX */
