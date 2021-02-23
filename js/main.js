@@ -1,6 +1,9 @@
 //copyright https://github.com/ShahriarShafin
 //19-Oct-2020
 
+var modal = document.getElementById("myModal");
+var vsett = document.getElementById("settPop");
+var span = document.getElementsByClassName("close")[0];
 //---------------------- NOTIFIER -------------------
 function tutorial() {
   if (window.innerHeight > window.innerWidth) {
@@ -11,7 +14,7 @@ function tutorial() {
 }
 //---------------------------------------------------
 
-//----------------------- POP UP --------------------
+//-------------------- POP-UP INTRO -----------------
 // loading bar
 var i = 0;
 function move() {
@@ -32,25 +35,33 @@ function move() {
     }
   }
 }
-
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the <span> element
-var span = document.getElementsByClassName("close")[0];
-
-// close the modal
+// end loading bar
 span.onclick = function () {
   move();
 }
-
 // clicks outside of the modal
 window.onclick = function (event) {
   if (event.target == modal) {
     move();
   }
+  else if (event.target == vsett) {
+    settNone();
+  }
 }
-//---------------------------------------------------
+//------------- ---- END POP-UP INTRO ----------
+
+//------------------ POP-UP SETTINGS -----------
+function settings(){
+  settPop.style.display = "block";
+  settIcon.style.transform = "rotate(180deg)";
+  settIcon.style.setProperty("-webkit-transition", "-webkit-transform 0.3s ease-in");
+}
+function settNone(){
+  settPop.style.display = "none";
+  settIcon.style.transform = "rotate(0deg)";
+  settIcon.style.setProperty("-webkit-transition", "-webkit-transform 0.3s ease-in");
+}
+//----------------------------------------------
 
 //-------------------- SHOW BUTTON ------------------
 function showBtn(){

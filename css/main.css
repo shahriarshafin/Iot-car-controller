@@ -358,6 +358,15 @@ select:-webkit-autofill:focus {
   transform: skew(349deg);
 }
 
+/* SETTINGS BUTTON */
+.settClass{
+  position: fixed;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 45px;
+  height: auto;
+}
+
 /* HIDDEN BOX */
 #box {
   position: absolute;

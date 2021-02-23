@@ -81,12 +81,39 @@
 	</div>
 	<!--------------------------------- END POP UP --------------------------------------->
 
+	<!--------------------------------- START SETTINGS --------------------------------------->
+		<div id="settPop" class="modal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<span onclick="settNone()" class="close">&times;</span>
+					<h2>SETTINGS</h2>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="column separator">
+							<h2>Move Parameters</h2>
+						</div>
+						<div class="column">
+							<h2>Others</h2>
+							<!--volume button -->
+							<button class="btn-volume active">♩</button>
+						</div>
+					</div>
+			    </div>       
+				<div class="modal-footer">
+					<!-- i am footer  -->
+				</div>
+			</div>
+		</div>
+		<!--------------------------------- END SETTINGS --------------------------------------->
+
 	<!-------------------------------START IP ADDRESS------------------------------------->
+	<img onclick="settings()" id="settIcon" class="settClass" src="assets/settings.png">
 	<form class="ipform">
 		<label>CAM IP:</label>
 		<input onclick="showBtn()" type="url" id="ip_cam" placeholder="http://camera_ip/video" list="ipList">
 		<datalist id="ipList">
-			<option value="http://192.168.0.106:8080/video">
+			<option value="https://cdn.britannica.com/08/148208-050-B87DCBD3/prototype-sports-cars-Le-Mans-race-American.jpg">
 			<option value="http://192.168.0.111:8080/video">
 		</datalist>
 		<br>
@@ -100,9 +127,6 @@
 		<input type="button" id="connectBtn" onclick="getIp()" value="CONNECT">
 	</form>
 	<!------------------------------- END IP ADDRESS------------------------------------->
-
-	<!--VOLUME BUTTON -->
-	<button class="btn-volume active">♩</button>
 
 	<!---------------------------------START BUTTONS------------------------------------->
 	<iframe id="Iframe" name="Iframe" style="display:none"></iframe>

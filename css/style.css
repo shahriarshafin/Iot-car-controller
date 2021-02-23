@@ -231,9 +231,9 @@
 }
 
 .btn-volume {
-  position: fixed;
-  top: 0.5rem;
-  right: 0.5rem;
+  /* position: fixed; */
+  /* top: 0.5rem; */
+  /* right: 0.5rem; */
   width: 2.5rem;
   height: 2.53rem;
   line-height: 2rem;
