@@ -1,6 +1,7 @@
 //copyright https://github.com/ShahriarShafin
 //19-Oct-2020
 
+// variables 
 var modal = document.getElementById("myModal");
 var vsett = document.getElementById("settPop");
 var span = document.getElementsByClassName("close")[0];
@@ -72,11 +73,13 @@ function showBtn(){
 //------------------- Getting Cam IP -----------------
 function getIp() {
   var x = "url('";
-  var y = document.getElementById("ip_cam").value;
+  var y = document.getElementById("ip_cam").value; //as http://192.168.0.106:8080
+  var y1 = y+"/video";
   var z = "'), url(assets/Camerror.gif)"; //for invalid input the second one will load
-  var xyz = x + y + z; //url('get from y') //ninja technique:D
+  var xyz = x + y1 + z; //url('get from y1') //ninja technique:D
   document.body.style.backgroundImage = xyz;
-  document.getElementById("connectBtn").style.display = "none"; // hide button
+  document.getElementById("camFrame").src = y+"/settings_window.html";
+  document.getElementById("connectBtn").style.display = "none"; // hide connect button
 }
 //---------------------------------------------------
 
