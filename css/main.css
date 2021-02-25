@@ -81,6 +81,24 @@
 /*--------------- POP UP ---------------*/
 
 /*--------------- Column ---------------*/
+
+/* Settings Column */
+.columnSett {
+  float: left;
+  width: 50%;
+  padding: 10px 0px 20px 0px;
+  height: auto;
+  text-align: center;
+  background-color: #5cb85c44;
+}
+
+.camera{
+  padding: 0px;
+  padding-top: 20px;
+  margin: 0px;
+}
+/* Settings  */
+
 .column {
   float: left;
   width: 50%;
@@ -101,6 +119,9 @@
 /* media  */
 @media screen and (max-width: 880px) {
   .column {
+    width: 100%;
+  }
+  .columnSett {
     width: 100%;
   }
   .separator {
@@ -283,6 +304,8 @@ ul {
   height: 10px;
   background-color: green;
 }
+/* end loading bar */
+
 /* ......................main-body.......................  */
 body {
   margin: 0 0;
@@ -323,7 +346,7 @@ textarea {
 }
 
 /* placeholder color */
-input::placeholder {
+input[type="url"]::placeholder {
   color: rgba(255, 255, 255, 0.575);
 }
 

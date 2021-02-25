@@ -65,43 +65,65 @@
 							<li>Change Gear - Shift, L</li>
 							<li>Horn - H</li>
 							<li>Brake - Space</li>
-							<li><a href="https://github.com/ShahriarShafin/wificarcontroller" target="_blank">Tutorial</a></li>
+							<li><a href="#" target="_blank">Tutorial</a></li>
 						</ul>
 					</div>
 				</div>
 					<div id="myProgress">
 						<div id="myBar"></div>
 					</div>
-				<h3 id="reload">Please <a href="index.html">reload</a>, if you encounter any <a href="https://github.com/ShahriarShafin/wificarcontroller/issues" target="_blank">problems</a>.</h3>
+				<h3 id="reload">Please <a href="index.html">reload</a>, if you encounter any <a href="#" target="_blank">problems</a>.</h3>
 			</div>
 			<div class="modal-footer">
 				<!-- i am footer  -->
 			</div>
 		</div>
 	</div>
-	<!--------------------------------- END POP UP --------------------------------------->
+	<!----------------------------------- END POP UP --------------------------------------->
 
 	<!--------------------------------- START SETTINGS --------------------------------------->
-		<div id="settPop" class="modal">
-			<div class="modal-content">
-				<div class="modal-header">
-					<span onclick="settNone()" class="close">&times;</span>
-					<h2>SETTINGS</h2>
-				</div>
-				<div class="modal-body">
-					<div class="row">
-							<!--volume button -->
-							<button class="btn-volume active">♩</button>
-							<h2>Camera Settings</h2>
-							<iframe id="camFrame" src="SET_CAMERA_FIRST." width="100%" height="380" frameborder="0" scrolling="no"></iframe>
-					</div>
-			    </div>       
-				<div class="modal-footer">
-					<!-- i am footer  -->
-				</div>
-			</div>
+	<div id="settPop" class="modal">
+		<div class="modal-content">
+		   <div class="modal-header">
+			  <span onclick="settNone()" class="close">&times;</span>
+			  <h2>SETTINGS</h2>
+		   </div>
+		   <div class="modal-body">
+			  <div class="row">
+					<!--volume button -->
+					<button class="btn-volume active">♩</button>
+				 <h2>Control</h2>
+				 <div class="columnSett">
+					<p>Move Forward</p>
+					<input type="text" placeholder="forward">
+					<p>Turn Left</p>
+					<input type="text" placeholder="turnleft">
+					<p>Turn Back-Left</p>
+					<input type="text" placeholder="backleft">
+					<p>Move Stop</p>
+					<input type="text" placeholder="stop">
+				 </div>
+
+				 <div class="columnSett">
+					<p>Move Backward</p>
+					<input type="text" placeholder="backward">
+					<p>Turn Right</p>
+					<input type="text" placeholder="turnright">
+					<p>Turn Back-Right</p>
+					<input type="text" placeholder="backright">
+					<p>Move Stop</p>
+					<input type="text" placeholder="stop">
+				 </div>
+			  </div>
+			  <h2 class="camera">Camera</h2>
+			  <iframe id="camFrame" src="SET_CAMERA_FIRST." width="100%" height="380" frameborder="0" scrolling="no"></iframe>		
+			  <div class="modal-footer">
+				 <!-- i am footer  -->
+			  </div>
+		   </div>
 		</div>
-		<!--------------------------------- END SETTINGS --------------------------------------->
+	</div>
+	<!-------------------------------- END SETTINGS -------------------------------------->
 
 	<!-------------------------------START IP ADDRESS------------------------------------->
 	<img onclick="settings()" id="settIcon" class="settClass" src="assets/settings.png">
