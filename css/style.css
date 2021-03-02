@@ -231,12 +231,12 @@
 }
 
 .btn-volume {
-  /* position: fixed; */
-  /* top: 0.5rem; */
-  /* right: 0.5rem; */
-  width: 2.5rem;
-  height: 2.53rem;
-  line-height: 2rem;
+  position: relative;
+  bottom: 45px;
+  left: 140px;
+  width: 35px;
+  height: 35px;
+  line-height: 1px;
   border-radius: 50%;
   background: transparent;
   color: gray;
