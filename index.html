@@ -61,7 +61,7 @@
 						<h2>Controlling Guide</h2>
 						<ul>
 							<li>Connect with Cam & Engine IP</li>
-							<li>Control - W,A,S,D or Arrow keys</li>
+							<li>Control - W,A,S,D and Arrow keys</li>
 							<li>Change Gear - Shift, L</li>
 							<li>Horn - H</li>
 							<li>Brake - Space</li>
@@ -131,17 +131,17 @@
 	<img onclick="settings()" id="settIcon" class="settClass" src="assets/settings.png">
 	<form class="ipform">
 		<label>CAM IP:</label>
-		<input onclick="showBtn()" type="url" id="ip_cam" placeholder="http://camera_ip/video" list="ipList">
+		<input onclick="showBtn()" type="url" id="ip_cam" placeholder="http://camera_ip:port" list="ipList">
 		<datalist id="ipList">
-			<option value="https://cdn.britannica.com/08/148208-050-B87DCBD3/prototype-sports-cars-Le-Mans-race-American.jpg">
-			<option value="http://192.168.0.111:8080/video">
+			<option value="http://192.168.0.106:8080">
+			<option value="http://192.168.0.116:8080">
 		</datalist>
 		<br>
 		<label>ENGINE:</label>
-		<input onclick="showBtn()" type="url" id="ip_engine" placeholder="192.168.772" list="ipCar">
+		<input onclick="showBtn()" type="url" id="ip_engine" placeholder="http://car_ip_here" list="ipCar">
 		<datalist id="ipCar">
-			<option value="http://192.168.0.106:8080/video">
-			<option value="http://192.168.0.111:8080/video">
+			<option value="http://192.168.0.104">
+			<option value="http://192.168.0.105">
 		</datalist>
 		<br><br>
 		<input type="button" id="connectBtn" onclick="getIp()" value="CONNECT">
