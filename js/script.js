@@ -22,7 +22,7 @@ $(function() {
               cursor: 'none'
           });
           fadeInBuffer = true;
-      }, 2000) // time 2 seconds
+      }, 5000) // time 5 seconds
   });
   $('*').css({
       cursor: 'default'
