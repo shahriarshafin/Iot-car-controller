@@ -90,7 +90,7 @@ window.addEventListener("keydown", function (event) {
     document.getElementById("sound").play();
 
       // action link
-      document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/hornon";
+      document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/ho";
       document.getElementById("cmdip").click();
   }
 
@@ -101,7 +101,7 @@ window.addEventListener("keydown", function (event) {
     document.getElementById("right").style.opacity = "1.0";
 
     // action link
-    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/stop";
+    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/s";
     document.getElementById("cmdip").click();
   }
 
@@ -111,7 +111,7 @@ window.addEventListener("keydown", function (event) {
     // document.getElementById("box").style.backgroundSize = "60px 60% ";
 
     // action link
-    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/forward";
+    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/f";
     document.getElementById("cmdip").click();
   } 
 
@@ -121,7 +121,7 @@ window.addEventListener("keydown", function (event) {
     document.getElementById("box").style.transform = "rotate(180deg)";
 
     // action link
-    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/backward";
+    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/b";
     document.getElementById("cmdip").click();
   }
 
@@ -130,7 +130,7 @@ window.addEventListener("keydown", function (event) {
     document.getElementById("left").style.opacity = "1.0";
 
     // action link
-    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/turnleft";
+    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/l";
     document.getElementById("cmdip").click();
   } else if (event.code == "KeyA") {
     document.getElementById("left").style.opacity = "1.0";
@@ -138,7 +138,7 @@ window.addEventListener("keydown", function (event) {
     document.getElementById("box").style.transform = "rotate(180deg)";
 
     // action link
-    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/backleft";
+    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/bl";
     document.getElementById("cmdip").click();
   }
 
@@ -147,7 +147,7 @@ window.addEventListener("keydown", function (event) {
     document.getElementById("right").style.opacity = "1.0";
 
     // action link
-    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/turnright";
+    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/r";
     document.getElementById("cmdip").click();
   } else if (event.code == "KeyD") {
     document.getElementById("right").style.opacity = "1.0";
@@ -155,7 +155,7 @@ window.addEventListener("keydown", function (event) {
     document.getElementById("box").style.transform = "rotate(180deg)";
 
     // action link
-    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/backright";
+    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/br";
     document.getElementById("cmdip").click();
   }
 });
@@ -176,7 +176,7 @@ window.addEventListener("keyup", function (event) {
     document.getElementById("sound").pause();
     sound.currentTime = 0;
 
-    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/hornoff";
+    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/hf";
     document.getElementById("cmdip").click();
   }
 
@@ -193,7 +193,7 @@ window.addEventListener("keyup", function (event) {
     document.getElementById("box").style.backgroundImage = "url('')";
 
     // action link
-    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/stop";
+    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/s";
     document.getElementById("cmdip").click();
   } 
 
@@ -203,7 +203,7 @@ window.addEventListener("keyup", function (event) {
     document.getElementById("box").style.transform = "rotate(0deg)";
 
     // action link
-    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/stop";
+    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/s";
     document.getElementById("cmdip").click();
   }
   
@@ -212,7 +212,7 @@ window.addEventListener("keyup", function (event) {
     document.getElementById("left").style.opacity = "0.2";
 
     // action link
-    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/stop";
+    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/s";
     document.getElementById("cmdip").click();
   } else if (event.code == "KeyA") {
     document.getElementById("left").style.opacity = "0.2";
@@ -220,7 +220,7 @@ window.addEventListener("keyup", function (event) {
     document.getElementById("box").style.transform = "rotate(0deg)";
 
     // action link
-    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/stop";
+    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/s";
     document.getElementById("cmdip").click();
   }
 
@@ -229,7 +229,7 @@ window.addEventListener("keyup", function (event) {
     document.getElementById("right").style.opacity = "0.2";
 
     // action link
-    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/stop";
+    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/s";
     document.getElementById("cmdip").click();
   } else if (event.code == "KeyD") {
     document.getElementById("right").style.opacity = "0.2";
@@ -237,7 +237,7 @@ window.addEventListener("keyup", function (event) {
     document.getElementById("box").style.transform = "rotate(0deg)";
 
     // action link
-    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/stop";
+    document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/s";
     document.getElementById("cmdip").click();
   }
 });
