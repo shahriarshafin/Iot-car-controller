@@ -83,6 +83,28 @@ function getIp() {
 }
 //---------------------------------------------------
 
+//CONNECT_BUTTON_PRESSED START
+var input = document.getElementById("ip_cam");
+input.addEventListener("keyup", function(event) {
+  if (event.code == "Enter") {
+    event.preventDefault();
+    document.getElementById("ip_cam").blur();
+    document.getElementById("ip_engine").blur();
+    document.getElementById("connectBtn").click();
+  }
+});
+
+var input = document.getElementById("ip_engine");
+input.addEventListener("keyup", function(event) {
+  if (event.code == "Enter") {
+    event.preventDefault();
+    document.getElementById("ip_cam").blur();
+    document.getElementById("ip_engine").blur();
+    document.getElementById("connectBtn").click();
+  }
+});
+//CONNECT_BUTTON_PRESSED END
+
 //--------------------- KEY DOWN --------------------
 window.addEventListener("keydown", function (event) {
   //SOUND_HORN
@@ -163,14 +185,6 @@ window.addEventListener("keydown", function (event) {
 
 //------------------------ KEY UP --------------------
 window.addEventListener("keyup", function (event) {
-  //CONNECT_BUTTON_PRESSED
-  if (event.code == "Enter") {
-    event.preventDefault();
-    document.getElementById("ip_cam").blur();
-    document.getElementById("ip_engine").blur();
-    document.getElementById("connectBtn").click();
-  }
-
   //HORN_OFF
   if (event.code == "KeyH") {
     document.getElementById("sound").pause();
