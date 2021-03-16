@@ -405,6 +405,7 @@ select:-webkit-autofill:focus {
 
 /* left-right Button Table  */
 .table {
+  border: 0px;
   position: absolute;
   top: 25%;
   border-collapse: collapse;
