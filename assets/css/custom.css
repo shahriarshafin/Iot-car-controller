@@ -1,51 +1,5 @@
-.spinner {
-  width: 40px;
-  height: 40px;
 
-  position: relative;
-  margin: 100px auto;
-}
-
-.double-bounce1, .double-bounce2 {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background-color: #333;
-  opacity: 0.6;
-  position: absolute;
-  top: 0;
-  left: 0;
-  
-  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
-  animation: sk-bounce 2.0s infinite ease-in-out;
-}
-
-.double-bounce2 {
-  -webkit-animation-delay: -1.0s;
-  animation-delay: -1.0s;
-}
-
-@-webkit-keyframes sk-bounce {
-  0%, 100% { -webkit-transform: scale(0.0) }
-  50% { -webkit-transform: scale(1.0) }
-}
-
-@keyframes sk-bounce {
-  0%, 100% { 
-    transform: scale(0.0);
-    -webkit-transform: scale(0.0);
-  } 50% { 
-    transform: scale(1.0);
-    -webkit-transform: scale(1.0);
-  }
-}
-
-
-
-
-
-
-/* BODY  */
+/* ------------------- BODY ------------------- */
 body {
     margin: 0 0;
     padding: 0 0;
@@ -58,19 +12,144 @@ body {
     /* background-image: url("http://192.168.0.106:8080/video"); */
     background-repeat: no-repeat;
     background-size: cover;
-    /*uncomment 2 lines for full size view. But ratio will be compressed.*/
+    /*uncomment below 2 lines for full size view. */
     background-size: 100% 100%;
     background-attachment: fixed;
-    /*---------------------------------------*/
   }
+/* ------------------- BODY ------------------- */
 
-  
-/* div-IP Address input */
+/* ------------------- NAV -------------------- */
+#trapezoid {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+  border: 80px solid rgba(236, 1, 1, 0);
+  border-top: 0 solid;
+  border-bottom: 100px solid #ffd607b2;
+  -webkit-border-radius: 20px 20px 0 0;
+  border-radius: 20px 20px 0 0;
+  font: normal 100%/normal Arial, Helvetica, sans-serif;
+  color: rgba(0,0,0,0.7);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+  margin-top:-53px;
+  width: 550px;
+  position: relative;
+  transition: all 0.7s ease;
+  padding-left:7%;
+}
+
+#trapezoid a, .subnavbtn {
+ -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+.sub-home {
+  display: none;
+  position: absolute;
+  right: 0;
+  left: 0; 
+
+  z-index: 1;   
+  transform: perspective(-10px);
+}
+
+#trapezoid:hover .sub-home {
+  justify-content: center;
+  margin-top: 53px;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  display:flex;
+  overflow:hidden;
+  justify-content: center;
+  height: 100px;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  transition: all 0.5s ease;
+}
+
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .subnavbtn {
+  font-size: 16px; 
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 25px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  transition: all 0.5s ease;
+}
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background:#ef4f4f;
+  color: black;
+  border-radius:5px;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 1;   
+  transform: perspective(-10px);
+}
+
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none; 
+}
+
+.subnav-content a:hover {
+  background:#B993D6;
+  color: black;
+}
+
+.subnav:hover .subnav-content {
+  display: flex;
+  justify-content: center;
+}
+/* -------------------- NAV -------------------- */
+
+/* -------------- IP ADDRESS FORM -------------- */
+/* input form  */
+.ipform {
+  color: #fff;
+  font-family: "Roboto Mono", monospace;
+  margin-left: -5px;
+  margin-top: -6.5%;
+}
+
+/* ip form input container */
 .input-container {
     display: -ms-flexbox; /* IE10 */
     display: flex;
   }
-  /* i tag icons */
+
+  /* ip form icons */
   .icon {
     padding: 10px;
     background: #ffd607;
@@ -78,14 +157,6 @@ body {
     min-width: 30px;
     text-align: center;
     transform: skew(13deg);
-  }
-
-/* input form  */
-.ipform {
-    color: #fff;
-    font-family: "Roboto Mono", monospace;
-    margin-left: -5px;
-    margin-top: -6.5%;
   }
   
   /* input box */
@@ -107,38 +178,25 @@ body {
   input[type="url"]::placeholder {
     color: rgba(255, 255, 255, 0.575);
   }
-  
-  /* input autocomplete styles */
-  input:-webkit-autofill,
-  input:-webkit-autofill:hover,
-  input:-webkit-autofill:focus,
-  textarea:-webkit-autofill,
-  textarea:-webkit-autofill:hover,
-  textarea:-webkit-autofill:focus,
-  select:-webkit-autofill,
-  select:-webkit-autofill:hover,
-  select:-webkit-autofill:focus {
-    -webkit-text-fill-color: rgb(255, 255, 255);
-    -webkit-box-shadow: 0 0 0px 1000px #07ffea1f inset;
-    transition: background-color 5000s ease-in-out 0s;
-  }
 
 /* input focus  */
   input[type="url"]:focus {
     border: 2px solid rgb(255, 255, 255);
   }
-  
-/* SETTINGS BUTTON */
-.settClass{
+  /* -------------- IP ADDRESS FORM --------------*/
+
+  /* -------------- SETTINGS BUTTON --------------*/
+  .sett-btn{
     position: fixed;
     top: 0.5rem;
     right: 0.5rem;
     width: 45px;
     height: auto;
   }
+  /* -------------- SETTINGS BUTTON --------------*/
 
-  /* HIDDEN Div */
-#box {
+  /* -------------- KEY COMMAND MAP --------------*/
+  #cmd-map {
     position: absolute;
     top: 10%;
     left: 50%;
@@ -149,9 +207,11 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
   }
+  /* -------------- KEY COMMAND MAP --------------*/
 
-  /* Side Indicator Table  */
-.table {
+  /* ------------ SIDE INDICATOR TABLE ------------*/
+  /* Table */
+.indicator-table {
     border: 0px;
     position: absolute;
     top: 25%;
@@ -159,10 +219,10 @@ body {
     width: 100%;
   }
   
-  /* Side Indicator */
-  .sidebutton {
+  /* Left-right Buttons */
+  .indicator-table .sidebutton {
     color: #ffd607;
     opacity: 0.2;
     font-size: 200px;
   }
-  
+  /* ------------ SIDE INDICATOR TABLE ------------*/
