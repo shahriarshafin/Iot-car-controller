@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- JQUERY -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+
+  <!-- Font Awseome -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+  <!-- Magic Mouse -->
+  <link rel="stylesheet" href="https://res.cloudinary.com/veseylab/raw/upload/v1613706377/magicmouse/magic-mouse-1.1.css" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/nav.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+
+<body>
+  <!----------------------- PRELOADER START ------------------------>
+  <div class="sk-bounce">
+    <div class="sk-bounce-dot"></div>
+    <div class="sk-bounce-dot"></div>
+  </div>
+  <!----------------------- PRELOADER END ------------------------>
+
+<!-------------------------- NAVBAR START -------------------------->
+  <nav class="navbar">
+    <div id="trapezoid">
+      <a class="sub-home" href="#">Home</a>
+      <a href="#About" class="expandHome">About</a>
+       <div class="subnav">
+       <button class="subnavbtn">Control</button>
+         <div class="subnav-content">
+          <div id="subnav-trapezoid">
+            <a href="#Clients">Settings</a>
+            <a href="#Clients">Settings</a>
+          </div>
+         </div>
+      </div>
+    
+       <div class="subnav">
+       <button class="subnavbtn">Demo</button>
+         <div class="subnav-content">
+          <div class="subnav-trapezoid">
+            <a href="#Services">About</a>
+            <a href="#Services">About</a>
+            <a href="#Services">About</a>
+           </div>
+         </div>
+        </div>
+    </div>
+  </nav>
+<!-------------------------- NAVBAR END -------------------------->
+
+<!-- SETTINGS BUTTON -->
+<img onclick="" id="settIcon" class="settClass" src="assets/img/settings.png">
+
+<!--------------------- GET IP ADDRESS START --------------------->
+<form class="ipform">
+  <div class="input-container">
+    <i class="fas fa-video icon"></i>
+    <input onclick="" type="url" id="ip_cam" placeholder="http://camera_ip:port" list="camipList" autocomplete="off">
+    <datalist id="camipList">
+      <option value="http://192.168.0.106:8080">
+      <option value="http://192.168.0.116:8080">
+    </datalist>
+  </div>
+  <br>
+  <div class="input-container">
+    <i class="fas fa-car icon"></i>
+    <input onclick="" type="url" id="ip_engine" placeholder="http://car_ip_here" list="ipCar" autocomplete="off">
+    <datalist id="ipCar">
+      <option value="http://192.168.0.104">
+      <option value="http://192.168.0.105">
+    </datalist>
+  </div>
+</form>
+<!--------------------- GET IP ADDRESS END ----------------------->
+
+<!-------------------- SIDE INDICATOR START ---------------------->
+<iframe id="Iframe" name="Iframe" style="display:none"></iframe>
+<div id="box"><a id="cmdip" href="#" target="Iframe"></a></div>
+<br>
+<table class="table">
+  <tr>
+    <td style="text-align:left">
+      <i class="fas fa-angle-left sidebutton"></i>
+    </td>
+
+    <td style="text-align:right">
+      <i class="fas fa-angle-right sidebutton"></i>
+    </td>
+  </tr>
+</table>
+<!--------------------- SIDE INDICATOR END ----------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+function browserSupportsCSSProperty(propertyName) {
+  var elm = document.createElement('div');
+  propertyName = propertyName.toLowerCase();
+
+  if (elm.style[propertyName] != undefined)
+    return true;
+
+  var propertyNameCapital = propertyName.charAt(0).toUpperCase() + propertyName.substr(1),
+    domPrefixes = 'Webkit Moz ms O'.split(' ');
+
+  for (var i = 0; i < domPrefixes.length; i++) {
+    if (elm.style[domPrefixes[i] + propertyNameCapital] != undefined)
+      return true;
+  }
+
+  return false;
+}
+  </script>
+
+
+
+
+
+
+
+<!-- VENDOR JS FILES -->
+<!-- Magic Mouse -->
+  <script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1613706377/magicmouse/magic_mouse-1.1.js"></script>
+  <script type="text/javascript">
+    options = {
+      "cursorOuter": "circle-basic",
+      "hoverEffect": "circle-move",
+      "hoverItemMove": false,
+      "defaultCursor": true,
+      "outerWidth": 41,
+      "outerHeight": 41
+    };
+    magicMouse(options);
+  </script>
+  <!-- Magic Mouse -->
+
+<!-- CUSTOM JS -->
+<script  src="assets/js/nav.js"></script>
+
+</body>
+</html>
