@@ -87,10 +87,10 @@
   <table class="indicator-table">
     <tr>
       <td style="text-align:left">
-        <i class="fas fa-angle-left sidebutton"></i>
+        <i id="leftIndicator" class="fas fa-angle-left sidebutton"></i>
       </td>
       <td style="text-align:right">
-        <i class="fas fa-angle-right sidebutton"></i>
+        <i id="rightIndicator" class="fas fa-angle-right sidebutton"></i>
       </td>
     </tr>
   </table>
@@ -109,10 +109,16 @@
   <!--volume button -->
   <button class="btn-volume active">♩</button>
 
+	<!-- START SOUNDS -->
+	<audio id="carHorn" src="assets/audios/carhorn.mp3"></audio>
+	<audio id="brake" src="assets/audios/brake.mp3"></audio>
+	<!--- END SOUNDS --->
 
 
 
-  <!-- ------------ JS FILES ------------ -->
+ <!-- ____________________________________________________________________________  -->
+
+  <!-- ------------ SCRIPTS ------------ -->
 
   <!-- Main JS -->
   <script src="assets/js/custom.js"></script>

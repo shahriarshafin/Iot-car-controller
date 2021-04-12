@@ -1,4 +1,3 @@
-
 // ----------------------- START KEY LISTENER ------------------------------------ 
 var cmd, keys = [];
 window.addEventListener("keydown",
@@ -57,6 +56,7 @@ function controller() {
     // ___________WHEEL-LEFT___________
     // ------ArrowLeft / KeyA---------
     if (command == "37" || command == "STOP37" || command == "65" || command == "STOP65") {
+        document.getElementById("leftIndicator").style.opacity = "1.0";
 
         // action 
         document.getElementById("cmd-ip").href = "http://192.168.0.105/left";
@@ -65,6 +65,7 @@ function controller() {
     // ___________WHEEL-RIGHT__________
     // -----ArrowRight / KeyD---------
     if (command == "39" || command == "STOP39" || command == "68" || command == "STOP68") {
+        document.getElementById("rightIndicator").style.opacity = "1.0";
 
         // action 
         document.getElementById("cmd-ip").href = "http://192.168.0.105/right";
@@ -103,16 +104,21 @@ function controller() {
         document.getElementById("cmd-ip").click();
     }
     // ______________STOP______________
-    // -----------Any KewDown---------
+    // -----------All KeyUP---------
     if (command == "STOP") {
-
-        // action 
+        // action
         document.getElementById("cmd-ip").href = "http://192.168.0.105/s";
         document.getElementById("cmd-ip").click();
     }
     // __________EMERGENCY-BRAKE________
     // --------------SpaceBar----------
     if (command == "32") {
+        document.getElementById("brake").play();
+
+        document.getElementById("leftIndicator").style.color = "#DC3545"
+        document.getElementById("rightIndicator").style.color = "#DC3545"
+        document.getElementById("leftIndicator").style.opacity = "1.0";
+        document.getElementById("rightIndicator").style.opacity = "1.0";
 
         // action
         document.getElementById("cmd-ip").href = "http://192.168.0.105/s";
@@ -121,10 +127,45 @@ function controller() {
     // ______________H-O-R-N____________
     // ---------------KeyH-------------
     if (command == "72") {
+        document.getElementById("carHorn").play();
 
         // action 
-        document.getElementById("cmd-ip").href = "http://192.168.0.105/hornON";
-        document.getElementById("cmd-ip").click();
+        // document.getElementById("cmd-ip").href = "http://192.168.0.105/hornON";
+        // document.getElementById("cmd-ip").click();
     }
 }
 // ----------------------- END CONTROLLER ------------------------------------ 
+
+//------------------------- START KEY UP -------------------------------------
+window.addEventListener("keyup", function (event) {
+    // ___________WHEEL-RIGHT__________
+    // -----ArrowRight / KeyD---------
+    if (event.code == "ArrowLeft" || event.code == "KeyA") {
+        document.getElementById("leftIndicator").style.opacity = "0.2";
+    }
+    // __________BACKWARD-RIGHT________
+    // --Arrow[Down + Right] / Key[S + D]--
+    if (event.code == "ArrowRight" || event.code == "KeyD") {
+        document.getElementById("rightIndicator").style.opacity = "0.2";
+    }
+    // ______________HORN-OFF____________
+    // ---------------KeyH-------------
+    if (event.code == "KeyH") {
+        document.getElementById("carHorn").pause();
+        sound.currentTime = 0;
+
+        // action link
+        //   document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/hf";
+        //   document.getElementById("cmdip").click();
+    }
+    // ______________SPACEBAR____________
+    if (event.code == "Space") {
+        document.getElementById("brake").pause();
+        brake.currentTime = 0;
+        document.getElementById("leftIndicator").style.color = "#ffd607"
+        document.getElementById("rightIndicator").style.color = "#ffd607"
+        document.getElementById("leftIndicator").style.opacity = "0.2";
+        document.getElementById("rightIndicator").style.opacity = "0.2";
+    }
+});
+//----------------------- END KEY UP -------------------------------------

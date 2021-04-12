@@ -250,7 +250,7 @@ input[type="url"]:focus {
 }
 
 /* Left-right Buttons */
-.indicator-table .sidebutton {
+.sidebutton {
   color: #ffd607;
   opacity: 0.2;
   font-size: 200px;
