@@ -149,8 +149,8 @@ body {
 
 /* ip form input container */
 .input-container {
-    display: -ms-flexbox; /* IE10 */
-    display: flex;
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
   }
 
 /* ip form icons div*/

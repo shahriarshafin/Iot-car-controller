@@ -3,13 +3,14 @@
 
 <head>
   <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" href="assets/img/favicon.png" type="image/gif" sizes="16x16">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/img/favicon.png" type="image/gif" sizes="16x16">
+  
   <!-- Jquery -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
-  
+
   <!-- Font Awseome -->
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
   <!-- Main CSS -->
   <link rel="stylesheet" href="assets/css/custom.css">
@@ -95,15 +96,15 @@
   </table>
   <!-- ------------------- SIDE INDICATOR END --------------------- -->
 
-	<!-------------------------------STRAT SPEED METER---------------------------------->
-	<div class="dashboard">
-		<div class="meter meter--rpm meter--big-label"></div>
-		<div class="meter meter--gear">
-			<div>1</div>
-		</div>
-		<div class="meter meter--speed"></div>
-	</div>
-	<!-------------------------------END SPEED METER------------------------------------>
+  <!-------------------------------STRAT SPEED METER---------------------------------->
+  <div class="dashboard">
+    <div class="meter meter--rpm meter--big-label"></div>
+    <div class="meter meter--gear">
+      <div>1</div>
+    </div>
+    <div class="meter meter--speed"></div>
+  </div>
+  <!-------------------------------END SPEED METER------------------------------------>
 
   <!--volume button -->
   <button class="btn-volume active">♩</button>
@@ -111,42 +112,42 @@
 
 
 
-<!-- ------------ JS FILES ------------ -->
+  <!-- ------------ JS FILES ------------ -->
 
-<!-- Main JS -->
-<script src="assets/js/nav.js"></script>
-<script src="assets/js/gearmeter.js"></script>
+  <!-- Main JS -->
+  <script src="assets/js/nav.js"></script>
+  <script src="assets/js/gearmeter.js"></script>
 
-<!-- Hide Cursor -->
-<script>
-  $(function () {
-    var timer;
-    var fadeInBuffer = false;
-    $(document).mousemove(function () {
-      if (!fadeInBuffer && timer) {
-        clearTimeout(timer);
-        timer = 0;
-        $('html').css({
-          cursor: ''
-        });
-      } else {
-        $('*').css({
-          cursor: 'default'
-        });
-        fadeInBuffer = false;
-      }
-      timer = setTimeout(function () {
-        $('*').css({
-          cursor: 'none'
-        });
-        fadeInBuffer = true;
-      }, 5000) // time 5 seconds
+  <!-- Hide Cursor -->
+  <script>
+    $(function () {
+      var timer;
+      var fadeInBuffer = false;
+      $(document).mousemove(function () {
+        if (!fadeInBuffer && timer) {
+          clearTimeout(timer);
+          timer = 0;
+          $('html').css({
+            cursor: ''
+          });
+        } else {
+          $('*').css({
+            cursor: 'default'
+          });
+          fadeInBuffer = false;
+        }
+        timer = setTimeout(function () {
+          $('*').css({
+            cursor: 'none'
+          });
+          fadeInBuffer = true;
+        }, 5000) // time 5 seconds
+      });
+      $('*').css({
+        cursor: 'default'
+      });
     });
-    $('*').css({
-      cursor: 'default'
-    });
-  });
-</script>
+  </script>
 
 </body>
 

@@ -1,4 +1,3 @@
-
 //--------------------------START SPEED METER------------------------------
 //--------------- https://codepen.io/Chmood/pen/MaBZdM --------------------
 
@@ -19,7 +18,7 @@ let Meter = function Meter($elm, config) {
   let value2angle = function (value) {
     let angle =
       (value / (config.valueMax - config.valueMin)) *
-        (config.angleMax - config.angleMin) +
+      (config.angleMax - config.angleMin) +
       config.angleMin;
 
     return angle;
@@ -72,8 +71,7 @@ let Meter = function Meter($elm, config) {
     makeElement(
       $elm,
       "grad grad--" + n + redzoneClass,
-      config.labelFormat(value),
-      {
+      config.labelFormat(value), {
         left: 50 - (50 - margin) * Math.sin(angle * (Math.PI / 180)) + "%",
         top: 50 + (50 - margin) * Math.cos(angle * (Math.PI / 180)) + "%",
       }
@@ -93,8 +91,7 @@ let Meter = function Meter($elm, config) {
       makeElement(
         $elm,
         "grad-tick grad-tick--half grad-tick--" + n + redzoneClass,
-        "",
-        {
+        "", {
           left: 50 - 50 * Math.sin(angle * (Math.PI / 180)) + "%",
           top: 50 + 50 * Math.cos(angle * (Math.PI / 180)) + "%",
           transform: "translate3d(-50%, 0, 0) rotate(" + (angle + 180) + "deg)",
@@ -109,8 +106,7 @@ let Meter = function Meter($elm, config) {
       makeElement(
         $elm,
         "grad-tick grad-tick--quarter grad-tick--" + n + redzoneClass,
-        "",
-        {
+        "", {
           left: 50 - 50 * Math.sin(angle * (Math.PI / 180)) + "%",
           top: 50 + 50 * Math.cos(angle * (Math.PI / 180)) + "%",
           transform: "translate3d(-50%, 0, 0) rotate(" + (angle + 180) + "deg)",
@@ -124,8 +120,7 @@ let Meter = function Meter($elm, config) {
       makeElement(
         $elm,
         "grad-tick grad-tick--quarter grad-tick--" + n + redzoneClass,
-        "",
-        {
+        "", {
           left: 50 - 50 * Math.sin(angle * (Math.PI / 180)) + "%",
           top: 50 + 50 * Math.cos(angle * (Math.PI / 180)) + "%",
           transform: "translate3d(-50%, 0, 0) rotate(" + (angle + 180) + "deg)",
@@ -149,11 +144,11 @@ let Meter = function Meter($elm, config) {
     $elm,
     "label label-value",
     "<div>" +
-      config.labelFormat(config.value) +
-      "</div>" +
-      "<span>" +
-      config.labelUnit +
-      "</span>"
+    config.labelFormat(config.value) +
+    "</div>" +
+    "<span>" +
+    config.labelUnit +
+    "</span>"
   ).addEventListener("click", switchLabel);
 
   $value = $elm.querySelector(".label-value div");
@@ -208,8 +203,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (e.keyCode == "38" || e.keyCode == "87") {
       // upArrow, KeyW
       isAccelerating = true;
-    }
-     else if (e.keyCode == "32") {
+    } else if (e.keyCode == "32") {
       // spacebar
       isBraking = true;
     } else if (e.keyCode == "76") {
@@ -225,8 +219,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (e.keyCode == "38" || e.keyCode == "87") {
       // upArrow, KeyW
       isAccelerating = false;
-    }
-      else if (e.keyCode == "32") {
+    } else if (e.keyCode == "32") {
       // spacebar
       isBraking = false;
     } else if (e.keyCode == "76") {
@@ -383,7 +376,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // WEBAUDIO
   // Courtesy of https://mdn.github.io/decode-audio-data/
   // define variables
-  var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  var audioCtx = new(window.AudioContext || window.webkitAudioContext)();
   var source, source2, gainNode;
   var songLength;
   var loader = document.querySelector(".loader");
