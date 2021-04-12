@@ -74,6 +74,7 @@ function controller() {
     // ___________FORWARD-LEFT_________
     // --Arrow[Up + Left] / Key[W + A]--
     if (command == "37,38" || command == "65,87") {
+        document.getElementById("leftIndicator").style.opacity = "1.0";
 
         // action 
         document.getElementById("cmd-ip").href = "http://192.168.0.105/l";
@@ -82,6 +83,7 @@ function controller() {
     // ___________FORWARD-RIGHT________
     // --Arrow[Up + Right] / Key[W + D]--
     if (command == "38,39" || command == "68,87") {
+        document.getElementById("rightIndicator").style.opacity = "1.0";
 
         // action 
         document.getElementById("cmd-ip").href = "http://192.168.0.105/r";
@@ -152,7 +154,7 @@ window.addEventListener("keyup", function (event) {
     // ---------------KeyH-------------
     if (event.code == "KeyH") {
         document.getElementById("carHorn").pause();
-        sound.currentTime = 0;
+        carHorn.currentTime = 0;
 
         // action link
         //   document.getElementById("cmdip").href = document.getElementById("ip_engine").value + "/hf";
