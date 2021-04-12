@@ -205,8 +205,8 @@ document.addEventListener("DOMContentLoaded", function () {
   function keyDown(e) {
     e = e || window.event;
 
-    if (e.keyCode == "37" || e.keyCode == "38" || e.keyCode == "39" || e.keyCode == "87") {
-      // leftArrow, upArrow, rightArrow, w
+    if (e.keyCode == "38" || e.keyCode == "87") {
+      // upArrow, KeyW
       isAccelerating = true;
     }
      else if (e.keyCode == "32") {
@@ -222,8 +222,8 @@ document.addEventListener("DOMContentLoaded", function () {
   function keyUp(e) {
     e = e || window.event;
 
-    if (e.keyCode == "37" || e.keyCode == "38" || e.keyCode == "39" || e.keyCode == "87") {
-      // leftArrow, upArrow, rightArrow, w
+    if (e.keyCode == "38" || e.keyCode == "87") {
+      // upArrow, KeyW
       isAccelerating = false;
     }
       else if (e.keyCode == "32") {

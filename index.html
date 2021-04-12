@@ -10,10 +10,7 @@
   
   <!-- Font Awseome -->
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-  
-  <!-- Magic Mouse -->
-  <link rel="stylesheet" href="https://res.cloudinary.com/veseylab/raw/upload/v1613706377/magicmouse/magic-mouse-1.1.css" />
-  
+
   <!-- Main CSS -->
   <link rel="stylesheet" href="assets/css/custom.css">
   <link rel="stylesheet" href="assets/css/gearmeter.css">
@@ -114,28 +111,42 @@
 
 
 
+<!-- ------------ JS FILES ------------ -->
 
+<!-- Main JS -->
+<script src="assets/js/nav.js"></script>
+<script src="assets/js/gearmeter.js"></script>
 
-  <!-- ------------ JS FILES ------------ -->
-  <!-- Magic Mouse -->
-  <script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1613706377/magicmouse/magic_mouse-1.1.js"></script>
-
-  <script type="text/javascript">
-    // Magic Mouse
-    options = {
-      "cursorOuter": "circle-basic",
-      "hoverEffect": "circle-move",
-      "hoverItemMove": false,
-      "defaultCursor": true,
-      "outerWidth": 41,
-      "outerHeight": 41
-    };
-    magicMouse(options);
-  </script>
-
-  <!-- Custom JS -->
-  <script src="assets/js/nav.js"></script>
-  <script src="assets/js/gearmeter.js"></script>
+<!-- Hide Cursor -->
+<script>
+  $(function () {
+    var timer;
+    var fadeInBuffer = false;
+    $(document).mousemove(function () {
+      if (!fadeInBuffer && timer) {
+        clearTimeout(timer);
+        timer = 0;
+        $('html').css({
+          cursor: ''
+        });
+      } else {
+        $('*').css({
+          cursor: 'default'
+        });
+        fadeInBuffer = false;
+      }
+      timer = setTimeout(function () {
+        $('*').css({
+          cursor: 'none'
+        });
+        fadeInBuffer = true;
+      }, 5000) // time 5 seconds
+    });
+    $('*').css({
+      cursor: 'default'
+    });
+  });
+</script>
 
 </body>
 
