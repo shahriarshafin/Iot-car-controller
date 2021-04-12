@@ -257,6 +257,7 @@
   border: 4px solid;
   font-size: 1.5rem;
   font-weight: bold;
+  display: none;
 }
 
 .btn-volume.active {
