@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,78 +21,80 @@
 
 <body>
 
-<!-- ------------------------ NAVBAR START ------------------------ -->
+  <!-- ------------------------ NAVBAR START ------------------------ -->
   <nav class="navbar">
     <div id="trapezoid">
       <a class="sub-home" href="#">Home</a>
       <a href="#About" class="expandHome">About</a>
-       <div class="subnav">
-       <button class="subnavbtn">Control</button>
-         <div class="subnav-content">
+      <div class="subnav">
+        <button class="subnavbtn">Control</button>
+        <div class="subnav-content">
           <div id="subnav-trapezoid">
             <a href="#Clients">Settings</a>
             <a href="#Clients">Settings</a>
           </div>
-         </div>
+        </div>
       </div>
 
-       <div class="subnav">
-       <button class="subnavbtn">Demo</button>
-         <div class="subnav-content">
+      <div class="subnav">
+        <button class="subnavbtn">Demo</button>
+        <div class="subnav-content">
           <div class="subnav-trapezoid">
             <a href="#Services">About</a>
             <a href="#Services">About</a>
             <a href="#Services">About</a>
-           </div>
-         </div>
+          </div>
         </div>
+      </div>
     </div>
   </nav>
-<!-- ------------------------ NAVBAR END ------------------------ -->
+  <!-- ------------------------ NAVBAR END ------------------------ -->
 
-<!-- SETTINGS BUTTON -->
-<div class="sett-btn"><img onclick="" id="" alt="settings" src="assets/img/settings.png"></div>
+  <!-- SETTINGS BUTTON -->
+  <div class="sett-btn"><img onclick="" id="" alt="settings" src="assets/img/settings.png"></div>
 
-<!-- ------------------- GET IP ADDRESS START ------------------- -->
-<form class="ipform">
-  <div class="input-container">
-    <div class="icon"><i class="fas fa-video"></i></div>
-    <input onclick="" id="cam-ip" type="url" list="cam-ip-list" placeholder="http://camera_ip:port" autocomplete="off">
-    <datalist id="cam-ip-list">
-      <option value="http://192.168.0.106:8080">
-      <option value="http://192.168.0.116:8080">
-    </datalist>
-  </div>
+  <!-- ------------------- GET IP ADDRESS START ------------------- -->
+  <form class="ipform">
+    <div class="input-container">
+      <div class="icon"><i class="fas fa-video"></i></div>
+      <input onclick="" id="cam-ip" type="url" list="cam-ip-list" placeholder="http://camera_ip:port"
+        autocomplete="off">
+      <datalist id="cam-ip-list">
+        <option value="http://192.168.0.106:8080">
+        <option value="http://192.168.0.116:8080">
+      </datalist>
+    </div>
+    <br>
+    <div class="input-container">
+      <div class="icon"><i class="fas fa-car"></i></div>
+      <input onclick="" id="engine-ip" type="url" list="car-ip-list" placeholder="http://car_ip_here"
+        autocomplete="off">
+      <datalist id="car-ip-list">
+        <option value="http://192.168.0.104">
+        <option value="http://192.168.0.105">
+      </datalist>
+    </div>
+  </form>
+  <!-- ------------------- GET IP ADDRESS END --------------------- -->
+
+  <!-- ----- HIDDEN DIV START ----- -->
+  <iframe id="hidden-frame" name="hidden-frame" style="display:none"></iframe>
+  <div id="cmd-map"><a id="cmd-ip" href="#" target="hidden-frame"></a></div>
   <br>
-  <div class="input-container">
-    <div class="icon"><i class="fas fa-car"></i></div>
-    <input onclick="" id="engine-ip" type="url" list="car-ip-list" placeholder="http://car_ip_here" autocomplete="off">
-    <datalist id="car-ip-list">
-      <option value="http://192.168.0.104">
-      <option value="http://192.168.0.105">
-    </datalist>
-  </div>
-</form>
-<!-- ------------------- GET IP ADDRESS END --------------------- -->
+  <!-- ------ HIDDEN DIV END ------ -->
 
-<!-- ----- HIDDEN DIV START ----- -->
-<iframe id="hidden-frame" name="hidden-frame" style="display:none"></iframe>
-<div id="cmd-map"><a id="cmd-ip" href="#" target="hidden-frame"></a></div>
-<br>
-<!-- ------ HIDDEN DIV END ------ -->
-
-<!-- ------------------ SIDE INDICATOR START -------------------- -->
-<table class="indicator-table">
-  <tr>
-    <td style="text-align:left">
-      <i class="fas fa-angle-left sidebutton"></i>
-    </td>
-    <td style="text-align:right">
-      <i class="fas fa-angle-right sidebutton"></i>
-    </td>
-  </tr>
-</table>
-<!-- ------------------- SIDE INDICATOR END --------------------- -->
+  <!-- ------------------ SIDE INDICATOR START -------------------- -->
+  <table class="indicator-table">
+    <tr>
+      <td style="text-align:left">
+        <i class="fas fa-angle-left sidebutton"></i>
+      </td>
+      <td style="text-align:right">
+        <i class="fas fa-angle-right sidebutton"></i>
+      </td>
+    </tr>
+  </table>
+  <!-- ------------------- SIDE INDICATOR END --------------------- -->
 
 
 
@@ -100,25 +103,26 @@
 
 
 
-<!-- ------------ JS FILES ------------ -->
-<!-- Magic Mouse -->
-<script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1613706377/magicmouse/magic_mouse-1.1.js"></script>
+  <!-- ------------ JS FILES ------------ -->
+  <!-- Magic Mouse -->
+  <script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1613706377/magicmouse/magic_mouse-1.1.js"></script>
 
-<script type="text/javascript">
-// Magic Mouse
-  options = {
-    "cursorOuter": "circle-basic",
-    "hoverEffect": "circle-move",
-    "hoverItemMove": false,
-    "defaultCursor": true,
-    "outerWidth": 41,
-    "outerHeight": 41
-  };
-  magicMouse(options);
-</script>
+  <script type="text/javascript">
+    // Magic Mouse
+    options = {
+      "cursorOuter": "circle-basic",
+      "hoverEffect": "circle-move",
+      "hoverItemMove": false,
+      "defaultCursor": true,
+      "outerWidth": 41,
+      "outerHeight": 41
+    };
+    magicMouse(options);
+  </script>
 
-<!-- Custom JS -->
-<script src="assets/js/nav.js"></script>
+  <!-- Custom JS -->
+  <script src="assets/js/nav.js"></script>
 
 </body>
+
 </html>
