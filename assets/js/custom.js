@@ -54,6 +54,56 @@ $('#trapezoid').mouseleave(function () {
 });
 // --------------------------- END NAV BAR --------------------------------------- 
 
+//-------------------------- GETTING CAM IP --------------------------------------
+// pressed cam input field 
+function camipClicked() {
+    document.getElementById("camipBtn").style.backgroundColor = "red";
+}
+
+// pressed cam icon 
+function getcamIp() {
+    var x = "url('";
+    var y = document.getElementById("cam-ip").value; //as http://192.168.0.106:8080
+    var y1 = y + "/video";
+    var z = "'), url(assets/img/error.png)"; //for invalid input the second one will load
+    var xyz = x + y1 + z; //url('get from y1') //ninja technique for potato coder:D
+    document.body.style.backgroundImage = xyz;
+    document.getElementById("camipBtn").style.backgroundColor = "#ffd607";
+    document.getElementById("cam-ip").blur();
+}
+
+// pressed enter key cam field
+var cam_ip = document.getElementById("cam-ip");
+cam_ip.addEventListener("keyup", function (event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("camipBtn").click();
+    }
+});
+//-------------------------- GETTING CAM IP --------------------------------------
+
+//------------------------- GETTING ENGIN IP -------------------------------------
+// pressed engine input field 
+function engineipClicked() {
+    document.getElementById("engineipBtn").style.backgroundColor = "red";
+}
+
+// pressed engine icon 
+function getengineIp() {
+    document.getElementById("engineipBtn").style.backgroundColor = "#ffd607";
+    document.getElementById("engine-ip").blur();
+}
+
+// pressed enter key engine field
+var engine_ip = document.getElementById("engine-ip");
+engine_ip.addEventListener("keyup", function (event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("engineipBtn").click();
+    }
+});
+//------------------------- GETTING ENGIN IP -------------------------------------
+
 // ----------------------- START KEY LISTENER ------------------------------------ 
 var cmd, keys = [];
 window.addEventListener("keydown",
@@ -90,6 +140,9 @@ function controller() {
     // view command
     // console.log(cmd);
 
+    // getting engine-ip
+    var engine_val = document.getElementById("engine-ip").value;
+
     // getting cmd(to string) as command   
     const command = cmd.toString();
 
@@ -98,7 +151,7 @@ function controller() {
     if (command == "38" || command == "STOP38" || command == "87" || command == "STOP87") {
 
         // action 
-        document.getElementById("cmd-ip").href = "http://192.168.0.105/f";
+        document.getElementById("cmd-ip").href = engine_val + "/f";
         document.getElementById("cmd-ip").click();
     }
     // ____________BACKWARD____________
@@ -106,7 +159,7 @@ function controller() {
     if (command == "40" || command == "STOP40" || command == "83" || command == "STOP83") {
 
         // action 
-        document.getElementById("cmd-ip").href = "http://192.168.0.105/b";
+        document.getElementById("cmd-ip").href = engine_val + "/b";
         document.getElementById("cmd-ip").click();
     }
     // ___________WHEEL-LEFT___________
@@ -115,7 +168,7 @@ function controller() {
         document.getElementById("leftIndicator").style.opacity = "1.0";
 
         // action 
-        document.getElementById("cmd-ip").href = "http://192.168.0.105/left";
+        document.getElementById("cmd-ip").href = engine_val + "left";
         document.getElementById("cmd-ip").click();
     }
     // ___________WHEEL-RIGHT__________
@@ -124,7 +177,7 @@ function controller() {
         document.getElementById("rightIndicator").style.opacity = "1.0";
 
         // action 
-        document.getElementById("cmd-ip").href = "http://192.168.0.105/right";
+        document.getElementById("cmd-ip").href = engine_val + "right";
         document.getElementById("cmd-ip").click();
     }
     // ___________FORWARD-LEFT_________
@@ -133,7 +186,7 @@ function controller() {
         document.getElementById("leftIndicator").style.opacity = "1.0";
 
         // action 
-        document.getElementById("cmd-ip").href = "http://192.168.0.105/l";
+        document.getElementById("cmd-ip").href = engine_val + "/l";
         document.getElementById("cmd-ip").click();
     }
     // ___________FORWARD-RIGHT________
@@ -142,7 +195,7 @@ function controller() {
         document.getElementById("rightIndicator").style.opacity = "1.0";
 
         // action 
-        document.getElementById("cmd-ip").href = "http://192.168.0.105/r";
+        document.getElementById("cmd-ip").href = engine_val + "/r";
         document.getElementById("cmd-ip").click();
     }
     // __________BACKWARD-LEFT_________
@@ -150,7 +203,7 @@ function controller() {
     if (command == "37,40" || command == "65,83") {
 
         // action 
-        document.getElementById("cmd-ip").href = "http://192.168.0.105/bl";
+        document.getElementById("cmd-ip").href = engine_val + "/bl";
         document.getElementById("cmd-ip").click();
     }
     // __________BACKWARD-RIGHT________
@@ -158,14 +211,14 @@ function controller() {
     if (command == "39,40" || command == "68,83") {
 
         // action 
-        document.getElementById("cmd-ip").href = "http://192.168.0.105/br";
+        document.getElementById("cmd-ip").href = engine_val + "/br";
         document.getElementById("cmd-ip").click();
     }
     // ______________STOP______________
     // -----------All KeyUP---------
     if (command == "STOP") {
         // action
-        document.getElementById("cmd-ip").href = "http://192.168.0.105/s";
+        document.getElementById("cmd-ip").href = engine_val + "/s";
         document.getElementById("cmd-ip").click();
     }
     // __________EMERGENCY-BRAKE________
@@ -179,7 +232,7 @@ function controller() {
         document.getElementById("rightIndicator").style.opacity = "1.0";
 
         // action
-        document.getElementById("cmd-ip").href = "http://192.168.0.105/s";
+        document.getElementById("cmd-ip").href = engine_val + "/s";
         document.getElementById("cmd-ip").click();
     }
     // ______________H-O-R-N____________
