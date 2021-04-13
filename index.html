@@ -124,38 +124,7 @@
   <script src="assets/js/custom.js"></script>
   <script src="assets/js/nav.js"></script>
   <script src="assets/js/gearmeter.js"></script>
-
-  <!-- Hide Cursor -->
-  <script>
-    $(function () {
-      var timer;
-      var fadeInBuffer = false;
-      $(document).mousemove(function () {
-        if (!fadeInBuffer && timer) {
-          clearTimeout(timer);
-          timer = 0;
-          $('html').css({
-            cursor: ''
-          });
-        } else {
-          $('*').css({
-            cursor: 'default'
-          });
-          fadeInBuffer = false;
-        }
-        timer = setTimeout(function () {
-          $('*').css({
-            cursor: 'none'
-          });
-          fadeInBuffer = true;
-        }, 5000) // time 5 seconds
-      });
-      $('*').css({
-        cursor: 'default'
-      });
-    });
-  </script>
-
+  
 </body>
 
 </html>

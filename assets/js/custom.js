@@ -1,3 +1,59 @@
+// ----------------------- START HIDE CURSOR ------------------------------------ 
+$(function () {
+    var timer;
+    var fadeInBuffer = false;
+    $(document).mousemove(function () {
+        if (!fadeInBuffer && timer) {
+            clearTimeout(timer);
+            timer = 0;
+            $('html').css({
+                cursor: ''
+            });
+        } else {
+            $('*').css({
+                cursor: 'default'
+            });
+            fadeInBuffer = false;
+        }
+        timer = setTimeout(function () {
+            $('*').css({
+                cursor: 'none'
+            });
+            fadeInBuffer = true;
+        }, 5000) // time 5 seconds
+    });
+    $('*').css({
+        cursor: 'default'
+    });
+});
+// ------------------------ END HIDE CURSOR ------------------------------------- 
+
+// ------------------------- START NAV BAR -------------------------------------- 
+$('.expandHome').mouseover(function () {
+    $('.sub-home').css({
+        'display': 'block'
+    });
+});
+$('.subnavbtn').mouseover(function () {
+    $('.sub-home').css({
+        'display': 'none'
+    });
+});
+
+$('#trapezoid').mouseleave(function () {
+    $('#trapezoid').css({
+        'margin-top': '-53px'
+    });
+    $('.sub-home').css({
+        'display': 'none'
+    });
+}).mouseenter(function () {
+    $('#trapezoid').css({
+        'margin-top': '0px'
+    });
+});
+// --------------------------- END NAV BAR --------------------------------------- 
+
 // ----------------------- START KEY LISTENER ------------------------------------ 
 var cmd, keys = [];
 window.addEventListener("keydown",
