@@ -168,7 +168,7 @@ function controller() {
         document.getElementById("leftIndicator").style.opacity = "1.0";
 
         // action 
-        document.getElementById("cmd-ip").href = engine_val + "left";
+        document.getElementById("cmd-ip").href = engine_val + "/left";
         document.getElementById("cmd-ip").click();
     }
     // ___________WHEEL-RIGHT__________
@@ -177,7 +177,7 @@ function controller() {
         document.getElementById("rightIndicator").style.opacity = "1.0";
 
         // action 
-        document.getElementById("cmd-ip").href = engine_val + "right";
+        document.getElementById("cmd-ip").href = engine_val + "/right";
         document.getElementById("cmd-ip").click();
     }
     // ___________FORWARD-LEFT_________
