@@ -198,6 +198,11 @@ document.addEventListener("DOMContentLoaded", function () {
   document.onkeyup = keyUp;
 
   function keyDown(e) {
+     // keyUp not work in ipInput Field  
+     if (event.target.matches('[type="url"]')) {
+      return;
+    }
+  // -----------------------------------------
     e = e || window.event;
 
     if (e.keyCode == "38" || e.keyCode == "87") {
@@ -214,6 +219,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function keyUp(e) {
+     // keyUp not work in ipInput Field  
+     if (event.target.matches('[type="url"]')) {
+      return;
+    }
+  // -----------------------------------------
     e = e || window.event;
 
     if (e.keyCode == "38" || e.keyCode == "87") {
