@@ -58,7 +58,7 @@
   <form class="ipform">
     <div class="input-container">
       <div id="camipBtn" onclick="getcamIp()" class="icon"><i class="fas fa-video"></i></div>
-      <input onclick="camipClicked()" id="cam-ip" type="url" list="cam-ip-list" placeholder="http://camera_ip:port"
+      <input onclick="camipClicked()" id="cam-ip" type="url" list="cam-ip-list" name="camipField" placeholder="http://camera_ip:port"
         autocomplete="off">
       <datalist id="cam-ip-list">
         <option value="http://192.168.0.106:8080">
@@ -68,7 +68,7 @@
     <br>
     <div class="input-container">
       <div id="engineipBtn" onclick="getengineIp()" class="icon"><i class="fas fa-car"></i></div>
-      <input onclick="engineipClicked()" id="engine-ip" type="url" list="car-ip-list" placeholder="http://car_ip_here"
+      <input onclick="engineipClicked()" id="engine-ip" type="url" list="car-ip-list" name="engineipField" placeholder="http://car_ip_here"
         autocomplete="off">
       <datalist id="car-ip-list">
         <option value="http://192.168.0.104">

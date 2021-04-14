@@ -108,6 +108,11 @@ engine_ip.addEventListener("keyup", function (event) {
 var cmd, keys = [];
 window.addEventListener("keydown",
     function (e) {
+        // keyDown not work in ipInput Field 
+        if (event.target.matches('[type="url"]')) {
+            return;
+          }
+        // -----------------------------------------
         keys[e.keyCode] = e.keyCode;
         var keysArray = getNumberArray(keys);
         cmd = keysArray;
@@ -117,7 +122,11 @@ window.addEventListener("keydown",
 
 window.addEventListener('keyup',
     function (e) {
-
+        // keyUp not work in ipInput Field  
+        if (event.target.matches('[type="url"]')) {
+            return;
+          }
+        // -----------------------------------------
         keys[e.keyCode] = false;
         cmd = "STOP" + getNumberArray(keys);
         controller();
