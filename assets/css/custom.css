@@ -214,11 +214,11 @@ input[type="url"]:focus {
   transform: skew(-13deg);
   box-shadow: -7px 5px 7px 0px #00000040;
   border-radius: 4px;
+  font-size: 37px;
+  color: white;
 }
 
-.sett-btn img {
-  width: 40px;
-  height: auto;
+.sett-btn i {
   transform: skew(13deg);
 }
 
