@@ -104,6 +104,44 @@ engine_ip.addEventListener("keyup", function (event) {
 });
 //------------------------- GETTING ENGIN IP -------------------------------------
 
+//--------------------- START TOOGLE FULL SCREEN ---------------------------------
+function toggleScreen() {
+    var x = document.getElementById("changeIcon");
+    if (x.className === "fas fa-expand-arrows-alt") {
+      x.className = "fas fa-compress-arrows-alt";
+      openFullscreen();
+    } else {
+      x.className = "fas fa-expand-arrows-alt";
+      closeFullscreen();
+    }
+  }
+  var elem = document.documentElement;
+
+  function openFullscreen() {
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) {
+      /* Safari */
+      elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) {
+      /* IE11 */
+      elem.msRequestFullscreen();
+    }
+  }
+
+  function closeFullscreen() {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.webkitExitFullscreen) {
+      /* Safari */
+      document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) {
+      /* IE11 */
+      document.msExitFullscreen();
+    }
+  }
+//---------------------- END TOOGLE FULL SCREEN ----------------------------------
+
 // ----------------------- START KEY LISTENER ------------------------------------ 
 var cmd, keys = [];
 window.addEventListener("keydown",
