@@ -62,14 +62,19 @@ function camipClicked() {
 
 // pressed cam icon 
 function getcamIp() {
+    document.getElementById("camipBtn").style.backgroundColor = "#ffd607";
+    document.getElementById("cam-ip").blur();
+    document.body.style.backgroundImage = "url('assets/img/camPreloader.gif')";
+    
+// wait 9.3 sec then execute the function
+    setTimeout(function () {
     var x = "url('";
     var y = document.getElementById("cam-ip").value; //as http://192.168.0.106:8080
     var y1 = y + "/video";
     var z = "'), url(assets/img/error.png)"; //for invalid input the second one will load
     var xyz = x + y1 + z; //url('get from y1') //ninja technique for potato coder:D
     document.body.style.backgroundImage = xyz;
-    document.getElementById("camipBtn").style.backgroundColor = "#ffd607";
-    document.getElementById("cam-ip").blur();
+    }, 9300);
 }
 
 // pressed enter key cam field
