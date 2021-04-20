@@ -74,7 +74,7 @@ function getcamIp() {
     var z = "'), url(assets/img/error.png)"; //for invalid input the second one will load
     var xyz = x + y1 + z; //url('get from y1') //ninja technique for potato coder:D
     document.body.style.backgroundImage = xyz;
-    }, 9300);
+    }, 6500);
 }
 
 // pressed enter key cam field
