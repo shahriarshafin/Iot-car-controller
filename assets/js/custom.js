@@ -189,7 +189,7 @@ function getNumberArray(arr) {
 
 // ----------------------- START CONTROLLER ------------------------------------ 
 function controller() {
-    // view command
+    // view key command
     // console.log(cmd);
 
     // getting engine-ip
@@ -204,8 +204,7 @@ function controller() {
     if (command == "38" || command == "STOP38" || command == "87" || command == "STOP87") {
 
         // action 
-        document.getElementById("cmd-ip").href = engine_val + "/f";
-        document.getElementById("cmd-ip").click();
+        sendToCar("/f");
     }
 
     // ____________BACKWARD____________
@@ -213,8 +212,7 @@ function controller() {
     if (command == "40" || command == "STOP40" || command == "83" || command == "STOP83") {
 
         // action 
-        document.getElementById("cmd-ip").href = engine_val + "/b";
-        document.getElementById("cmd-ip").click();
+        sendToCar("/b");
     }
 
     // ___________WHEEL-LEFT___________
@@ -223,8 +221,7 @@ function controller() {
         document.getElementById("leftIndicator").style.opacity = "1.0";
 
         // action 
-        document.getElementById("cmd-ip").href = engine_val + "/left";
-        document.getElementById("cmd-ip").click();
+        sendToCar("/left");
     }
 
     // ___________WHEEL-RIGHT__________
@@ -233,8 +230,7 @@ function controller() {
         document.getElementById("rightIndicator").style.opacity = "1.0";
 
         // action 
-        document.getElementById("cmd-ip").href = engine_val + "/right";
-        document.getElementById("cmd-ip").click();
+        sendToCar("/right");
     }
 
     // ___________FORWARD-LEFT_________
@@ -243,8 +239,7 @@ function controller() {
         document.getElementById("leftIndicator").style.opacity = "1.0";
 
         // action 
-        document.getElementById("cmd-ip").href = engine_val + "/l";
-        document.getElementById("cmd-ip").click();
+        sendToCar("/l");
     }
 
     // ___________FORWARD-RIGHT________
@@ -253,8 +248,7 @@ function controller() {
         document.getElementById("rightIndicator").style.opacity = "1.0";
 
         // action 
-        document.getElementById("cmd-ip").href = engine_val + "/r";
-        document.getElementById("cmd-ip").click();
+        sendToCar("/r");
     }
 
     // __________BACKWARD-LEFT_________
@@ -262,8 +256,7 @@ function controller() {
     if (command == "37,40" || command == "65,83") {
 
         // action 
-        document.getElementById("cmd-ip").href = engine_val + "/bl";
-        document.getElementById("cmd-ip").click();
+        sendToCar("/bl");
     }
 
     // __________BACKWARD-RIGHT________
@@ -271,16 +264,14 @@ function controller() {
     if (command == "39,40" || command == "68,83") {
 
         // action 
-        document.getElementById("cmd-ip").href = engine_val + "/br";
-        document.getElementById("cmd-ip").click();
+        sendToCar("/br");
     }
 
     // ______________STOP______________
     // -----------All KeyUP---------
     if (command == "STOP") {
         // action
-        document.getElementById("cmd-ip").href = engine_val + "/s";
-        document.getElementById("cmd-ip").click();
+        sendToCar("/s");
     }
 
     // __________EMERGENCY-BRAKE________
@@ -294,8 +285,7 @@ function controller() {
         document.getElementById("rightIndicator").style.opacity = "1.0";
 
         // action
-        document.getElementById("cmd-ip").href = engine_val + "/s";
-        document.getElementById("cmd-ip").click();
+        sendToCar("/s");
     }
 
     // ______________H-O-R-N____________
@@ -304,11 +294,20 @@ function controller() {
         document.getElementById("carHorn").play();
 
         // action 
-        document.getElementById("cmd-ip").href = engine_val + "/ho";
-        document.getElementById("cmd-ip").click();
+        sendToCar("/ho");
     }
 }
 // ----------------------- END CONTROLLER ------------------------------------ 
+
+// --------------------- SEND COMMAND TO CAR --------------------------------- 
+function sendToCar(carCmd) {
+	var engine_val = document.getElementById("engine-ip").value;
+
+	document.getElementById("cmd-ip").href = engine_val + carCmd;
+	document.getElementById("cmd-ip").click();
+	return;
+}
+// --------------------- SEND COMMAND TO CAR ---------------------------------
 
 //------------------------- START KEY UP -------------------------------------
 window.addEventListener("keyup", function (event) {
@@ -331,8 +330,7 @@ window.addEventListener("keyup", function (event) {
         carHorn.currentTime = 0;
 
         // action link
-        document.getElementById("cmd-ip").href = document.getElementById("engine-ip").value + "/hf";
-        document.getElementById("cmd-ip").click();
+        sendToCar("/hf");
     }
 
     // ______________SPACEBAR____________
@@ -345,8 +343,7 @@ window.addEventListener("keyup", function (event) {
         document.getElementById("rightIndicator").style.opacity = "0.2";
 
         // action
-        document.getElementById("cmd-ip").href = document.getElementById("engine-ip").value + "/s";
-        document.getElementById("cmd-ip").click();
+        sendToCar("/s");
     }
 });
 //----------------------- END KEY UP -------------------------------------
