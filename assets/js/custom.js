@@ -54,6 +54,13 @@ $('#trapezoid').mouseleave(function () {
 });
 // --------------------------- END NAV BAR --------------------------------------- 
 
+// ------------------------ GLOBAL VARIABLES ------------------------------------- 
+//
+//
+//
+//
+// ------------------------ GLOBAL VARIABLES ------------------------------------- 
+
 //-------------------------- GETTING CAM IP --------------------------------------
 // pressed cam input field 
 function camipClicked() {
@@ -190,7 +197,7 @@ function getNumberArray(arr) {
 // ----------------------- START CONTROLLER ------------------------------------ 
 function controller() {
     // view key command
-    console.log(cmd);
+    // console.log(cmd);
 
     // getting engine-ip
     var engine_val = document.getElementById("engine-ip").value;
