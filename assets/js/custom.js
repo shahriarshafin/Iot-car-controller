@@ -87,7 +87,7 @@ cam_ip.addEventListener("keyup", function (event) {
 });
 //-------------------------- GETTING CAM IP --------------------------------------
 
-//------------------------- GETTING ENGIN IP -------------------------------------
+//------------------------- GETTING ENGINE IP ------------------------------------
 // pressed engine input field 
 function engineipClicked() {
     document.getElementById("engineipBtn").style.backgroundColor = "red";
@@ -107,7 +107,7 @@ engine_ip.addEventListener("keyup", function (event) {
         document.getElementById("engineipBtn").click();
     }
 });
-//------------------------- GETTING ENGIN IP -------------------------------------
+//------------------------- GETTING ENGINE IP ------------------------------------
 
 //--------------------- START TOOGLE FULL SCREEN ---------------------------------
 function toggleScreen() {
