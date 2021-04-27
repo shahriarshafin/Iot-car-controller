@@ -190,7 +190,7 @@ function getNumberArray(arr) {
 // ----------------------- START CONTROLLER ------------------------------------ 
 function controller() {
     // view key command
-    // console.log(cmd);
+    console.log(cmd);
 
     // getting engine-ip
     var engine_val = document.getElementById("engine-ip").value;
@@ -235,7 +235,7 @@ function controller() {
 
     // ___________FORWARD-LEFT_________
     // --Arrow[Up + Left] / Key[W + A]--
-    if (command == "37,38" || command == "65,87") {
+    if (command == "37,38" || command == "65,87" || command == "38,65" || command == "37,87") {
         document.getElementById("leftIndicator").style.opacity = "1.0";
 
         // action 
@@ -244,7 +244,7 @@ function controller() {
 
     // ___________FORWARD-RIGHT________
     // --Arrow[Up + Right] / Key[W + D]--
-    if (command == "38,39" || command == "68,87") {
+    if (command == "38,39" || command == "68,87" || command == "38,68" || command == "39,87") {
         document.getElementById("rightIndicator").style.opacity = "1.0";
 
         // action 
@@ -253,7 +253,7 @@ function controller() {
 
     // __________BACKWARD-LEFT_________
     // --Arrow[Down + Left] / Key[S + A]--
-    if (command == "37,40" || command == "65,83") {
+    if (command == "37,40" || command == "65,83" || command == "40,65" || command == "37,83") {
 
         // action 
         sendToCar("/bl");
@@ -261,7 +261,7 @@ function controller() {
 
     // __________BACKWARD-RIGHT________
     // --Arrow[Down + Right] / Key[S + D]--
-    if (command == "39,40" || command == "68,83") {
+    if (command == "39,40" || command == "68,83" || command == "40,68" || command == "39,83") {
 
         // action 
         sendToCar("/br");
