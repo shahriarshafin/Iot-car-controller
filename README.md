@@ -1,12 +1,14 @@
 # [Iot Car Controller](https://iotcarcontroller.netlify.app/)
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue)
-![coverage](https://img.shields.io/badge/coverage-50%25-green)
+![project coverage](https://img.shields.io/badge/project_coverage-50%25-green)
 ![repo size](https://img.shields.io/github/repo-size/shahriarshafin/Iot-car-controller?color=red)
 
 ## About this project
 
 A web application that can control [NodeMCU](https://en.wikipedia.org/wiki/NodeMCU) - Car via WiFi and stream live footage with IP camera.
+
+<a href="https://iotcarcontroller.netlify.app/"><img src="https://raw.githubusercontent.com/shahriarshafin/MyCDN/master/images/dbot_home.png?token=AHVY5NT7IH7N7BQF6KKWRXLASKFOI" alt="home-page"></a>
 
 ## Features:
 
