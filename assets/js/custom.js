@@ -166,6 +166,7 @@ window.addEventListener("keydown",
         keys[e.keyCode] = e.keyCode;
         var keysArray = getNumberArray(keys);
         cmd = keysArray;
+        // passing key value to controller()
         controller();
     },
     false);
@@ -179,7 +180,8 @@ window.addEventListener('keyup',
         // -----------------------------------------
         keys[e.keyCode] = false;
         cmd = "STOP" + getNumberArray(keys);
-        controller();
+        // passing key value to controller()
+        controller(); 
     },
     false);
 
@@ -196,12 +198,11 @@ function getNumberArray(arr) {
 
 // ----------------------- START CONTROLLER ------------------------------------ 
 function controller() {
-    // view key command
+    // view recieved key values
     // console.log(cmd);
 
     // getting engine-ip
     var engine_val = document.getElementById("engine-ip").value;
-
 
     // getting cmd(to string) as command   
     const command = cmd.toString();
@@ -336,7 +337,7 @@ window.addEventListener("keyup", function (event) {
         document.getElementById("carHorn").pause();
         carHorn.currentTime = 0;
 
-        // action link
+        // action
         sendToCar("/hf");
     }
 
