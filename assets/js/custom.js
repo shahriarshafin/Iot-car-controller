@@ -1,314 +1,353 @@
-// ----------------------- START HIDE CURSOR ------------------------------------ 
+// ----------------------- START HIDE CURSOR ------------------------------------
 $(function () {
-    var timer;
-    var fadeInBuffer = false;
-    $(document).mousemove(function () {
-        if (!fadeInBuffer && timer) {
-            clearTimeout(timer);
-            timer = 0;
-            $('html').css({
-                cursor: ''
-            });
-        } else {
-            $('*').css({
-                cursor: 'default'
-            });
-            fadeInBuffer = false;
-        }
-        timer = setTimeout(function () {
-            $('*').css({
-                cursor: 'none'
-            });
-            fadeInBuffer = true;
-        }, 5000) // time 5 seconds
-    });
-    $('*').css({
-        cursor: 'default'
-    });
+	var timer;
+	var fadeInBuffer = false;
+	$(document).mousemove(function () {
+		if (!fadeInBuffer && timer) {
+			clearTimeout(timer);
+			timer = 0;
+			$("html").css({
+				cursor: "",
+			});
+		} else {
+			$("*").css({
+				cursor: "default",
+			});
+			fadeInBuffer = false;
+		}
+		timer = setTimeout(function () {
+			$("*").css({
+				cursor: "none",
+			});
+			fadeInBuffer = true;
+		}, 5000); // time 5 seconds
+	});
+	$("*").css({
+		cursor: "default",
+	});
 });
-// ------------------------ END HIDE CURSOR ------------------------------------- 
+// ------------------------ END HIDE CURSOR -------------------------------------
 
-// ------------------------- START NAV BAR -------------------------------------- 
-$('.expandHome').mouseover(function () {
-    $('.sub-home').css({
-        'display': 'block'
-    });
+// ------------------------- START NAV BAR --------------------------------------
+$(".expandHome").mouseover(function () {
+	$(".sub-home").css({
+		display: "block",
+	});
 });
-$('.subnavbtn').mouseover(function () {
-    $('.sub-home').css({
-        'display': 'none'
-    });
+$(".subnavbtn").mouseover(function () {
+	$(".sub-home").css({
+		display: "none",
+	});
 });
 
-$('#trapezoid').mouseleave(function () {
-    $('#trapezoid').css({
-        'margin-top': '-53px'
-    });
-    $('.sub-home').css({
-        'display': 'none'
-    });
-}).mouseenter(function () {
-    $('#trapezoid').css({
-        'margin-top': '0px'
-    });
-});
-// --------------------------- END NAV BAR --------------------------------------- 
+$("#trapezoid")
+	.mouseleave(function () {
+		$("#trapezoid").css({
+			"margin-top": "-53px",
+		});
+		$(".sub-home").css({
+			display: "none",
+		});
+	})
+	.mouseenter(function () {
+		$("#trapezoid").css({
+			"margin-top": "0px",
+		});
+	});
+// --------------------------- END NAV BAR ---------------------------------------
 
-// ------------------------ GLOBAL VARIABLES ------------------------------------- 
+// ------------------------ GLOBAL VARIABLES -------------------------------------
 const camButton = document.getElementById("camipBtn"),
-      camInput = document.getElementById("cam-ip"),
-      engineButton = document.getElementById("engineipBtn"),
-      engineInput = document.getElementById("engine-ip"),
-      leftIndicator = document.getElementById("leftIndicator"),
-      rightIndicator = document.getElementById("rightIndicator"),
-      cmdLink = document.getElementById("cmd-ip"),
-      carHorn = document.getElementById("carHorn"),
-      brakeSound = document.getElementById("brake"),
-      ToggleScreenBtn = document.getElementById("changeIcon");
-// ------------------------ GLOBAL VARIABLES ------------------------------------- 
+	camInput = document.getElementById("cam-ip"),
+	engineButton = document.getElementById("engineipBtn"),
+	engineInput = document.getElementById("engine-ip"),
+	leftIndicator = document.getElementById("leftIndicator"),
+	rightIndicator = document.getElementById("rightIndicator"),
+	cmdLink = document.getElementById("cmd-ip"),
+	carHorn = document.getElementById("carHorn"),
+	brakeSound = document.getElementById("brake"),
+	ToggleScreenBtn = document.getElementById("changeIcon");
+// ------------------------ GLOBAL VARIABLES -------------------------------------
 
 //-------------------------- GETTING CAM IP --------------------------------------
-// pressed cam input field 
+// pressed cam input field
 function camipClicked() {
-    camButton.style.backgroundColor = "red";
+	camButton.style.backgroundColor = "red";
 }
 
-// pressed cam icon 
+// pressed cam icon
 function getcamIp() {
-    camButton.style.backgroundColor = "#ffd607";
-    camInput.blur();
-    document.body.style.backgroundImage = "url('assets/img/camPreloader.gif')";
-    
-// wait 9.3 sec then execute the function
-    setTimeout(function () {
-    var x = "url('";
-    var y = camInput.value; //as http://192.168.0.106:8080
-    var y1 = y + "/video";
-    var z = "'), url(assets/img/error.png)"; //for invalid input the second one will load
-    var xyz = x + y1 + z; //url('get from y1') //ninja technique for potato coder:D
-    document.body.style.backgroundImage = xyz;
-    }, 6500);
+	camButton.style.backgroundColor = "#ffd607";
+	camInput.blur();
+	document.body.style.backgroundImage = "url('assets/img/camPreloader.gif')";
+
+	// wait 9.3 sec then execute the function
+	setTimeout(function () {
+		var x = "url('";
+		var y = camInput.value; //as http://192.168.0.106:8080
+		var y1 = y + "/video";
+		var z = "'), url(assets/img/error.png)"; //for invalid input the second one will load
+		var xyz = x + y1 + z; //url('get from y1') //ninja technique for potato coder:D
+		document.body.style.backgroundImage = xyz;
+	}, 6500);
 }
 
 // pressed enter key cam field
 camInput.addEventListener("keyup", function (event) {
-    if (event.keyCode === 13) {
-        event.preventDefault();
-        camButton.click();
-    }
+	if (event.keyCode === 13) {
+		event.preventDefault();
+		camButton.click();
+	}
 });
 //-------------------------- GETTING CAM IP --------------------------------------
 
 //------------------------- GETTING ENGINE IP ------------------------------------
-// pressed engine input field 
+// pressed engine input field
 function engineipClicked() {
-    engineButton.style.backgroundColor = "red";
+	engineButton.style.backgroundColor = "red";
 }
 
-// pressed engine icon 
+// pressed engine icon
 function getengineIp() {
-    engineButton.style.backgroundColor = "#ffd607";
-    engineInput.blur();
+	engineButton.style.backgroundColor = "#ffd607";
+	engineInput.blur();
 }
 
 // pressed enter key engine field
 engineInput.addEventListener("keyup", function (event) {
-    if (event.keyCode === 13) {
-        event.preventDefault();
-        engineButton.click();
-    }
+	if (event.keyCode === 13) {
+		event.preventDefault();
+		engineButton.click();
+	}
 });
 //------------------------- GETTING ENGINE IP ------------------------------------
 
 //--------------------- START TOOGLE FULL SCREEN ---------------------------------
 function toggleScreen() {
-    if (ToggleScreenBtn.className === "fas fa-expand-arrows-alt") {
-        ToggleScreenBtn.className = "fas fa-compress-arrows-alt";
-      openFullscreen();
-    } else {
-        ToggleScreenBtn.className = "fas fa-expand-arrows-alt";
-      closeFullscreen();
-    }
-  }
-  
-  function openFullscreen() {
-    var elem = document.documentElement;
-    
-    if (elem.requestFullscreen) {
-      elem.requestFullscreen();
-    } else if (elem.webkitRequestFullscreen) {
-      /* Safari */
-      elem.webkitRequestFullscreen();
-    } else if (elem.msRequestFullscreen) {
-      /* IE11 */
-      elem.msRequestFullscreen();
-    }
-  }
+	if (ToggleScreenBtn.className === "fas fa-expand-arrows-alt") {
+		ToggleScreenBtn.className = "fas fa-compress-arrows-alt";
+		openFullscreen();
+	} else {
+		ToggleScreenBtn.className = "fas fa-expand-arrows-alt";
+		closeFullscreen();
+	}
+}
 
-  function closeFullscreen() {
-    if (document.exitFullscreen) {
-      document.exitFullscreen();
-    } else if (document.webkitExitFullscreen) {
-      /* Safari */
-      document.webkitExitFullscreen();
-    } else if (document.msExitFullscreen) {
-      /* IE11 */
-      document.msExitFullscreen();
-    }
-  }
+function openFullscreen() {
+	var elem = document.documentElement;
+
+	if (elem.requestFullscreen) {
+		elem.requestFullscreen();
+	} else if (elem.webkitRequestFullscreen) {
+		/* Safari */
+		elem.webkitRequestFullscreen();
+	} else if (elem.msRequestFullscreen) {
+		/* IE11 */
+		elem.msRequestFullscreen();
+	}
+}
+
+function closeFullscreen() {
+	if (document.exitFullscreen) {
+		document.exitFullscreen();
+	} else if (document.webkitExitFullscreen) {
+		/* Safari */
+		document.webkitExitFullscreen();
+	} else if (document.msExitFullscreen) {
+		/* IE11 */
+		document.msExitFullscreen();
+	}
+}
 //---------------------- END TOOGLE FULL SCREEN ----------------------------------
 
-// ----------------------- START KEY LISTENER ------------------------------------ 
-var cmd, keys = [];
-window.addEventListener("keydown",
-    function (e) {
-        // keyDown not work in ipInput Field 
-        if (event.target.matches('[type="url"]')) {
-            return;
-          }
-        // -----------------------------------------
-        keys[e.keyCode] = e.keyCode;
-        var keysArray = getNumberArray(keys);
-        cmd = keysArray;
-        // passing key value to controller()
-        controller();
-    },
-    false);
+// ----------------------- START KEY LISTENER ------------------------------------
+var cmd,
+	keys = [];
+window.addEventListener(
+	"keydown",
+	function (e) {
+		// keyDown not work in ipInput Field
+		if (event.target.matches('[type="url"]')) {
+			return;
+		}
+		// -----------------------------------------
+		keys[e.keyCode] = e.keyCode;
+		var keysArray = getNumberArray(keys);
+		cmd = keysArray;
+		// passing key value to controller()
+		controller();
+	},
+	false
+);
 
-window.addEventListener('keyup',
-    function (e) {
-        // keyUp not work in ipInput Field  
-        if (event.target.matches('[type="url"]')) {
-            return;
-          }
-        // -----------------------------------------
-        keys[e.keyCode] = false;
-        cmd = "STOP" + getNumberArray(keys);
-        // passing key value to controller()
-        controller(); 
-    },
-    false);
+window.addEventListener(
+	"keyup",
+	function (e) {
+		// keyUp not work in ipInput Field
+		if (event.target.matches('[type="url"]')) {
+			return;
+		}
+		// -----------------------------------------
+		keys[e.keyCode] = false;
+		cmd = "STOP" + getNumberArray(keys);
+		// passing key value to controller()
+		controller();
+	},
+	false
+);
 
 function getNumberArray(arr) {
-    var newArr = new Array();
-    for (var i = 0; i < arr.length; i++) {
-        if (typeof arr[i] == "number") {
-            newArr[newArr.length] = arr[i];
-        }
-    }
-    return newArr;
+	var newArr = new Array();
+	for (var i = 0; i < arr.length; i++) {
+		if (typeof arr[i] == "number") {
+			newArr[newArr.length] = arr[i];
+		}
+	}
+	return newArr;
 }
-// ----------------------- END KEY LISTENER ------------------------------------ 
+// ----------------------- END KEY LISTENER ------------------------------------
 
-// ----------------------- START CONTROLLER ------------------------------------ 
+// ----------------------- START CONTROLLER ------------------------------------
 function controller() {
-    // view recieved key values
-    // console.log(cmd);
+	// view recieved key values
+	// console.log(cmd);
 
-    // getting cmd(to string) as command   
-    const command = cmd.toString();
+	// getting cmd(to string) as command
+	const command = cmd.toString();
 
-    // _____________FORWARD____________
-    // --------ArrowUp / KeyW---------
-    if (command == "38" || command == "STOP38" || command == "87" || command == "STOP87") {
+	// _____________FORWARD____________
+	// --------ArrowUp / KeyW---------
+	if (
+		command == "38" ||
+		command == "STOP38" ||
+		command == "87" ||
+		command == "STOP87"
+	) {
+		// action
+		sendToCar("/f");
+	}
 
-        // action 
-        sendToCar("/f");
-    }
+	// ____________BACKWARD____________
+	// ------ArrowDown / KeyS---------
+	if (
+		command == "40" ||
+		command == "STOP40" ||
+		command == "83" ||
+		command == "STOP83"
+	) {
+		// action
+		sendToCar("/b");
+	}
 
-    // ____________BACKWARD____________
-    // ------ArrowDown / KeyS---------
-    if (command == "40" || command == "STOP40" || command == "83" || command == "STOP83") {
+	// ___________WHEEL-LEFT___________
+	// ------ArrowLeft / KeyA---------
+	if (
+		command == "37" ||
+		command == "STOP37" ||
+		command == "65" ||
+		command == "STOP65"
+	) {
+		leftIndicator.style.opacity = "1.0";
+		// action
+		sendToCar("/left");
+	}
 
-        // action 
-        sendToCar("/b");
-    }
+	// ___________WHEEL-RIGHT__________
+	// -----ArrowRight / KeyD---------
+	if (
+		command == "39" ||
+		command == "STOP39" ||
+		command == "68" ||
+		command == "STOP68"
+	) {
+		rightIndicator.style.opacity = "1.0";
+		// action
+		sendToCar("/right");
+	}
 
-    // ___________WHEEL-LEFT___________
-    // ------ArrowLeft / KeyA---------
-    if (command == "37" || command == "STOP37" || command == "65" || command == "STOP65") {
-        leftIndicator.style.opacity = "1.0";
+	// ___________FORWARD-LEFT_________
+	// --Arrow[Up + Left] / Key[W + A]--
+	if (
+		command == "37,38" ||
+		command == "65,87" ||
+		command == "38,65" ||
+		command == "37,87"
+	) {
+		leftIndicator.style.opacity = "1.0";
+		// action
+		sendToCar("/l");
+	}
 
-        // action 
-        sendToCar("/left");
-    }
+	// ___________FORWARD-RIGHT________
+	// --Arrow[Up + Right] / Key[W + D]--
+	if (
+		command == "38,39" ||
+		command == "68,87" ||
+		command == "38,68" ||
+		command == "39,87"
+	) {
+		rightIndicator.style.opacity = "1.0";
+		// action
+		sendToCar("/r");
+	}
 
-    // ___________WHEEL-RIGHT__________
-    // -----ArrowRight / KeyD---------
-    if (command == "39" || command == "STOP39" || command == "68" || command == "STOP68") {
-        rightIndicator.style.opacity = "1.0";
+	// __________BACKWARD-LEFT_________
+	// --Arrow[Down + Left] / Key[S + A]--
+	if (
+		command == "37,40" ||
+		command == "65,83" ||
+		command == "40,65" ||
+		command == "37,83"
+	) {
+		// action
+		sendToCar("/bl");
+	}
 
-        // action 
-        sendToCar("/right");
-    }
+	// __________BACKWARD-RIGHT________
+	// --Arrow[Down + Right] / Key[S + D]--
+	if (
+		command == "39,40" ||
+		command == "68,83" ||
+		command == "40,68" ||
+		command == "39,83"
+	) {
+		// action
+		sendToCar("/br");
+	}
 
-    // ___________FORWARD-LEFT_________
-    // --Arrow[Up + Left] / Key[W + A]--
-    if (command == "37,38" || command == "65,87" || command == "38,65" || command == "37,87") {
-        leftIndicator.style.opacity = "1.0";
+	// ______________STOP______________
+	// -----------All KeyUP---------
+	if (command == "STOP") {
+		// action
+		sendToCar("/s");
+	}
 
-        // action 
-        sendToCar("/l");
-    }
+	// __________EMERGENCY-BRAKE________
+	// --------------SpaceBar----------
+	if (command == "32") {
+		brakeSound.play();
 
-    // ___________FORWARD-RIGHT________
-    // --Arrow[Up + Right] / Key[W + D]--
-    if (command == "38,39" || command == "68,87" || command == "38,68" || command == "39,87") {
-        rightIndicator.style.opacity = "1.0";
+		leftIndicator.style.color = "#DC3545";
+		rightIndicator.style.color = "#DC3545";
+		leftIndicator.style.opacity = "1.0";
+		rightIndicator.style.opacity = "1.0";
 
-        // action 
-        sendToCar("/r");
-    }
+		// action
+		sendToCar("/s");
+	}
 
-    // __________BACKWARD-LEFT_________
-    // --Arrow[Down + Left] / Key[S + A]--
-    if (command == "37,40" || command == "65,83" || command == "40,65" || command == "37,83") {
+	// ______________H-O-R-N____________
+	// ---------------KeyH-------------
+	if (command == "72") {
+		carHorn.play();
 
-        // action 
-        sendToCar("/bl");
-    }
-
-    // __________BACKWARD-RIGHT________
-    // --Arrow[Down + Right] / Key[S + D]--
-    if (command == "39,40" || command == "68,83" || command == "40,68" || command == "39,83") {
-
-        // action 
-        sendToCar("/br");
-    }
-
-    // ______________STOP______________
-    // -----------All KeyUP---------
-    if (command == "STOP") {
-        // action
-        sendToCar("/s");
-    }
-
-    // __________EMERGENCY-BRAKE________
-    // --------------SpaceBar----------
-    if (command == "32") {
-        brakeSound.play();
-
-        leftIndicator.style.color = "#DC3545"
-        rightIndicator.style.color = "#DC3545"
-        leftIndicator.style.opacity = "1.0";
-        rightIndicator.style.opacity = "1.0";
-
-        // action
-        sendToCar("/s");
-    }
-
-    // ______________H-O-R-N____________
-    // ---------------KeyH-------------
-    if (command == "72") {
-        carHorn.play();
-
-        // action 
-        sendToCar("/ho");
-    }
+		// action
+		sendToCar("/ho");
+	}
 }
-// ----------------------- END CONTROLLER ------------------------------------ 
+// ----------------------- END CONTROLLER ------------------------------------
 
-// --------------------- SEND COMMAND TO CAR --------------------------------- 
+// --------------------- SEND COMMAND TO CAR ---------------------------------
 function sendToCar(carCmd) {
 	cmdLink.href = engineInput.value + carCmd;
 	cmdLink.click();
@@ -318,39 +357,39 @@ function sendToCar(carCmd) {
 
 //------------------------- START KEY UP -------------------------------------
 window.addEventListener("keyup", function (event) {
-    // ___________WHEEL-RIGHT__________
-    // -----ArrowRight / KeyD---------
-    if (event.code == "ArrowLeft" || event.code == "KeyA") {
-        leftIndicator.style.opacity = "0.2";
-    }
+	// ___________WHEEL-RIGHT__________
+	// -----ArrowRight / KeyD---------
+	if (event.code == "ArrowLeft" || event.code == "KeyA") {
+		leftIndicator.style.opacity = "0.2";
+	}
 
-    // __________BACKWARD-RIGHT________
-    // --Arrow[Down + Right] / Key[S + D]--
-    if (event.code == "ArrowRight" || event.code == "KeyD") {
-        rightIndicator.style.opacity = "0.2";
-    }
+	// __________BACKWARD-RIGHT________
+	// --Arrow[Down + Right] / Key[S + D]--
+	if (event.code == "ArrowRight" || event.code == "KeyD") {
+		rightIndicator.style.opacity = "0.2";
+	}
 
-    // ______________HORN-OFF____________
-    // ---------------KeyH-------------
-    if (event.code == "KeyH") {
-        carHorn.pause();
-        carHorn.currentTime = 0;
+	// ______________HORN-OFF____________
+	// ---------------KeyH-------------
+	if (event.code == "KeyH") {
+		carHorn.pause();
+		carHorn.currentTime = 0;
 
-        // action
-        sendToCar("/hf");
-    }
+		// action
+		sendToCar("/hf");
+	}
 
-    // ______________SPACEBAR____________
-    if (event.code == "Space") {
-        brakeSound.pause();
-        brakeSound.currentTime = 0;
-        leftIndicator.style.color = "#ffd607"
-        rightIndicator.style.color = "#ffd607"
-        leftIndicator.style.opacity = "0.2";
-        rightIndicator.style.opacity = "0.2";
+	// ______________SPACEBAR____________
+	if (event.code == "Space") {
+		brakeSound.pause();
+		brakeSound.currentTime = 0;
+		leftIndicator.style.color = "#ffd607";
+		rightIndicator.style.color = "#ffd607";
+		leftIndicator.style.opacity = "0.2";
+		rightIndicator.style.opacity = "0.2";
 
-        // action
-        sendToCar("/s");
-    }
+		// action
+		sendToCar("/s");
+	}
 });
 //----------------------- END KEY UP -------------------------------------
