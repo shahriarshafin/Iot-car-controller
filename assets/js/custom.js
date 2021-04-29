@@ -57,16 +57,16 @@ $("#trapezoid")
 // --------------------------- END NAV BAR ---------------------------------------
 
 // ------------------------ GLOBAL VARIABLES -------------------------------------
-const camButton = document.getElementById("camipBtn"),
-	camInput = document.getElementById("cam-ip"),
-	engineButton = document.getElementById("engineipBtn"),
-	engineInput = document.getElementById("engine-ip"),
-	leftIndicator = document.getElementById("leftIndicator"),
-	rightIndicator = document.getElementById("rightIndicator"),
-	cmdLink = document.getElementById("cmd-ip"),
-	carHorn = document.getElementById("carHorn"),
-	brakeSound = document.getElementById("brake"),
-	ToggleScreenBtn = document.getElementById("changeIcon");
+const camButton = document.querySelector("#camipBtn"),
+	camInput = document.querySelector("#cam-ip"),
+	engineButton = document.querySelector("#engineipBtn"),
+	engineInput = document.querySelector("#engine-ip"),
+	leftIndicator = document.querySelector("#leftIndicator"),
+	rightIndicator = document.querySelector("#rightIndicator"),
+	cmdLink = document.querySelector("#cmd-ip"),
+	carHorn = document.querySelector("#carHorn"),
+	brakeSound = document.querySelector("#brake"),
+	ToggleScreenBtn = document.querySelector("#changeIcon");
 // ------------------------ GLOBAL VARIABLES -------------------------------------
 
 //-------------------------- GETTING CAM IP --------------------------------------
