@@ -1,7 +1,7 @@
 // ----------------------- START HIDE CURSOR ------------------------------------
 $(function () {
-	var timer;
-	var fadeInBuffer = false;
+	let timer;
+	let fadeInBuffer = false;
 	$(document).mousemove(function () {
 		if (!fadeInBuffer && timer) {
 			clearTimeout(timer);
@@ -83,12 +83,9 @@ function getcamIp() {
 
 	// wait 9.3 sec then execute the function
 	setTimeout(function () {
-		var x = "url('";
-		var y = camInput.value; //as http://192.168.0.106:8080
-		var y1 = y + "/video";
-		var z = "'), url(assets/img/error.png)"; //for invalid input the second one will load
-		var xyz = x + y1 + z; //url('get from y1') //ninja technique for potato coder:D
-		document.body.style.backgroundImage = xyz;
+		//for invalid input the second one will load
+		document.body.style.backgroundImage =
+			'url("' + camInput.value + '/video"' + '), url("assets/img/error.png")';
 	}, 6500);
 }
 
@@ -134,7 +131,7 @@ function toggleScreen() {
 }
 
 function openFullscreen() {
-	var elem = document.documentElement;
+	const elem = document.documentElement;
 
 	if (elem.requestFullscreen) {
 		elem.requestFullscreen();
@@ -161,7 +158,7 @@ function closeFullscreen() {
 //---------------------- END TOOGLE FULL SCREEN ----------------------------------
 
 // ----------------------- START KEY LISTENER ------------------------------------
-var cmd,
+let cmd,
 	keys = [];
 window.addEventListener(
 	"keydown",
@@ -172,7 +169,7 @@ window.addEventListener(
 		}
 		// -----------------------------------------
 		keys[e.keyCode] = e.keyCode;
-		var keysArray = getNumberArray(keys);
+		let keysArray = getNumberArray(keys);
 		cmd = keysArray;
 		// passing key value to controller()
 		controller();
@@ -197,8 +194,8 @@ window.addEventListener(
 );
 
 function getNumberArray(arr) {
-	var newArr = new Array();
-	for (var i = 0; i < arr.length; i++) {
+	let newArr = new Array();
+	for (let i = 0; i < arr.length; i++) {
 		if (typeof arr[i] == "number") {
 			newArr[newArr.length] = arr[i];
 		}
