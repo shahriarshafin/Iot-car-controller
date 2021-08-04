@@ -6,9 +6,10 @@
 
 ## About this project
 
-A web application that can control [NodeMCU](https://en.wikipedia.org/wiki/NodeMCU) - Car via WiFi and stream live footage with IP camera.
+A web application that can control [NodeMCU](https://en.wikipedia.org/wiki/NodeMCU) - Car via WiFi and stream live footage with IP camera.<br>
+Live : https://iotcarcontroller.netlify.app/
 
-<a href="https://iotcarcontroller.netlify.app/"><img src="https://raw.githubusercontent.com/shahriarshafin/MyCDN/master/images/dbot_home.png?token=AHVY5NT7IH7N7BQF6KKWRXLASKFOI" alt="home-page"></a>
+<a href="https://iotcarcontroller.netlify.app/"><img src="https://raw.githubusercontent.com/shahriarshafin/Iot-car-controller/master/assets/img/screenshot.png" alt="home-page"></a>
 
 ## Features:
 
