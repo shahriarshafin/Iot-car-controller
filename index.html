@@ -2,128 +2,115 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="assets/img/favicon.png" type="image/gif" sizes="16x16">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/img/favicon.png" type="image/gif" sizes="16x16">
 
-  <!-- Jquery -->
-  <script src="assets/js/jQuery-3.4.1.min.js"></script>
+    <title>IoT Car Controller | Shafin D_bot</title>
 
-  <!-- Font Awseome -->
-  <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-  <link rel="stylesheet" href="assets/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/gearmeter.css">
 
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="assets/css/custom.css">
-  <link rel="stylesheet" href="assets/css/gearmeter.css">
+    <script src="assets/js/jQuery-3.4.1.min.js"></script>
 
-  <title>IoT Car Controller | Shafin D_bot</title>
+    <script defer src="assets/js/gearmeter.js"></script>
+    <script defer src="assets/js/custom.js"></script>
+
 </head>
 
 <body>
-<img style="display: none;" src="assets/img/camPreloader.gif">
-  <!-- ------------------------ NAVBAR START ------------------------ -->
-  <nav class="navbar">
-    <div id="trapezoid">
-      <a class="sub-home" href="#">Home</a>
-      <a href="#About" class="expandHome">About</a>
-      <div class="subnav">
-        <button class="subnavbtn">Settings</button>
-        <div class="subnav-content">
-          <div id="subnav-trapezoid">
-            <a href="#Clients">Camema</a>
-            <a href="#Clients">Control</a>
-          </div>
+    <img style="display: none;" src="assets/img/camPreloader.gif">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div id="trapezoid">
+            <a class="sub-home" href="#">Home</a>
+            <a href="#About" class="expandHome">About</a>
+            <div class="subnav">
+                <button class="subnavbtn">Settings</button>
+                <div class="subnav-content">
+                    <div id="subnav-trapezoid">
+                        <a href="#Clients">Camema</a>
+                        <a href="#Clients">Control</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subnav">
+                <button class="subnavbtn">Theme</button>
+                <div class="subnav-content">
+                    <div class="subnav-trapezoid">
+                        <a href="#Services">red</a>
+                        <a href="#Services">blue</a>
+                        <a href="#Services">yellow</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+    </nav>
 
-      <div class="subnav">
-        <button class="subnavbtn">Theme</button>
-        <div class="subnav-content">
-          <div class="subnav-trapezoid">
-            <a href="#Services">red</a>
-            <a href="#Services">blue</a>
-            <a href="#Services">yellow</a>
-          </div>
+    <!-- SETTINGS BUTTON -->
+    <div onclick="toggleScreen();" class="sett-btn"><i id="changeIcon"
+            class="fas fa-expand-arrows-alt"></i></div>
+
+    <!-- GET IP ADDRESS  -->
+    <form class="ipform">
+        <div class="input-container">
+            <div id="camipBtn" onclick="getcamIp()" class="icon"><i class="fas fa-video"></i></div>
+            <input onclick="camipClicked()" id="cam-ip" type="url" list="cam-ip-list"
+                name="camipField" placeholder="http://camera_ip:port" autocomplete="off">
+            <datalist id="cam-ip-list">
+                <option value="http://192.168.0.106:8080">
+                <option value="http://192.168.0.116:8080">
+            </datalist>
         </div>
-      </div>
-    </div>
-  </nav>
-  <!-- ------------------------ NAVBAR END ------------------------ -->
+        <br>
+        <div class="input-container">
+            <div id="engineipBtn" onclick="getengineIp()" class="icon"><i class="fas fa-car"></i>
+            </div>
+            <input onclick="engineipClicked()" id="engine-ip" type="url" list="car-ip-list"
+                name="engineipField" placeholder="http://car_ip_here" autocomplete="off">
+            <datalist id="car-ip-list">
+                <option value="http://192.168.0.104">
+                <option value="http://192.168.0.105">
+            </datalist>
+        </div>
+    </form>
 
-  <!-- SETTINGS BUTTON -->
-  <div onclick="toggleScreen();" class="sett-btn"><i id="changeIcon" class="fas fa-expand-arrows-alt"></i></div>
-
-  <!-- ------------------- GET IP ADDRESS START ------------------- -->
-  <form class="ipform">
-    <div class="input-container">
-      <div id="camipBtn" onclick="getcamIp()" class="icon"><i class="fas fa-video"></i></div>
-      <input onclick="camipClicked()" id="cam-ip" type="url" list="cam-ip-list" name="camipField" placeholder="http://camera_ip:port"
-        autocomplete="off">
-      <datalist id="cam-ip-list">
-        <option value="http://192.168.0.106:8080">
-        <option value="http://192.168.0.116:8080">
-      </datalist>
-    </div>
+    <!-- HIDDEN DIV START -->
+    <iframe id="hidden-frame" name="hidden-frame" style="display:none"></iframe>
+    <div id="cmd-map"><a id="cmd-ip" href="#" target="hidden-frame"></a></div>
     <br>
-    <div class="input-container">
-      <div id="engineipBtn" onclick="getengineIp()" class="icon"><i class="fas fa-car"></i></div>
-      <input onclick="engineipClicked()" id="engine-ip" type="url" list="car-ip-list" name="engineipField" placeholder="http://car_ip_here"
-        autocomplete="off">
-      <datalist id="car-ip-list">
-        <option value="http://192.168.0.104">
-        <option value="http://192.168.0.105">
-      </datalist>
+
+    <!-- SIDE INDICATOR -->
+    <table class="indicator-table">
+        <tr>
+            <td style="text-align:left">
+                <i id="leftIndicator" class="fas fa-angle-left sidebutton"></i>
+            </td>
+            <td style="text-align:right">
+                <i id="rightIndicator" class="fas fa-angle-right sidebutton"></i>
+            </td>
+        </tr>
+    </table>
+
+    <!-- SPEED METER -->
+    <div class="dashboard">
+        <div class="meter meter--rpm meter--big-label"></div>
+        <div class="meter meter--gear">
+            <div>1</div>
+        </div>
+        <div class="meter meter--speed"></div>
     </div>
-  </form>
-  <!-- ------------------- GET IP ADDRESS END --------------------- -->
 
-  <!-- ----- HIDDEN DIV START ----- -->
-  <iframe id="hidden-frame" name="hidden-frame" style="display:none"></iframe>
-  <div id="cmd-map"><a id="cmd-ip" href="#" target="hidden-frame"></a></div>
-  <br>
-  <!-- ------ HIDDEN DIV END ------ -->
+    <!-- VOLUME -->
+    <button class="btn-volume active">♩</button>
 
-  <!-- ------------------ SIDE INDICATOR START -------------------- -->
-  <table class="indicator-table">
-    <tr>
-      <td style="text-align:left">
-        <i id="leftIndicator" class="fas fa-angle-left sidebutton"></i>
-      </td>
-      <td style="text-align:right">
-        <i id="rightIndicator" class="fas fa-angle-right sidebutton"></i>
-      </td>
-    </tr>
-  </table>
-  <!-- ------------------- SIDE INDICATOR END --------------------- -->
-
-  <!-------------------------------STRAT SPEED METER---------------------------------->
-  <div class="dashboard">
-    <div class="meter meter--rpm meter--big-label"></div>
-    <div class="meter meter--gear">
-      <div>1</div>
-    </div>
-    <div class="meter meter--speed"></div>
-  </div>
-  <!-------------------------------END SPEED METER------------------------------------>
-
-  <!--volume button -->
-  <button class="btn-volume active">♩</button>
-
-	<!-- START SOUNDS -->
-	<audio id="carHorn" src="assets/audios/carhorn.mp3"></audio>
-	<audio id="brake" src="assets/audios/brake.mp3"></audio>
-	<!--- END SOUNDS --->
-
-
-
-  <!-- ____________________________________________________________________________  -->
-
-  <!-- ------------ SCRIPTS ------------ -->
-
-  <!-- Main JS -->
-  <script src="assets/js/gearmeter.js"></script>
-  <script src="assets/js/custom.js"></script>
+    <!-- SOUNDS -->
+    <audio id="carHorn" src="assets/audios/carhorn.mp3"></audio>
+    <audio id="brake" src="assets/audios/brake.mp3"></audio>
 
 </body>
 
