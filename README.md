@@ -24,7 +24,7 @@ View the demo site on Netlify:
 
 <div align="center">
         <a href="https://iotcarcontroller.netlify.app/">
-        <img src="/assets/img/screenshot.png" alt="homepage screenshot" title="go to homepage" width="600">
+        <img src="/assets/img/screenshot.png" alt="homepage screenshot" title="go to homepage" width="800">
     </a>
 </div>
 
@@ -39,22 +39,24 @@ View the demo site on Netlify:
 
 ## Controls
 
-- Move
-    - letters: <kbd>W</kbd>, <kbd>A</kbd>, <kbd>S</kbd>,<kbd>D</kbd>
-    - arrows: <kbd>←</kbd>, <kbd>→</kbd>, <kbd>↑</kbd>, <kbd>↓</kbd>
-- Horn
-    - <kbd>H</kbd>
-- Brake
-    <kbd>Space</kbd>
+Action | Keys
+---    | ---
+Move   | <kbd>W</kbd>, <kbd>A</kbd>, <kbd>S</kbd>,<kbd>D</kbd> OR <kbd>←</kbd>, <kbd>→</kbd>, <kbd>↑</kbd>, <kbd>↓</kbd>
+Horn   | <kbd>H</kbd>
+Brake  | <kbd>Space</kbd>
 
-## Build Setup
+## Set up and run
+
+### Clone
 
 ```bash
 git clone https://github.com/shahriarshafin/Iot-car-controller.git
 cd Iot-car-controller
 ```
 
-Start a static server.
+### Start server
+
+Start a static server in the root.
 
 Open in the browser.
 
