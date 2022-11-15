@@ -1,0 +1,126 @@
+/* Global CSS */
+.d-none {
+	display: none;
+}
+/* MAIN BODY  */
+body {
+	margin: 0 0;
+	padding: 0 0;
+	overflow: hidden;
+	box-sizing: border-box;
+	background-color: #1f1f29;
+	/* background-image: url("http://192.168.0.110:8080/video"); */
+	background-image: url("https://img.freepik.com/free-vector/gradient-dynamic-blue-lines-background_23-2148995756.jpg?size=626&ext=jpg&ga=GA1.2.2112143618.1627165436");
+	/*EDIT ME*/
+	background-repeat: no-repeat;
+	background-size: cover;
+	/*use these 2 line for full size stream. But ratio will be compressed.*/
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	/*---------------------------------------*/
+}
+
+/* SETTINGS BUTTON */
+.settClass {
+	position: fixed;
+	top: 0.5rem;
+	right: 0.5rem;
+	width: 45px;
+	height: auto;
+	-webkit-animation: spin 4s linear infinite;
+	-moz-animation: spin 4s linear infinite;
+	animation: spin 4s linear infinite;
+}
+/* settings rotate */
+@-moz-keyframes spin {
+	100% {
+		-moz-transform: rotate(360deg);
+	}
+}
+@-webkit-keyframes spin {
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+@keyframes spin {
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+/* settings rotate */
+
+/* IP form  */
+.ipform {
+	color: #fff;
+	font-family: "Roboto Mono", monospace;
+	margin-left: 5px;
+	font-style: italic;
+}
+
+/* input box */
+.ipform input[type="url"],
+textarea {
+	background-color: #07ffea1f;
+	color: #ffffff;
+	padding: 7px 3px;
+	margin-top: 9px;
+	border: 2px solid rgb(0, 204, 255);
+	border-radius: 4px;
+	width: 20%;
+	max-width: 165px;
+	font-size: 13px;
+	transform: skew(349deg);
+}
+
+/* placeholder color */
+.ipform input[type="url"]::placeholder {
+	color: rgba(255, 255, 255, 0.575);
+}
+
+/* connect button */
+#connectBtn {
+	background-color: #004263da;
+	border: 2px solid rgb(0, 204, 255);
+	color: rgb(253, 253, 253);
+	/* margin-left: 77px; */
+	width: 20%;
+	/* max-width: 165px; */
+	padding: 7px 3px;
+	text-align: center;
+	/* font-size: 13px; */
+	border-radius: 5px;
+	/* display: block; */
+	/*EDIT ME*/
+	transform: skew(349deg);
+}
+
+/* HIDDEN BOX */
+#box {
+	position: absolute;
+	background-color: red;
+	top: 10%;
+	left: 50%;
+	margin-left: -30px;
+	width: 50px;
+	height: 50px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* BUTTON TABLE  */
+.tableBtn {
+	position: absolute;
+	border-collapse: collapse;
+	width: 100%;
+	bottom: 0px;
+}
+
+table,
+th,
+td {
+	border: 1px solid rgb(255, 255, 255);
+}
+
+/* media */

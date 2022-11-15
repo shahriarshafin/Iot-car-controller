@@ -1,0 +1,27 @@
+About Screen : First screen
+App Name     : Shafin_dbot
+Title        : Developed by Shahriar Shafin
+Version Code : 02
+Version Name : dbot_1.2
+App Heading  : 〈𓀙〉Developed by 'Shahriar Shafin␀'𓀙 
+Lable_1      : Ip Address
+IP Hint      : 192.168.4.1
+IP Text      : 192.168.1.9
+Speed Color  : #adff2fff , #00BCD3FF
+Title Bar    : #008c97ff
+
+title:
+font 14 
+height 9%
+
+android : android.intent.action.view
+gmail : https://mail.google.com/mail/u/0/?view=cm&fs=1&to=shafinshahriar350@gmail.com&tf=1
+google form : https://docs.google.com/forms/d/e/1FAIpQLSe0t7q1TiWx7Q85kpt_KV16HaoectHPaCm-HBu1I6OpdbYGTQ/viewform?usp=sf_link
+Title Button : 
+height 9% ,  weight 30%
+
+
+
+
+192.168.0.103
+
