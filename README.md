@@ -1,98 +1,36 @@
-# [Iot Car Controller](https://iotcarcontroller.netlify.app/)
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-[![GitHub tag](https://img.shields.io/github/tag/shahriarshafin/Iot-car-controller?include_prereleases=&sort=semver)](https://github.com/shahriarshafin/Iot-car-controller/releases/)
-[![License](https://img.shields.io/badge/License-MIT-blue)](#license)
+## Getting Started
 
-![Project coverage](https://img.shields.io/badge/project_coverage-50%25-green)
-![Repo size](https://img.shields.io/github/repo-size/shahriarshafin/Iot-car-controller?color=red)
-
-
-## About
-
-A web application that can control an [NodeMCU][] Car via WiFi and stream live video with an IP camera.
-
-<div align="center">
-    
-[![View - Site](https://img.shields.io/badge/View-Website-2ea44f?style=for-the-badge)](https://iotcarcontroller.netlify.app/)
-
-</div>
-
-
-## Preview
-
-View the demo site on Netlify:
-
-<div align="center">
-        <a href="https://iotcarcontroller.netlify.app/">
-        <img src="/assets/img/screenshot.png" alt="homepage screenshot" title="go to homepage" width="800">
-    </a>
-</div>
-
-## Features:
-
-- Control a [NodeMCU][] [ESP8266][] car via WiFi
-- Stream live footage
-- Car racing game UI
-- User-friendly control system
-- Fullscreen view 
-- [More](https://iotcarcontroller.netlify.app/)!
-
-## Controls
-
-Action | Keys
----    | ---
-Move   | <kbd>W</kbd>, <kbd>A</kbd>, <kbd>S</kbd>,<kbd>D</kbd> OR <kbd>←</kbd>, <kbd>→</kbd>, <kbd>↑</kbd>, <kbd>↓</kbd>
-Horn   | <kbd>H</kbd>
-Brake  | <kbd>Space</kbd>
-
-## Set up and run
-
-### Clone
+First, run the development server:
 
 ```bash
-git clone https://github.com/shahriarshafin/Iot-car-controller.git
-cd Iot-car-controller
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-### Start server
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Start a static server in the root.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-Open in the browser.
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-e.g. 
+## Learn More
 
-- http://127.0.0.1:8000/
+To learn more about Next.js, take a look at the following resources:
 
-## License
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-```
-MIT License
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-Copyright (c) 2020 - 2021 Shahriar Shafin
+## Deploy on Vercel
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
-
-<p align="right">
-    <b><a href="#">↥ Back To Top</a></b>
-</p>
-
-[NodeMCU]: https://en.wikipedia.org/wiki/NodeMCU
-[ESP8266]: https://en.wikipedia.org/wiki/ESP8266
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
