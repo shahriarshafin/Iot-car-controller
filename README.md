@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NodeMCU to L293N Wiring for Car Control
 
-## Getting Started
+This documentation shows the pin mapping between **NodeMCU** and **L293N Motor Driver** for steering and driving motors of your car.
 
-First, run the development server:
+## Pin Mapping
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+| **NodeMCU Pin**          | **L293N Pin**     | **Function**                    |
+| ------------------------ | ----------------- | ------------------------------- |
+| D4 (PIN_STEERING_LEFT)   | IN1               | Controls steering motor left    |
+| D2 (PIN_STEERING_RIGHT)  | IN2               | Controls steering motor right   |
+| D6 (PIN_STEERING_ENABLE) | EN1               | Enables/disables steering motor |
+| D8 (PIN_DRIVE_FWD)       | IN3               | Controls driving motor forward  |
+| D7 (PIN_DRIVE_BWD)       | IN4               | Controls driving motor backward |
+| D5 (PIN_DRIVE_ENABLE)    | EN2               | Enables/disables driving motor  |
+| 3.3V or 5V (NodeMCU)     | VCC (L293N logic) | Power for L293N logic           |
+| GND                      | GND               | Common ground                   |
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Power Connections
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **VCC (12V external)** → External battery (for motors power)
+- **GND** → Ground (common ground with NodeMCU and L293N)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Diagram
 
-## Learn More
+Here’s a visual representation of how to wire the NodeMCU to the L293N motor driver:
 
-To learn more about Next.js, take a look at the following resources:
+                         +----------------------+
+                         |     NodeMCU          |
+                         |                      |
+            D4  -------->| IN1 (Steering Left)  |
+            D2  -------->| IN2 (Steering Right) |
+            D6  -------->| EN1 (Steering Enable)|
+            D8  -------->| IN3 (Drive Forward)  |
+            D7  -------->| IN4 (Drive Backward) |
+            D5  -------->| EN2 (Drive Enable)   |
+                         |                      |
+          3.3V/5V  ----->| VCC (Logic Power)    |
+           GND   --------| GND                  |
+                         +----------------------+
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Make sure all grounds are connected to avoid potential issues with motor control.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Notes
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **IN1-IN4** on the L293N control the direction of the motors.
+- **EN1 and EN2** control the enabling/disabling of motors.
+- Power the motors through the external power connected to the **VCC** pin of the L293N.
